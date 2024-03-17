@@ -1,0 +1,96 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.graphoenix.showcase.order.grpc";
+
+package io.graphoenix.showcase.order;
+
+import "io/graphoenix/showcase/order/enums.proto";
+import "io/graphoenix/showcase/order/objects.proto";
+import "io/graphoenix/showcase/order/interfaces.proto";
+import "io/graphoenix/showcase/order/input_objects.proto";
+import "io/graphoenix/core/enums.proto";
+import "io/graphoenix/core/input_objects.proto";
+import "io/graphoenix/showcase/user/input_objects.proto";
+
+message QueryOrderResponse {
+    Order order = 1;
+}
+message QueryOrderListResponse {
+    repeated Order order_list = 1;
+}
+message QueryOrderConnectionResponse {
+    OrderConnection order_connection = 1;
+}
+message QueryGoodResponse {
+    Good good = 1;
+}
+message QueryGoodListResponse {
+    repeated Good good_list = 1;
+}
+message QueryGoodConnectionResponse {
+    GoodConnection good_connection = 1;
+}
+message QueryProductResponse {
+    Product product = 1;
+}
+message QueryProductListResponse {
+    repeated Product product_list = 1;
+}
+message QueryProductConnectionResponse {
+    ProductConnection product_connection = 1;
+}
+message QueryMerchantResponse {
+    Merchant merchant = 1;
+}
+message QueryMerchantListResponse {
+    repeated Merchant merchant_list = 1;
+}
+message QueryMerchantConnectionResponse {
+    MerchantConnection merchant_connection = 1;
+}
+message QueryGoodOrderRelationResponse {
+    GoodOrderRelation good_order_relation = 1;
+}
+message QueryGoodOrderRelationListResponse {
+    repeated GoodOrderRelation good_order_relation_list = 1;
+}
+message QueryGoodOrderRelationConnectionResponse {
+    GoodOrderRelationConnection good_order_relation_connection = 1;
+}
+message QueryGoodProductRelationResponse {
+    GoodProductRelation good_product_relation = 1;
+}
+message QueryGoodProductRelationListResponse {
+    repeated GoodProductRelation good_product_relation_list = 1;
+}
+message QueryGoodProductRelationConnectionResponse {
+    GoodProductRelationConnection good_product_relation_connection = 1;
+}
+message QueryGoodMerchantRelationResponse {
+    GoodMerchantRelation good_merchant_relation = 1;
+}
+message QueryGoodMerchantRelationListResponse {
+    repeated GoodMerchantRelation good_merchant_relation_list = 1;
+}
+message QueryGoodMerchantRelationConnectionResponse {
+    GoodMerchantRelationConnection good_merchant_relation_connection = 1;
+}
+message QueryMerchantPartnersResponse {
+    MerchantPartners merchant_partners = 1;
+}
+message QueryMerchantPartnersListResponse {
+    repeated MerchantPartners merchant_partners_list = 1;
+}
+message QueryMerchantPartnersConnectionResponse {
+    MerchantPartnersConnection merchant_partners_connection = 1;
+}
+message QueryMerchantDirectorResponse {
+    MerchantDirector merchant_director = 1;
+}
+message QueryMerchantDirectorListResponse {
+    repeated MerchantDirector merchant_director_list = 1;
+}
+message QueryMerchantDirectorConnectionResponse {
+    MerchantDirectorConnection merchant_director_connection = 1;
+}

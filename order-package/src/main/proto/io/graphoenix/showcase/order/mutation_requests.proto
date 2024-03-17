@@ -1,0 +1,377 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.graphoenix.showcase.order.grpc";
+
+package io.graphoenix.showcase.order;
+
+import "io/graphoenix/showcase/order/enums.proto";
+import "io/graphoenix/showcase/order/objects.proto";
+import "io/graphoenix/showcase/order/interfaces.proto";
+import "io/graphoenix/showcase/order/input_objects.proto";
+import "io/graphoenix/showcase/user/input_objects.proto";
+import "google/protobuf/timestamp.proto";
+
+message MutationOrderRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string number = 4;
+    io.graphoenix.showcase.user.UserInput buyer = 5;
+    repeated GoodInput goods = 6;
+    bool is_deprecated = 7;
+    int32 version = 8;
+    int32 realm_id = 9;
+    string create_user_id = 10;
+    google.protobuf.Timestamp create_time = 11;
+    string update_user_id = 12;
+    google.protobuf.Timestamp update_time = 13;
+    string create_group_id = 14;
+    string intro_typename = 15;
+    int32 buyer_id = 16;
+    repeated GoodOrderRelationInput good_order_relation = 17;
+    OrderExpression where = 18;
+}
+message MutationOrderListRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string number = 4;
+    io.graphoenix.showcase.user.UserInput buyer = 5;
+    repeated GoodInput goods = 6;
+    bool is_deprecated = 7;
+    int32 version = 8;
+    int32 realm_id = 9;
+    string create_user_id = 10;
+    google.protobuf.Timestamp create_time = 11;
+    string update_user_id = 12;
+    google.protobuf.Timestamp update_time = 13;
+    string create_group_id = 14;
+    string intro_typename = 15;
+    int32 buyer_id = 16;
+    repeated GoodOrderRelationInput good_order_relation = 17;
+    repeated OrderInput list = 18;
+    OrderExpression where = 19;
+}
+message MutationGoodRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    int32 quantity = 4;
+    OrderInput order = 5;
+    ProductInput product = 6;
+    MerchantInput merchant = 7;
+    bool is_deprecated = 8;
+    int32 version = 9;
+    int32 realm_id = 10;
+    string create_user_id = 11;
+    google.protobuf.Timestamp create_time = 12;
+    string update_user_id = 13;
+    google.protobuf.Timestamp update_time = 14;
+    string create_group_id = 15;
+    string intro_typename = 16;
+    repeated GoodOrderRelationInput good_order_relation = 17;
+    repeated GoodProductRelationInput good_product_relation = 18;
+    repeated GoodMerchantRelationInput good_merchant_relation = 19;
+    GoodExpression where = 20;
+}
+message MutationGoodListRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    int32 quantity = 4;
+    OrderInput order = 5;
+    ProductInput product = 6;
+    MerchantInput merchant = 7;
+    bool is_deprecated = 8;
+    int32 version = 9;
+    int32 realm_id = 10;
+    string create_user_id = 11;
+    google.protobuf.Timestamp create_time = 12;
+    string update_user_id = 13;
+    google.protobuf.Timestamp update_time = 14;
+    string create_group_id = 15;
+    string intro_typename = 16;
+    repeated GoodOrderRelationInput good_order_relation = 17;
+    repeated GoodProductRelationInput good_product_relation = 18;
+    repeated GoodMerchantRelationInput good_merchant_relation = 19;
+    repeated GoodInput list = 20;
+    GoodExpression where = 21;
+}
+message MutationProductRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string name = 4;
+    float price = 5;
+    bool is_deprecated = 6;
+    int32 version = 7;
+    int32 realm_id = 8;
+    string create_user_id = 9;
+    google.protobuf.Timestamp create_time = 10;
+    string update_user_id = 11;
+    google.protobuf.Timestamp update_time = 12;
+    string create_group_id = 13;
+    string intro_typename = 14;
+    ProductExpression where = 15;
+}
+message MutationProductListRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string name = 4;
+    float price = 5;
+    bool is_deprecated = 6;
+    int32 version = 7;
+    int32 realm_id = 8;
+    string create_user_id = 9;
+    google.protobuf.Timestamp create_time = 10;
+    string update_user_id = 11;
+    google.protobuf.Timestamp update_time = 12;
+    string create_group_id = 13;
+    string intro_typename = 14;
+    repeated ProductInput list = 15;
+    ProductExpression where = 16;
+}
+message MutationMerchantRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string name = 4;
+    io.graphoenix.showcase.user.OrganizationInput organization = 5;
+    repeated io.graphoenix.showcase.user.UserInput customer_services = 6;
+    repeated io.graphoenix.showcase.user.OrganizationInput partners = 7;
+    io.graphoenix.showcase.user.UserInput director = 8;
+    bool is_deprecated = 9;
+    int32 version = 10;
+    int32 realm_id = 11;
+    string create_user_id = 12;
+    google.protobuf.Timestamp create_time = 13;
+    string update_user_id = 14;
+    google.protobuf.Timestamp update_time = 15;
+    string create_group_id = 16;
+    string intro_typename = 17;
+    int32 organization_id = 18;
+    repeated MerchantPartnersInput merchant_partners = 19;
+    repeated MerchantDirectorInput merchant_director = 20;
+    MerchantExpression where = 21;
+}
+message MutationMerchantListRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string name = 4;
+    io.graphoenix.showcase.user.OrganizationInput organization = 5;
+    repeated io.graphoenix.showcase.user.UserInput customer_services = 6;
+    repeated io.graphoenix.showcase.user.OrganizationInput partners = 7;
+    io.graphoenix.showcase.user.UserInput director = 8;
+    bool is_deprecated = 9;
+    int32 version = 10;
+    int32 realm_id = 11;
+    string create_user_id = 12;
+    google.protobuf.Timestamp create_time = 13;
+    string update_user_id = 14;
+    google.protobuf.Timestamp update_time = 15;
+    string create_group_id = 16;
+    string intro_typename = 17;
+    int32 organization_id = 18;
+    repeated MerchantPartnersInput merchant_partners = 19;
+    repeated MerchantDirectorInput merchant_director = 20;
+    repeated MerchantInput list = 21;
+    MerchantExpression where = 22;
+}
+message MutationGoodOrderRelationRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string order_ref = 4;
+    OrderInput order = 5;
+    string good_ref = 6;
+    GoodInput good = 7;
+    bool is_deprecated = 8;
+    int32 version = 9;
+    int32 realm_id = 10;
+    string create_user_id = 11;
+    google.protobuf.Timestamp create_time = 12;
+    string update_user_id = 13;
+    google.protobuf.Timestamp update_time = 14;
+    string create_group_id = 15;
+    string intro_typename = 16;
+    GoodOrderRelationExpression where = 17;
+}
+message MutationGoodOrderRelationListRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string order_ref = 4;
+    OrderInput order = 5;
+    string good_ref = 6;
+    GoodInput good = 7;
+    bool is_deprecated = 8;
+    int32 version = 9;
+    int32 realm_id = 10;
+    string create_user_id = 11;
+    google.protobuf.Timestamp create_time = 12;
+    string update_user_id = 13;
+    google.protobuf.Timestamp update_time = 14;
+    string create_group_id = 15;
+    string intro_typename = 16;
+    repeated GoodOrderRelationInput list = 17;
+    GoodOrderRelationExpression where = 18;
+}
+message MutationGoodProductRelationRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string good_ref = 4;
+    GoodInput good = 5;
+    string product_ref = 6;
+    ProductInput product = 7;
+    bool is_deprecated = 8;
+    int32 version = 9;
+    int32 realm_id = 10;
+    string create_user_id = 11;
+    google.protobuf.Timestamp create_time = 12;
+    string update_user_id = 13;
+    google.protobuf.Timestamp update_time = 14;
+    string create_group_id = 15;
+    string intro_typename = 16;
+    GoodProductRelationExpression where = 17;
+}
+message MutationGoodProductRelationListRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string good_ref = 4;
+    GoodInput good = 5;
+    string product_ref = 6;
+    ProductInput product = 7;
+    bool is_deprecated = 8;
+    int32 version = 9;
+    int32 realm_id = 10;
+    string create_user_id = 11;
+    google.protobuf.Timestamp create_time = 12;
+    string update_user_id = 13;
+    google.protobuf.Timestamp update_time = 14;
+    string create_group_id = 15;
+    string intro_typename = 16;
+    repeated GoodProductRelationInput list = 17;
+    GoodProductRelationExpression where = 18;
+}
+message MutationGoodMerchantRelationRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string good_ref = 4;
+    GoodInput good = 5;
+    string merchant_ref = 6;
+    MerchantInput merchant = 7;
+    bool is_deprecated = 8;
+    int32 version = 9;
+    int32 realm_id = 10;
+    string create_user_id = 11;
+    google.protobuf.Timestamp create_time = 12;
+    string update_user_id = 13;
+    google.protobuf.Timestamp update_time = 14;
+    string create_group_id = 15;
+    string intro_typename = 16;
+    GoodMerchantRelationExpression where = 17;
+}
+message MutationGoodMerchantRelationListRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string good_ref = 4;
+    GoodInput good = 5;
+    string merchant_ref = 6;
+    MerchantInput merchant = 7;
+    bool is_deprecated = 8;
+    int32 version = 9;
+    int32 realm_id = 10;
+    string create_user_id = 11;
+    google.protobuf.Timestamp create_time = 12;
+    string update_user_id = 13;
+    google.protobuf.Timestamp update_time = 14;
+    string create_group_id = 15;
+    string intro_typename = 16;
+    repeated GoodMerchantRelationInput list = 17;
+    GoodMerchantRelationExpression where = 18;
+}
+message MutationMerchantPartnersRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string merchant_id = 4;
+    MerchantInput merchant = 5;
+    int32 organization_id = 6;
+    io.graphoenix.showcase.user.OrganizationInput organization = 7;
+    bool is_deprecated = 8;
+    int32 version = 9;
+    int32 realm_id = 10;
+    string create_user_id = 11;
+    google.protobuf.Timestamp create_time = 12;
+    string update_user_id = 13;
+    google.protobuf.Timestamp update_time = 14;
+    string create_group_id = 15;
+    string intro_typename = 16;
+    MerchantPartnersExpression where = 17;
+}
+message MutationMerchantPartnersListRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string merchant_id = 4;
+    MerchantInput merchant = 5;
+    int32 organization_id = 6;
+    io.graphoenix.showcase.user.OrganizationInput organization = 7;
+    bool is_deprecated = 8;
+    int32 version = 9;
+    int32 realm_id = 10;
+    string create_user_id = 11;
+    google.protobuf.Timestamp create_time = 12;
+    string update_user_id = 13;
+    google.protobuf.Timestamp update_time = 14;
+    string create_group_id = 15;
+    string intro_typename = 16;
+    repeated MerchantPartnersInput list = 17;
+    MerchantPartnersExpression where = 18;
+}
+message MutationMerchantDirectorRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string merchant_id = 4;
+    MerchantInput merchant = 5;
+    int32 user_id = 6;
+    io.graphoenix.showcase.user.UserInput user = 7;
+    bool is_deprecated = 8;
+    int32 version = 9;
+    int32 realm_id = 10;
+    string create_user_id = 11;
+    google.protobuf.Timestamp create_time = 12;
+    string update_user_id = 13;
+    google.protobuf.Timestamp update_time = 14;
+    string create_group_id = 15;
+    string intro_typename = 16;
+    MerchantDirectorExpression where = 17;
+}
+message MutationMerchantDirectorListRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string merchant_id = 4;
+    MerchantInput merchant = 5;
+    int32 user_id = 6;
+    io.graphoenix.showcase.user.UserInput user = 7;
+    bool is_deprecated = 8;
+    int32 version = 9;
+    int32 realm_id = 10;
+    string create_user_id = 11;
+    google.protobuf.Timestamp create_time = 12;
+    string update_user_id = 13;
+    google.protobuf.Timestamp update_time = 14;
+    string create_group_id = 15;
+    string intro_typename = 16;
+    repeated MerchantDirectorInput list = 17;
+    MerchantDirectorExpression where = 18;
+}

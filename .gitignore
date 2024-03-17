@@ -1,0 +1,11 @@
+# Project exclude paths
+/.gradle/
+/build/
+/order-application/build/
+/order-application/build/classes/java/main/
+/order-package/build/
+/order-package/build/classes/java/main/
+/user-application/build/
+/user-application/build/classes/java/main/
+/user-package/build/
+/user-package/build/classes/java/main/

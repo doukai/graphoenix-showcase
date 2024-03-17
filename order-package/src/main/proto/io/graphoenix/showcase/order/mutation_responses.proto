@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.graphoenix.showcase.order.grpc";
+
+package io.graphoenix.showcase.order;
+
+import "io/graphoenix/showcase/order/enums.proto";
+import "io/graphoenix/showcase/order/objects.proto";
+import "io/graphoenix/showcase/order/interfaces.proto";
+import "io/graphoenix/showcase/order/input_objects.proto";
+import "io/graphoenix/showcase/user/input_objects.proto";
+import "google/protobuf/timestamp.proto";
+
+message MutationOrderResponse {
+    Order order = 1;
+}
+message MutationOrderListResponse {
+    repeated Order order_list = 1;
+}
+message MutationGoodResponse {
+    Good good = 1;
+}
+message MutationGoodListResponse {
+    repeated Good good_list = 1;
+}
+message MutationProductResponse {
+    Product product = 1;
+}
+message MutationProductListResponse {
+    repeated Product product_list = 1;
+}
+message MutationMerchantResponse {
+    Merchant merchant = 1;
+}
+message MutationMerchantListResponse {
+    repeated Merchant merchant_list = 1;
+}
+message MutationGoodOrderRelationResponse {
+    GoodOrderRelation good_order_relation = 1;
+}
+message MutationGoodOrderRelationListResponse {
+    repeated GoodOrderRelation good_order_relation_list = 1;
+}
+message MutationGoodProductRelationResponse {
+    GoodProductRelation good_product_relation = 1;
+}
+message MutationGoodProductRelationListResponse {
+    repeated GoodProductRelation good_product_relation_list = 1;
+}
+message MutationGoodMerchantRelationResponse {
+    GoodMerchantRelation good_merchant_relation = 1;
+}
+message MutationGoodMerchantRelationListResponse {
+    repeated GoodMerchantRelation good_merchant_relation_list = 1;
+}
+message MutationMerchantPartnersResponse {
+    MerchantPartners merchant_partners = 1;
+}
+message MutationMerchantPartnersListResponse {
+    repeated MerchantPartners merchant_partners_list = 1;
+}
+message MutationMerchantDirectorResponse {
+    MerchantDirector merchant_director = 1;
+}
+message MutationMerchantDirectorListResponse {
+    repeated MerchantDirector merchant_director_list = 1;
+}

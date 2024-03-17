@@ -1,0 +1,6 @@
+rootProject.name = 'graphoenix-showcase'
+include 'user-package'
+include 'user-application'
+include 'order-package'
+include 'order-application'
+

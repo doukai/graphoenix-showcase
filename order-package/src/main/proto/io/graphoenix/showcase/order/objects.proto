@@ -1,0 +1,347 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.graphoenix.showcase.order.dto.objectType.grpc";
+
+package io.graphoenix.showcase.order;
+
+import "io/graphoenix/showcase/order/enums.proto";
+import "io/graphoenix/showcase/user/objects.proto";
+import "io/graphoenix/core/objects.proto";
+import "google/protobuf/timestamp.proto";
+
+message Order {
+    string id = 1;
+    optional string number = 2;
+    io.graphoenix.showcase.user.User buyer = 3;
+    repeated Good goods = 4;
+    bool is_deprecated = 5;
+    int32 version = 6;
+    int32 realm_id = 7;
+    string create_user_id = 8;
+    google.protobuf.Timestamp create_time = 9;
+    string update_user_id = 10;
+    google.protobuf.Timestamp update_time = 11;
+    string create_group_id = 12;
+    string intro_typename = 13;
+    int32 buyer_id = 14;
+    repeated GoodOrderRelation good_order_relation = 15;
+    Good goods_aggregate = 16;
+    GoodConnection goods_connection = 17;
+    GoodOrderRelation good_order_relation_aggregate = 18;
+    GoodOrderRelationConnection good_order_relation_connection = 19;
+    int32 id_count = 20;
+    int32 id_max = 21;
+    int32 id_min = 22;
+    int32 number_count = 23;
+    string number_max = 24;
+    string number_min = 25;
+    int32 buyer_id_count = 26;
+    int32 buyer_id_sum = 27;
+    int32 buyer_id_avg = 28;
+    int32 buyer_id_max = 29;
+    int32 buyer_id_min = 30;
+}
+message Good {
+    string id = 1;
+    optional int32 quantity = 2;
+    optional Order order = 3;
+    optional Product product = 4;
+    optional Merchant merchant = 5;
+    bool is_deprecated = 6;
+    int32 version = 7;
+    int32 realm_id = 8;
+    string create_user_id = 9;
+    google.protobuf.Timestamp create_time = 10;
+    string update_user_id = 11;
+    google.protobuf.Timestamp update_time = 12;
+    string create_group_id = 13;
+    string intro_typename = 14;
+    repeated GoodOrderRelation good_order_relation = 15;
+    repeated GoodProductRelation good_product_relation = 16;
+    repeated GoodMerchantRelation good_merchant_relation = 17;
+    GoodOrderRelation good_order_relation_aggregate = 18;
+    GoodOrderRelationConnection good_order_relation_connection = 19;
+    GoodProductRelation good_product_relation_aggregate = 20;
+    GoodProductRelationConnection good_product_relation_connection = 21;
+    GoodMerchantRelation good_merchant_relation_aggregate = 22;
+    GoodMerchantRelationConnection good_merchant_relation_connection = 23;
+    int32 id_count = 24;
+    int32 id_max = 25;
+    int32 id_min = 26;
+    int32 quantity_count = 27;
+    int32 quantity_sum = 28;
+    int32 quantity_avg = 29;
+    int32 quantity_max = 30;
+    int32 quantity_min = 31;
+}
+message Product {
+    string id = 1;
+    optional string name = 2;
+    optional float price = 3;
+    bool is_deprecated = 4;
+    int32 version = 5;
+    int32 realm_id = 6;
+    string create_user_id = 7;
+    google.protobuf.Timestamp create_time = 8;
+    string update_user_id = 9;
+    google.protobuf.Timestamp update_time = 10;
+    string create_group_id = 11;
+    string intro_typename = 12;
+    int32 id_count = 13;
+    int32 id_max = 14;
+    int32 id_min = 15;
+    int32 name_count = 16;
+    string name_max = 17;
+    string name_min = 18;
+    int32 price_count = 19;
+    float price_sum = 20;
+    float price_avg = 21;
+    float price_max = 22;
+    float price_min = 23;
+}
+message Merchant {
+    string id = 1;
+    optional string name = 2;
+    io.graphoenix.showcase.user.Organization organization = 3;
+    repeated io.graphoenix.showcase.user.User customer_services = 4;
+    repeated io.graphoenix.showcase.user.Organization partners = 5;
+    optional io.graphoenix.showcase.user.User director = 6;
+    bool is_deprecated = 7;
+    int32 version = 8;
+    int32 realm_id = 9;
+    string create_user_id = 10;
+    google.protobuf.Timestamp create_time = 11;
+    string update_user_id = 12;
+    google.protobuf.Timestamp update_time = 13;
+    string create_group_id = 14;
+    string intro_typename = 15;
+    int32 organization_id = 16;
+    repeated MerchantPartners merchant_partners = 17;
+    repeated MerchantDirector merchant_director = 18;
+    MerchantPartners merchant_partners_aggregate = 19;
+    MerchantPartnersConnection merchant_partners_connection = 20;
+    MerchantDirector merchant_director_aggregate = 21;
+    MerchantDirectorConnection merchant_director_connection = 22;
+    int32 id_count = 23;
+    int32 id_max = 24;
+    int32 id_min = 25;
+    int32 name_count = 26;
+    string name_max = 27;
+    string name_min = 28;
+    int32 organization_id_count = 29;
+    int32 organization_id_sum = 30;
+    int32 organization_id_avg = 31;
+    int32 organization_id_max = 32;
+    int32 organization_id_min = 33;
+}
+message GoodOrderRelation {
+    string id = 1;
+    string order_ref = 2;
+    Order order = 3;
+    string good_ref = 4;
+    Good good = 5;
+    bool is_deprecated = 6;
+    int32 version = 7;
+    int32 realm_id = 8;
+    string create_user_id = 9;
+    google.protobuf.Timestamp create_time = 10;
+    string update_user_id = 11;
+    google.protobuf.Timestamp update_time = 12;
+    string create_group_id = 13;
+    string intro_typename = 14;
+    int32 id_count = 15;
+    int32 id_max = 16;
+    int32 id_min = 17;
+    int32 order_ref_count = 18;
+    string order_ref_max = 19;
+    string order_ref_min = 20;
+    int32 good_ref_count = 21;
+    string good_ref_max = 22;
+    string good_ref_min = 23;
+}
+message GoodProductRelation {
+    string id = 1;
+    string good_ref = 2;
+    Good good = 3;
+    string product_ref = 4;
+    Product product = 5;
+    bool is_deprecated = 6;
+    int32 version = 7;
+    int32 realm_id = 8;
+    string create_user_id = 9;
+    google.protobuf.Timestamp create_time = 10;
+    string update_user_id = 11;
+    google.protobuf.Timestamp update_time = 12;
+    string create_group_id = 13;
+    string intro_typename = 14;
+    int32 id_count = 15;
+    int32 id_max = 16;
+    int32 id_min = 17;
+    int32 good_ref_count = 18;
+    string good_ref_max = 19;
+    string good_ref_min = 20;
+    int32 product_ref_count = 21;
+    string product_ref_max = 22;
+    string product_ref_min = 23;
+}
+message GoodMerchantRelation {
+    string id = 1;
+    string good_ref = 2;
+    Good good = 3;
+    string merchant_ref = 4;
+    Merchant merchant = 5;
+    bool is_deprecated = 6;
+    int32 version = 7;
+    int32 realm_id = 8;
+    string create_user_id = 9;
+    google.protobuf.Timestamp create_time = 10;
+    string update_user_id = 11;
+    google.protobuf.Timestamp update_time = 12;
+    string create_group_id = 13;
+    string intro_typename = 14;
+    int32 id_count = 15;
+    int32 id_max = 16;
+    int32 id_min = 17;
+    int32 good_ref_count = 18;
+    string good_ref_max = 19;
+    string good_ref_min = 20;
+    int32 merchant_ref_count = 21;
+    string merchant_ref_max = 22;
+    string merchant_ref_min = 23;
+}
+message MerchantPartners {
+    string id = 1;
+    string merchant_id = 2;
+    Merchant merchant = 3;
+    int32 organization_id = 4;
+    io.graphoenix.showcase.user.Organization organization = 5;
+    bool is_deprecated = 6;
+    int32 version = 7;
+    int32 realm_id = 8;
+    string create_user_id = 9;
+    google.protobuf.Timestamp create_time = 10;
+    string update_user_id = 11;
+    google.protobuf.Timestamp update_time = 12;
+    string create_group_id = 13;
+    string intro_typename = 14;
+    int32 id_count = 15;
+    int32 id_max = 16;
+    int32 id_min = 17;
+    int32 merchant_id_count = 18;
+    string merchant_id_max = 19;
+    string merchant_id_min = 20;
+    int32 organization_id_count = 21;
+    int32 organization_id_sum = 22;
+    int32 organization_id_avg = 23;
+    int32 organization_id_max = 24;
+    int32 organization_id_min = 25;
+}
+message MerchantDirector {
+    string id = 1;
+    string merchant_id = 2;
+    Merchant merchant = 3;
+    int32 user_id = 4;
+    io.graphoenix.showcase.user.User user = 5;
+    bool is_deprecated = 6;
+    int32 version = 7;
+    int32 realm_id = 8;
+    string create_user_id = 9;
+    google.protobuf.Timestamp create_time = 10;
+    string update_user_id = 11;
+    google.protobuf.Timestamp update_time = 12;
+    string create_group_id = 13;
+    string intro_typename = 14;
+    int32 id_count = 15;
+    int32 id_max = 16;
+    int32 id_min = 17;
+    int32 merchant_id_count = 18;
+    string merchant_id_max = 19;
+    string merchant_id_min = 20;
+    int32 user_id_count = 21;
+    int32 user_id_sum = 22;
+    int32 user_id_avg = 23;
+    int32 user_id_max = 24;
+    int32 user_id_min = 25;
+}
+message OrderConnection {
+    int32 total_count = 1;
+    io.graphoenix.core.PageInfo page_info = 2;
+    repeated OrderEdge edges = 3;
+}
+message OrderEdge {
+    Order node = 1;
+    string cursor = 2;
+}
+message GoodConnection {
+    int32 total_count = 1;
+    io.graphoenix.core.PageInfo page_info = 2;
+    repeated GoodEdge edges = 3;
+}
+message GoodEdge {
+    Good node = 1;
+    string cursor = 2;
+}
+message ProductConnection {
+    int32 total_count = 1;
+    io.graphoenix.core.PageInfo page_info = 2;
+    repeated ProductEdge edges = 3;
+}
+message ProductEdge {
+    Product node = 1;
+    string cursor = 2;
+}
+message MerchantConnection {
+    int32 total_count = 1;
+    io.graphoenix.core.PageInfo page_info = 2;
+    repeated MerchantEdge edges = 3;
+}
+message MerchantEdge {
+    Merchant node = 1;
+    string cursor = 2;
+}
+message GoodOrderRelationConnection {
+    int32 total_count = 1;
+    io.graphoenix.core.PageInfo page_info = 2;
+    repeated GoodOrderRelationEdge edges = 3;
+}
+message GoodOrderRelationEdge {
+    GoodOrderRelation node = 1;
+    string cursor = 2;
+}
+message GoodProductRelationConnection {
+    int32 total_count = 1;
+    io.graphoenix.core.PageInfo page_info = 2;
+    repeated GoodProductRelationEdge edges = 3;
+}
+message GoodProductRelationEdge {
+    GoodProductRelation node = 1;
+    string cursor = 2;
+}
+message GoodMerchantRelationConnection {
+    int32 total_count = 1;
+    io.graphoenix.core.PageInfo page_info = 2;
+    repeated GoodMerchantRelationEdge edges = 3;
+}
+message GoodMerchantRelationEdge {
+    GoodMerchantRelation node = 1;
+    string cursor = 2;
+}
+message MerchantPartnersConnection {
+    int32 total_count = 1;
+    io.graphoenix.core.PageInfo page_info = 2;
+    repeated MerchantPartnersEdge edges = 3;
+}
+message MerchantPartnersEdge {
+    MerchantPartners node = 1;
+    string cursor = 2;
+}
+message MerchantDirectorConnection {
+    int32 total_count = 1;
+    io.graphoenix.core.PageInfo page_info = 2;
+    repeated MerchantDirectorEdge edges = 3;
+}
+message MerchantDirectorEdge {
+    MerchantDirector node = 1;
+    string cursor = 2;
+}
