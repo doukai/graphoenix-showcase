@@ -51,11 +51,17 @@ public class Query {
 
   private GoodMerchantRelationConnection goodMerchantRelationConnection;
 
-  private MerchantPartners merchantPartners;
+  private MerchantUserRelation merchantUserRelation;
 
-  private Collection<MerchantPartners> merchantPartnersList;
+  private Collection<MerchantUserRelation> merchantUserRelationList;
 
-  private MerchantPartnersConnection merchantPartnersConnection;
+  private MerchantUserRelationConnection merchantUserRelationConnection;
+
+  private MerchantOrganizationRelation merchantOrganizationRelation;
+
+  private Collection<MerchantOrganizationRelation> merchantOrganizationRelationList;
+
+  private MerchantOrganizationRelationConnection merchantOrganizationRelationConnection;
 
   private MerchantDirector merchantDirector;
 
@@ -235,28 +241,57 @@ public class Query {
     this.goodMerchantRelationConnection = goodMerchantRelationConnection;
   }
 
-  public MerchantPartners getMerchantPartners() {
-    return this.merchantPartners;
+  public MerchantUserRelation getMerchantUserRelation() {
+    return this.merchantUserRelation;
   }
 
-  public void setMerchantPartners(MerchantPartners merchantPartners) {
-    this.merchantPartners = merchantPartners;
+  public void setMerchantUserRelation(MerchantUserRelation merchantUserRelation) {
+    this.merchantUserRelation = merchantUserRelation;
   }
 
-  public Collection<MerchantPartners> getMerchantPartnersList() {
-    return this.merchantPartnersList;
+  public Collection<MerchantUserRelation> getMerchantUserRelationList() {
+    return this.merchantUserRelationList;
   }
 
-  public void setMerchantPartnersList(Collection<MerchantPartners> merchantPartnersList) {
-    this.merchantPartnersList = merchantPartnersList;
+  public void setMerchantUserRelationList(
+      Collection<MerchantUserRelation> merchantUserRelationList) {
+    this.merchantUserRelationList = merchantUserRelationList;
   }
 
-  public MerchantPartnersConnection getMerchantPartnersConnection() {
-    return this.merchantPartnersConnection;
+  public MerchantUserRelationConnection getMerchantUserRelationConnection() {
+    return this.merchantUserRelationConnection;
   }
 
-  public void setMerchantPartnersConnection(MerchantPartnersConnection merchantPartnersConnection) {
-    this.merchantPartnersConnection = merchantPartnersConnection;
+  public void setMerchantUserRelationConnection(
+      MerchantUserRelationConnection merchantUserRelationConnection) {
+    this.merchantUserRelationConnection = merchantUserRelationConnection;
+  }
+
+  public MerchantOrganizationRelation getMerchantOrganizationRelation() {
+    return this.merchantOrganizationRelation;
+  }
+
+  public void setMerchantOrganizationRelation(
+      MerchantOrganizationRelation merchantOrganizationRelation) {
+    this.merchantOrganizationRelation = merchantOrganizationRelation;
+  }
+
+  public Collection<MerchantOrganizationRelation> getMerchantOrganizationRelationList() {
+    return this.merchantOrganizationRelationList;
+  }
+
+  public void setMerchantOrganizationRelationList(
+      Collection<MerchantOrganizationRelation> merchantOrganizationRelationList) {
+    this.merchantOrganizationRelationList = merchantOrganizationRelationList;
+  }
+
+  public MerchantOrganizationRelationConnection getMerchantOrganizationRelationConnection() {
+    return this.merchantOrganizationRelationConnection;
+  }
+
+  public void setMerchantOrganizationRelationConnection(
+      MerchantOrganizationRelationConnection merchantOrganizationRelationConnection) {
+    this.merchantOrganizationRelationConnection = merchantOrganizationRelationConnection;
   }
 
   public MerchantDirector getMerchantDirector() {

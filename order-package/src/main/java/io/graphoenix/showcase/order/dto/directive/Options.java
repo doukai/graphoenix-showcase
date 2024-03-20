@@ -1,5 +1,6 @@
 package io.graphoenix.showcase.order.dto.directive;
 
+import io.graphoenix.core.dto.enumType.Protocol;
 import io.graphoenix.spi.annotation.Directive;
 import jakarta.annotation.Generated;
 import java.lang.String;
@@ -26,4 +27,6 @@ public @interface Options {
   int decimals() default 0;
 
   boolean autoIncrement() default false;
+
+  Protocol protocol() default Protocol.GRPC;
 }

@@ -53,7 +53,9 @@ public class MerchantConnectionQueryArguments implements MetaExpression {
 
   private IntExpression organizationId;
 
-  private MerchantPartnersExpression merchantPartners;
+  private MerchantUserRelationExpression merchantUserRelation;
+
+  private MerchantOrganizationRelationExpression merchantOrganizationRelation;
 
   private MerchantDirectorExpression merchantDirector;
 
@@ -219,12 +221,21 @@ public class MerchantConnectionQueryArguments implements MetaExpression {
     this.organizationId = organizationId;
   }
 
-  public MerchantPartnersExpression getMerchantPartners() {
-    return this.merchantPartners;
+  public MerchantUserRelationExpression getMerchantUserRelation() {
+    return this.merchantUserRelation;
   }
 
-  public void setMerchantPartners(MerchantPartnersExpression merchantPartners) {
-    this.merchantPartners = merchantPartners;
+  public void setMerchantUserRelation(MerchantUserRelationExpression merchantUserRelation) {
+    this.merchantUserRelation = merchantUserRelation;
+  }
+
+  public MerchantOrganizationRelationExpression getMerchantOrganizationRelation() {
+    return this.merchantOrganizationRelation;
+  }
+
+  public void setMerchantOrganizationRelation(
+      MerchantOrganizationRelationExpression merchantOrganizationRelation) {
+    this.merchantOrganizationRelation = merchantOrganizationRelation;
   }
 
   public MerchantDirectorExpression getMerchantDirector() {

@@ -47,7 +47,9 @@ public @interface MerchantListMutationArguments {
 
   int organizationId() default 0;
 
-  MerchantPartnersInput1[] merchantPartners() default {};
+  MerchantUserRelationInput1[] merchantUserRelation() default {};
+
+  MerchantOrganizationRelationInput1[] merchantOrganizationRelation() default {};
 
   MerchantDirectorInput1[] merchantDirector() default {};
 
@@ -87,7 +89,9 @@ public @interface MerchantListMutationArguments {
 
   String $organizationId() default "";
 
-  String $merchantPartners() default "";
+  String $merchantUserRelation() default "";
+
+  String $merchantOrganizationRelation() default "";
 
   String $merchantDirector() default "";
 

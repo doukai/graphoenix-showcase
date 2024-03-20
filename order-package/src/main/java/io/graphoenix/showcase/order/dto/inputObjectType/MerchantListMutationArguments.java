@@ -51,7 +51,9 @@ public class MerchantListMutationArguments implements MetaInput {
 
   private Integer organizationId;
 
-  private Collection<MerchantPartnersInput> merchantPartners;
+  private Collection<MerchantUserRelationInput> merchantUserRelation;
+
+  private Collection<MerchantOrganizationRelationInput> merchantOrganizationRelation;
 
   private Collection<MerchantDirectorInput> merchantDirector;
 
@@ -201,12 +203,21 @@ public class MerchantListMutationArguments implements MetaInput {
     this.organizationId = organizationId;
   }
 
-  public Collection<MerchantPartnersInput> getMerchantPartners() {
-    return this.merchantPartners;
+  public Collection<MerchantUserRelationInput> getMerchantUserRelation() {
+    return this.merchantUserRelation;
   }
 
-  public void setMerchantPartners(Collection<MerchantPartnersInput> merchantPartners) {
-    this.merchantPartners = merchantPartners;
+  public void setMerchantUserRelation(Collection<MerchantUserRelationInput> merchantUserRelation) {
+    this.merchantUserRelation = merchantUserRelation;
+  }
+
+  public Collection<MerchantOrganizationRelationInput> getMerchantOrganizationRelation() {
+    return this.merchantOrganizationRelation;
+  }
+
+  public void setMerchantOrganizationRelation(
+      Collection<MerchantOrganizationRelationInput> merchantOrganizationRelation) {
+    this.merchantOrganizationRelation = merchantOrganizationRelation;
   }
 
   public Collection<MerchantDirectorInput> getMerchantDirector() {

@@ -23,7 +23,7 @@ type Merchant {
     id: ID
     name: String!
     organization: Organization @fetch(from: "organizationId" to: "id" anchor: true protocol: GRPC)
-    customerServices: [User!] @fetch(from: "organizationId" to: "organizationId" protocol: GRPC)
-    partners: [Organization!] @fetch(from: "id" with: {type: "MerchantPartners" from: "merchantId" to: "organizationId"} to: "id" anchor: true protocol: GRPC)
+    customerServices: [User!]
+    partners: [Organization!]
     director: User! @fetch(from: "id" with: {type: "MerchantDirector" from: "merchantId" to: "userId"} to: "id" anchor: true protocol: GRPC)
 }

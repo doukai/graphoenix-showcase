@@ -152,9 +152,10 @@ message MutationMerchantRequest {
     string create_group_id = 16;
     string intro_typename = 17;
     int32 organization_id = 18;
-    repeated MerchantPartnersInput merchant_partners = 19;
-    repeated MerchantDirectorInput merchant_director = 20;
-    MerchantExpression where = 21;
+    repeated MerchantUserRelationInput merchant_user_relation = 19;
+    repeated MerchantOrganizationRelationInput merchant_organization_relation = 20;
+    repeated MerchantDirectorInput merchant_director = 21;
+    MerchantExpression where = 22;
 }
 message MutationMerchantListRequest {
     optional string selection_set = 1;
@@ -175,10 +176,11 @@ message MutationMerchantListRequest {
     string create_group_id = 16;
     string intro_typename = 17;
     int32 organization_id = 18;
-    repeated MerchantPartnersInput merchant_partners = 19;
-    repeated MerchantDirectorInput merchant_director = 20;
-    repeated MerchantInput list = 21;
-    MerchantExpression where = 22;
+    repeated MerchantUserRelationInput merchant_user_relation = 19;
+    repeated MerchantOrganizationRelationInput merchant_organization_relation = 20;
+    repeated MerchantDirectorInput merchant_director = 21;
+    repeated MerchantInput list = 22;
+    MerchantExpression where = 23;
 }
 message MutationGoodOrderRelationRequest {
     optional string selection_set = 1;
@@ -297,14 +299,14 @@ message MutationGoodMerchantRelationListRequest {
     repeated GoodMerchantRelationInput list = 17;
     GoodMerchantRelationExpression where = 18;
 }
-message MutationMerchantPartnersRequest {
+message MutationMerchantUserRelationRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     string id = 3;
-    string merchant_id = 4;
+    string merchant_ref = 4;
     MerchantInput merchant = 5;
-    int32 organization_id = 6;
-    io.graphoenix.showcase.user.OrganizationInput organization = 7;
+    int32 user_ref = 6;
+    io.graphoenix.showcase.user.UserInput user = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -314,15 +316,35 @@ message MutationMerchantPartnersRequest {
     google.protobuf.Timestamp update_time = 14;
     string create_group_id = 15;
     string intro_typename = 16;
-    MerchantPartnersExpression where = 17;
+    MerchantUserRelationExpression where = 17;
 }
-message MutationMerchantPartnersListRequest {
+message MutationMerchantUserRelationListRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     string id = 3;
-    string merchant_id = 4;
+    string merchant_ref = 4;
     MerchantInput merchant = 5;
-    int32 organization_id = 6;
+    int32 user_ref = 6;
+    io.graphoenix.showcase.user.UserInput user = 7;
+    bool is_deprecated = 8;
+    int32 version = 9;
+    int32 realm_id = 10;
+    string create_user_id = 11;
+    google.protobuf.Timestamp create_time = 12;
+    string update_user_id = 13;
+    google.protobuf.Timestamp update_time = 14;
+    string create_group_id = 15;
+    string intro_typename = 16;
+    repeated MerchantUserRelationInput list = 17;
+    MerchantUserRelationExpression where = 18;
+}
+message MutationMerchantOrganizationRelationRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string merchant_ref = 4;
+    MerchantInput merchant = 5;
+    int32 organization_ref = 6;
     io.graphoenix.showcase.user.OrganizationInput organization = 7;
     bool is_deprecated = 8;
     int32 version = 9;
@@ -333,8 +355,27 @@ message MutationMerchantPartnersListRequest {
     google.protobuf.Timestamp update_time = 14;
     string create_group_id = 15;
     string intro_typename = 16;
-    repeated MerchantPartnersInput list = 17;
-    MerchantPartnersExpression where = 18;
+    MerchantOrganizationRelationExpression where = 17;
+}
+message MutationMerchantOrganizationRelationListRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    string id = 3;
+    string merchant_ref = 4;
+    MerchantInput merchant = 5;
+    int32 organization_ref = 6;
+    io.graphoenix.showcase.user.OrganizationInput organization = 7;
+    bool is_deprecated = 8;
+    int32 version = 9;
+    int32 realm_id = 10;
+    string create_user_id = 11;
+    google.protobuf.Timestamp create_time = 12;
+    string update_user_id = 13;
+    google.protobuf.Timestamp update_time = 14;
+    string create_group_id = 15;
+    string intro_typename = 16;
+    repeated MerchantOrganizationRelationInput list = 17;
+    MerchantOrganizationRelationExpression where = 18;
 }
 message MutationMerchantDirectorRequest {
     optional string selection_set = 1;

@@ -117,23 +117,26 @@ message Merchant {
     string create_group_id = 14;
     string intro_typename = 15;
     int32 organization_id = 16;
-    repeated MerchantPartners merchant_partners = 17;
-    repeated MerchantDirector merchant_director = 18;
-    MerchantPartners merchant_partners_aggregate = 19;
-    MerchantPartnersConnection merchant_partners_connection = 20;
-    MerchantDirector merchant_director_aggregate = 21;
-    MerchantDirectorConnection merchant_director_connection = 22;
-    int32 id_count = 23;
-    int32 id_max = 24;
-    int32 id_min = 25;
-    int32 name_count = 26;
-    string name_max = 27;
-    string name_min = 28;
-    int32 organization_id_count = 29;
-    int32 organization_id_sum = 30;
-    int32 organization_id_avg = 31;
-    int32 organization_id_max = 32;
-    int32 organization_id_min = 33;
+    repeated MerchantUserRelation merchant_user_relation = 17;
+    repeated MerchantOrganizationRelation merchant_organization_relation = 18;
+    repeated MerchantDirector merchant_director = 19;
+    MerchantUserRelation merchant_user_relation_aggregate = 20;
+    MerchantUserRelationConnection merchant_user_relation_connection = 21;
+    MerchantOrganizationRelation merchant_organization_relation_aggregate = 22;
+    MerchantOrganizationRelationConnection merchant_organization_relation_connection = 23;
+    MerchantDirector merchant_director_aggregate = 24;
+    MerchantDirectorConnection merchant_director_connection = 25;
+    int32 id_count = 26;
+    int32 id_max = 27;
+    int32 id_min = 28;
+    int32 name_count = 29;
+    string name_max = 30;
+    string name_min = 31;
+    int32 organization_id_count = 32;
+    int32 organization_id_sum = 33;
+    int32 organization_id_avg = 34;
+    int32 organization_id_max = 35;
+    int32 organization_id_min = 36;
 }
 message GoodOrderRelation {
     string id = 1;
@@ -210,11 +213,38 @@ message GoodMerchantRelation {
     string merchant_ref_max = 22;
     string merchant_ref_min = 23;
 }
-message MerchantPartners {
+message MerchantUserRelation {
     string id = 1;
-    string merchant_id = 2;
+    string merchant_ref = 2;
     Merchant merchant = 3;
-    int32 organization_id = 4;
+    int32 user_ref = 4;
+    io.graphoenix.showcase.user.User user = 5;
+    bool is_deprecated = 6;
+    int32 version = 7;
+    int32 realm_id = 8;
+    string create_user_id = 9;
+    google.protobuf.Timestamp create_time = 10;
+    string update_user_id = 11;
+    google.protobuf.Timestamp update_time = 12;
+    string create_group_id = 13;
+    string intro_typename = 14;
+    int32 id_count = 15;
+    int32 id_max = 16;
+    int32 id_min = 17;
+    int32 merchant_ref_count = 18;
+    string merchant_ref_max = 19;
+    string merchant_ref_min = 20;
+    int32 user_ref_count = 21;
+    int32 user_ref_sum = 22;
+    int32 user_ref_avg = 23;
+    int32 user_ref_max = 24;
+    int32 user_ref_min = 25;
+}
+message MerchantOrganizationRelation {
+    string id = 1;
+    string merchant_ref = 2;
+    Merchant merchant = 3;
+    int32 organization_ref = 4;
     io.graphoenix.showcase.user.Organization organization = 5;
     bool is_deprecated = 6;
     int32 version = 7;
@@ -228,14 +258,14 @@ message MerchantPartners {
     int32 id_count = 15;
     int32 id_max = 16;
     int32 id_min = 17;
-    int32 merchant_id_count = 18;
-    string merchant_id_max = 19;
-    string merchant_id_min = 20;
-    int32 organization_id_count = 21;
-    int32 organization_id_sum = 22;
-    int32 organization_id_avg = 23;
-    int32 organization_id_max = 24;
-    int32 organization_id_min = 25;
+    int32 merchant_ref_count = 18;
+    string merchant_ref_max = 19;
+    string merchant_ref_min = 20;
+    int32 organization_ref_count = 21;
+    int32 organization_ref_sum = 22;
+    int32 organization_ref_avg = 23;
+    int32 organization_ref_max = 24;
+    int32 organization_ref_min = 25;
 }
 message MerchantDirector {
     string id = 1;
@@ -327,13 +357,22 @@ message GoodMerchantRelationEdge {
     GoodMerchantRelation node = 1;
     string cursor = 2;
 }
-message MerchantPartnersConnection {
+message MerchantUserRelationConnection {
     int32 total_count = 1;
     io.graphoenix.core.PageInfo page_info = 2;
-    repeated MerchantPartnersEdge edges = 3;
+    repeated MerchantUserRelationEdge edges = 3;
 }
-message MerchantPartnersEdge {
-    MerchantPartners node = 1;
+message MerchantUserRelationEdge {
+    MerchantUserRelation node = 1;
+    string cursor = 2;
+}
+message MerchantOrganizationRelationConnection {
+    int32 total_count = 1;
+    io.graphoenix.core.PageInfo page_info = 2;
+    repeated MerchantOrganizationRelationEdge edges = 3;
+}
+message MerchantOrganizationRelationEdge {
+    MerchantOrganizationRelation node = 1;
     string cursor = 2;
 }
 message MerchantDirectorConnection {

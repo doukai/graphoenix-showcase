@@ -50,7 +50,10 @@ public @interface MerchantSubscriptionArguments {
 
   IntExpression1 organizationId() default @IntExpression1;
 
-  MerchantPartnersExpression1 merchantPartners() default @MerchantPartnersExpression1;
+  MerchantUserRelationExpression1 merchantUserRelation() default @MerchantUserRelationExpression1;
+
+  MerchantOrganizationRelationExpression1 merchantOrganizationRelation(
+      ) default @MerchantOrganizationRelationExpression1;
 
   MerchantDirectorExpression1 merchantDirector() default @MerchantDirectorExpression1;
 
@@ -94,7 +97,9 @@ public @interface MerchantSubscriptionArguments {
 
   String $organizationId() default "";
 
-  String $merchantPartners() default "";
+  String $merchantUserRelation() default "";
+
+  String $merchantOrganizationRelation() default "";
 
   String $merchantDirector() default "";
 

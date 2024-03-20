@@ -47,7 +47,9 @@ public @interface MerchantInput1 {
 
   int organizationId() default 0;
 
-  MerchantPartnersInput2[] merchantPartners() default {};
+  MerchantUserRelationInput2[] merchantUserRelation() default {};
+
+  MerchantOrganizationRelationInput2[] merchantOrganizationRelation() default {};
 
   MerchantDirectorInput2[] merchantDirector() default {};
 
@@ -85,7 +87,9 @@ public @interface MerchantInput1 {
 
   String $organizationId() default "";
 
-  String $merchantPartners() default "";
+  String $merchantUserRelation() default "";
+
+  String $merchantOrganizationRelation() default "";
 
   String $merchantDirector() default "";
 

@@ -46,10 +46,17 @@ public @interface Mutation {
   GoodMerchantRelationListMutationArguments goodMerchantRelationList(
       ) default @GoodMerchantRelationListMutationArguments;
 
-  MerchantPartnersMutationArguments merchantPartners() default @MerchantPartnersMutationArguments;
+  MerchantUserRelationMutationArguments merchantUserRelation(
+      ) default @MerchantUserRelationMutationArguments;
 
-  MerchantPartnersListMutationArguments merchantPartnersList(
-      ) default @MerchantPartnersListMutationArguments;
+  MerchantUserRelationListMutationArguments merchantUserRelationList(
+      ) default @MerchantUserRelationListMutationArguments;
+
+  MerchantOrganizationRelationMutationArguments merchantOrganizationRelation(
+      ) default @MerchantOrganizationRelationMutationArguments;
+
+  MerchantOrganizationRelationListMutationArguments merchantOrganizationRelationList(
+      ) default @MerchantOrganizationRelationListMutationArguments;
 
   MerchantDirectorMutationArguments merchantDirector() default @MerchantDirectorMutationArguments;
 

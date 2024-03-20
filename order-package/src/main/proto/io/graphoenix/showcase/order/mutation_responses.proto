@@ -54,11 +54,17 @@ message MutationGoodMerchantRelationResponse {
 message MutationGoodMerchantRelationListResponse {
     repeated GoodMerchantRelation good_merchant_relation_list = 1;
 }
-message MutationMerchantPartnersResponse {
-    MerchantPartners merchant_partners = 1;
+message MutationMerchantUserRelationResponse {
+    MerchantUserRelation merchant_user_relation = 1;
 }
-message MutationMerchantPartnersListResponse {
-    repeated MerchantPartners merchant_partners_list = 1;
+message MutationMerchantUserRelationListResponse {
+    repeated MerchantUserRelation merchant_user_relation_list = 1;
+}
+message MutationMerchantOrganizationRelationResponse {
+    MerchantOrganizationRelation merchant_organization_relation = 1;
+}
+message MutationMerchantOrganizationRelationListResponse {
+    repeated MerchantOrganizationRelation merchant_organization_relation_list = 1;
 }
 message MutationMerchantDirectorResponse {
     MerchantDirector merchant_director = 1;

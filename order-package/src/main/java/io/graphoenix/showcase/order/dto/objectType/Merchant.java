@@ -54,13 +54,19 @@ public class Merchant implements Meta {
 
   private Integer organizationId;
 
-  private Collection<MerchantPartners> merchantPartners;
+  private Collection<MerchantUserRelation> merchantUserRelation;
+
+  private Collection<MerchantOrganizationRelation> merchantOrganizationRelation;
 
   private Collection<MerchantDirector> merchantDirector;
 
-  private MerchantPartners merchantPartnersAggregate;
+  private MerchantUserRelation merchantUserRelationAggregate;
 
-  private MerchantPartnersConnection merchantPartnersConnection;
+  private MerchantUserRelationConnection merchantUserRelationConnection;
+
+  private MerchantOrganizationRelation merchantOrganizationRelationAggregate;
+
+  private MerchantOrganizationRelationConnection merchantOrganizationRelationConnection;
 
   private MerchantDirector merchantDirectorAggregate;
 
@@ -232,12 +238,21 @@ public class Merchant implements Meta {
     this.organizationId = organizationId;
   }
 
-  public Collection<MerchantPartners> getMerchantPartners() {
-    return this.merchantPartners;
+  public Collection<MerchantUserRelation> getMerchantUserRelation() {
+    return this.merchantUserRelation;
   }
 
-  public void setMerchantPartners(Collection<MerchantPartners> merchantPartners) {
-    this.merchantPartners = merchantPartners;
+  public void setMerchantUserRelation(Collection<MerchantUserRelation> merchantUserRelation) {
+    this.merchantUserRelation = merchantUserRelation;
+  }
+
+  public Collection<MerchantOrganizationRelation> getMerchantOrganizationRelation() {
+    return this.merchantOrganizationRelation;
+  }
+
+  public void setMerchantOrganizationRelation(
+      Collection<MerchantOrganizationRelation> merchantOrganizationRelation) {
+    this.merchantOrganizationRelation = merchantOrganizationRelation;
   }
 
   public Collection<MerchantDirector> getMerchantDirector() {
@@ -248,20 +263,39 @@ public class Merchant implements Meta {
     this.merchantDirector = merchantDirector;
   }
 
-  public MerchantPartners getMerchantPartnersAggregate() {
-    return this.merchantPartnersAggregate;
+  public MerchantUserRelation getMerchantUserRelationAggregate() {
+    return this.merchantUserRelationAggregate;
   }
 
-  public void setMerchantPartnersAggregate(MerchantPartners merchantPartnersAggregate) {
-    this.merchantPartnersAggregate = merchantPartnersAggregate;
+  public void setMerchantUserRelationAggregate(MerchantUserRelation merchantUserRelationAggregate) {
+    this.merchantUserRelationAggregate = merchantUserRelationAggregate;
   }
 
-  public MerchantPartnersConnection getMerchantPartnersConnection() {
-    return this.merchantPartnersConnection;
+  public MerchantUserRelationConnection getMerchantUserRelationConnection() {
+    return this.merchantUserRelationConnection;
   }
 
-  public void setMerchantPartnersConnection(MerchantPartnersConnection merchantPartnersConnection) {
-    this.merchantPartnersConnection = merchantPartnersConnection;
+  public void setMerchantUserRelationConnection(
+      MerchantUserRelationConnection merchantUserRelationConnection) {
+    this.merchantUserRelationConnection = merchantUserRelationConnection;
+  }
+
+  public MerchantOrganizationRelation getMerchantOrganizationRelationAggregate() {
+    return this.merchantOrganizationRelationAggregate;
+  }
+
+  public void setMerchantOrganizationRelationAggregate(
+      MerchantOrganizationRelation merchantOrganizationRelationAggregate) {
+    this.merchantOrganizationRelationAggregate = merchantOrganizationRelationAggregate;
+  }
+
+  public MerchantOrganizationRelationConnection getMerchantOrganizationRelationConnection() {
+    return this.merchantOrganizationRelationConnection;
+  }
+
+  public void setMerchantOrganizationRelationConnection(
+      MerchantOrganizationRelationConnection merchantOrganizationRelationConnection) {
+    this.merchantOrganizationRelationConnection = merchantOrganizationRelationConnection;
   }
 
   public MerchantDirector getMerchantDirectorAggregate() {

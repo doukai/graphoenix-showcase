@@ -66,14 +66,23 @@ public @interface Subscription {
   GoodMerchantRelationConnectionSubscriptionArguments goodMerchantRelationConnection(
       ) default @GoodMerchantRelationConnectionSubscriptionArguments;
 
-  MerchantPartnersSubscriptionArguments merchantPartners(
-      ) default @MerchantPartnersSubscriptionArguments;
+  MerchantUserRelationSubscriptionArguments merchantUserRelation(
+      ) default @MerchantUserRelationSubscriptionArguments;
 
-  MerchantPartnersListSubscriptionArguments merchantPartnersList(
-      ) default @MerchantPartnersListSubscriptionArguments;
+  MerchantUserRelationListSubscriptionArguments merchantUserRelationList(
+      ) default @MerchantUserRelationListSubscriptionArguments;
 
-  MerchantPartnersConnectionSubscriptionArguments merchantPartnersConnection(
-      ) default @MerchantPartnersConnectionSubscriptionArguments;
+  MerchantUserRelationConnectionSubscriptionArguments merchantUserRelationConnection(
+      ) default @MerchantUserRelationConnectionSubscriptionArguments;
+
+  MerchantOrganizationRelationSubscriptionArguments merchantOrganizationRelation(
+      ) default @MerchantOrganizationRelationSubscriptionArguments;
+
+  MerchantOrganizationRelationListSubscriptionArguments merchantOrganizationRelationList(
+      ) default @MerchantOrganizationRelationListSubscriptionArguments;
+
+  MerchantOrganizationRelationConnectionSubscriptionArguments merchantOrganizationRelationConnection(
+      ) default @MerchantOrganizationRelationConnectionSubscriptionArguments;
 
   MerchantDirectorSubscriptionArguments merchantDirector(
       ) default @MerchantDirectorSubscriptionArguments;

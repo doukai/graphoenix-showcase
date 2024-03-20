@@ -62,13 +62,23 @@ public @interface Query {
   GoodMerchantRelationConnectionQueryArguments goodMerchantRelationConnection(
       ) default @GoodMerchantRelationConnectionQueryArguments;
 
-  MerchantPartnersQueryArguments merchantPartners() default @MerchantPartnersQueryArguments;
+  MerchantUserRelationQueryArguments merchantUserRelation(
+      ) default @MerchantUserRelationQueryArguments;
 
-  MerchantPartnersListQueryArguments merchantPartnersList(
-      ) default @MerchantPartnersListQueryArguments;
+  MerchantUserRelationListQueryArguments merchantUserRelationList(
+      ) default @MerchantUserRelationListQueryArguments;
 
-  MerchantPartnersConnectionQueryArguments merchantPartnersConnection(
-      ) default @MerchantPartnersConnectionQueryArguments;
+  MerchantUserRelationConnectionQueryArguments merchantUserRelationConnection(
+      ) default @MerchantUserRelationConnectionQueryArguments;
+
+  MerchantOrganizationRelationQueryArguments merchantOrganizationRelation(
+      ) default @MerchantOrganizationRelationQueryArguments;
+
+  MerchantOrganizationRelationListQueryArguments merchantOrganizationRelationList(
+      ) default @MerchantOrganizationRelationListQueryArguments;
+
+  MerchantOrganizationRelationConnectionQueryArguments merchantOrganizationRelationConnection(
+      ) default @MerchantOrganizationRelationConnectionQueryArguments;
 
   MerchantDirectorQueryArguments merchantDirector() default @MerchantDirectorQueryArguments;
 
