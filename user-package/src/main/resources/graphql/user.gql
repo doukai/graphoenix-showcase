@@ -1,6 +1,6 @@
 type User {
     id: ID
-    login: String!
+    login: String! @options(unique: true)
     password: String!
     name: String!
     age: Int
@@ -27,7 +27,7 @@ enum Sex {
 
 type Role {
     id: ID
-    name: String!
+    name: String! @mutationBefore(field:"appName(role:{name:\\aaa})")
     roleType: [RoleType]!
     users: [User!]
 }
