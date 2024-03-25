@@ -41,7 +41,6 @@ service QueryService {
     rpc RoleRoleTypeRelationList (QueryRoleRoleTypeRelationListRequest) returns (QueryRoleRoleTypeRelationListResponse);
     rpc RoleRoleTypeRelationConnection (QueryRoleRoleTypeRelationConnectionRequest) returns (QueryRoleRoleTypeRelationConnectionResponse);
     rpc CurrentTime (QueryCurrentTimeRequest) returns (QueryCurrentTimeResponse);
-    rpc AppName (QueryAppNameRequest) returns (QueryAppNameResponse);
     rpc AppName2 (QueryAppName2Request) returns (QueryAppName2Response);
     rpc LoginName (QueryLoginNameRequest) returns (QueryLoginNameResponse);
 }

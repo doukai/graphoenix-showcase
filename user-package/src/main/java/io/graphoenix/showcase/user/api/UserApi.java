@@ -6,6 +6,7 @@ import io.nozdormu.spi.async.Async;
 import io.nozdormu.spi.async.Asyncable;
 import jakarta.enterprise.context.ApplicationScoped;
 import org.eclipse.microprofile.graphql.GraphQLApi;
+import org.eclipse.microprofile.graphql.Mutation;
 import org.eclipse.microprofile.graphql.Query;
 import org.eclipse.microprofile.graphql.Source;
 import reactor.core.publisher.Flux;
@@ -40,7 +41,7 @@ public class UserApi implements Asyncable {
         return LocalDateTime.now();
     }
 
-    @Query
+    @Mutation
     public Mono<String> appName(Role role) {
         return Mono.just("Graphoenix");
     }

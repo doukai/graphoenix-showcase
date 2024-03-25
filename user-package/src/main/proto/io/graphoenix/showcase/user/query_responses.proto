@@ -97,9 +97,6 @@ message QueryRoleRoleTypeRelationConnectionResponse {
 message QueryCurrentTimeResponse {
     google.type.DateTime current_time = 1;
 }
-message QueryAppNameResponse {
-    string app_name = 1;
-}
 message QueryAppName2Response {
     string app_name2 = 1;
 }

@@ -9,26 +9,16 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import org.eclipse.microprofile.graphql.Name;
 
 @Generated("io.graphoenix.java.builder.TypeSpecBuilder_Proxy")
 @Documented
 @Retention(RetentionPolicy.SOURCE)
-@Directive("options")
+@Directive("mutationBefore")
 @Target({ElementType.FIELD})
-public @interface Options {
-  String type() default "";
+public @interface MutationBefore {
+  Protocol protocol() default Protocol.LOCAL;
 
-  @Name("default")
-  String _default() default "";
+  String field() default "";
 
-  int length() default 0;
-
-  int decimals() default 0;
-
-  boolean unique() default false;
-
-  boolean autoIncrement() default false;
-
-  Protocol protocol() default Protocol.GRPC;
+  String target() default "";
 }

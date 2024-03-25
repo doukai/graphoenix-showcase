@@ -60,18 +60,6 @@ public class Merchant implements Meta {
 
   private Collection<MerchantDirector> merchantDirector;
 
-  private MerchantUserRelation merchantUserRelationAggregate;
-
-  private MerchantUserRelationConnection merchantUserRelationConnection;
-
-  private MerchantOrganizationRelation merchantOrganizationRelationAggregate;
-
-  private MerchantOrganizationRelationConnection merchantOrganizationRelationConnection;
-
-  private MerchantDirector merchantDirectorAggregate;
-
-  private MerchantDirectorConnection merchantDirectorConnection;
-
   private Integer idCount;
 
   private Integer idMax;
@@ -261,57 +249,6 @@ public class Merchant implements Meta {
 
   public void setMerchantDirector(Collection<MerchantDirector> merchantDirector) {
     this.merchantDirector = merchantDirector;
-  }
-
-  public MerchantUserRelation getMerchantUserRelationAggregate() {
-    return this.merchantUserRelationAggregate;
-  }
-
-  public void setMerchantUserRelationAggregate(MerchantUserRelation merchantUserRelationAggregate) {
-    this.merchantUserRelationAggregate = merchantUserRelationAggregate;
-  }
-
-  public MerchantUserRelationConnection getMerchantUserRelationConnection() {
-    return this.merchantUserRelationConnection;
-  }
-
-  public void setMerchantUserRelationConnection(
-      MerchantUserRelationConnection merchantUserRelationConnection) {
-    this.merchantUserRelationConnection = merchantUserRelationConnection;
-  }
-
-  public MerchantOrganizationRelation getMerchantOrganizationRelationAggregate() {
-    return this.merchantOrganizationRelationAggregate;
-  }
-
-  public void setMerchantOrganizationRelationAggregate(
-      MerchantOrganizationRelation merchantOrganizationRelationAggregate) {
-    this.merchantOrganizationRelationAggregate = merchantOrganizationRelationAggregate;
-  }
-
-  public MerchantOrganizationRelationConnection getMerchantOrganizationRelationConnection() {
-    return this.merchantOrganizationRelationConnection;
-  }
-
-  public void setMerchantOrganizationRelationConnection(
-      MerchantOrganizationRelationConnection merchantOrganizationRelationConnection) {
-    this.merchantOrganizationRelationConnection = merchantOrganizationRelationConnection;
-  }
-
-  public MerchantDirector getMerchantDirectorAggregate() {
-    return this.merchantDirectorAggregate;
-  }
-
-  public void setMerchantDirectorAggregate(MerchantDirector merchantDirectorAggregate) {
-    this.merchantDirectorAggregate = merchantDirectorAggregate;
-  }
-
-  public MerchantDirectorConnection getMerchantDirectorConnection() {
-    return this.merchantDirectorConnection;
-  }
-
-  public void setMerchantDirectorConnection(MerchantDirectorConnection merchantDirectorConnection) {
-    this.merchantDirectorConnection = merchantDirectorConnection;
   }
 
   public Integer getIdCount() {

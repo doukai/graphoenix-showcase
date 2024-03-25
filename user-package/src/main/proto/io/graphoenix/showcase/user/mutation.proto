@@ -31,4 +31,5 @@ service MutationService {
     rpc UserUserProfileRelationList (MutationUserUserProfileRelationListRequest) returns (MutationUserUserProfileRelationListResponse);
     rpc RoleRoleTypeRelation (MutationRoleRoleTypeRelationRequest) returns (MutationRoleRoleTypeRelationResponse);
     rpc RoleRoleTypeRelationList (MutationRoleRoleTypeRelationListRequest) returns (MutationRoleRoleTypeRelationListResponse);
+    rpc AppName (MutationAppNameRequest) returns (MutationAppNameResponse);
 }

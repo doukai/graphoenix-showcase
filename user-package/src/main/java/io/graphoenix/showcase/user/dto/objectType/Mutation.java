@@ -2,6 +2,7 @@ package io.graphoenix.showcase.user.dto.objectType;
 
 import com.dslplatform.json.CompiledJson;
 import jakarta.annotation.Generated;
+import java.lang.String;
 import java.util.Collection;
 import org.eclipse.microprofile.graphql.Type;
 
@@ -44,6 +45,8 @@ public class Mutation {
   private RoleRoleTypeRelation roleRoleTypeRelation;
 
   private Collection<RoleRoleTypeRelation> roleRoleTypeRelationList;
+
+  private String appName;
 
   public User getUser() {
     return this.user;
@@ -191,5 +194,13 @@ public class Mutation {
   public void setRoleRoleTypeRelationList(
       Collection<RoleRoleTypeRelation> roleRoleTypeRelationList) {
     this.roleRoleTypeRelationList = roleRoleTypeRelationList;
+  }
+
+  public String getAppName() {
+    return this.appName;
+  }
+
+  public void setAppName(String appName) {
+    this.appName = appName;
   }
 }

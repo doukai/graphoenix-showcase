@@ -2188,9 +2188,9 @@ message RoleRoleTypeRelationConnectionSubscriptionArguments {
 message Query_currentTime_Arguments {
     string local = 1;
 }
-message Query_appName_Arguments {
+message Query_appName2_Arguments {
     RoleInput role = 1;
 }
-message Query_appName2_Arguments {
+message Mutation_appName_Arguments {
     RoleInput role = 1;
 }

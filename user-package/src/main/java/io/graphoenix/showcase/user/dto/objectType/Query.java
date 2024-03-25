@@ -67,8 +67,6 @@ public class Query {
 
   private LocalDateTime currentTime;
 
-  private String appName;
-
   private String appName2;
 
   private Collection<String> loginName;
@@ -303,14 +301,6 @@ public class Query {
 
   public void setCurrentTime(LocalDateTime currentTime) {
     this.currentTime = currentTime;
-  }
-
-  public String getAppName() {
-    return this.appName;
-  }
-
-  public void setAppName(String appName) {
-    this.appName = appName;
   }
 
   public String getAppName2() {

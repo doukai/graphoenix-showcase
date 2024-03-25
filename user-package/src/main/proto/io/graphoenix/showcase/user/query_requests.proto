@@ -732,11 +732,6 @@ message QueryCurrentTimeRequest {
     optional string arguments = 2;
     string local = 3;
 }
-message QueryAppNameRequest {
-    optional string selection_set = 1;
-    optional string arguments = 2;
-    RoleInput role = 3;
-}
 message QueryAppName2Request {
     optional string selection_set = 1;
     optional string arguments = 2;

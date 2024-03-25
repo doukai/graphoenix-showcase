@@ -382,3 +382,8 @@ message MutationRoleRoleTypeRelationListRequest {
     repeated RoleRoleTypeRelationInput list = 16;
     RoleRoleTypeRelationExpression where = 17;
 }
+message MutationAppNameRequest {
+    optional string selection_set = 1;
+    optional string arguments = 2;
+    RoleInput role = 3;
+}

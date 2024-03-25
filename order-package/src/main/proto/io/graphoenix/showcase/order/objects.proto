@@ -120,23 +120,17 @@ message Merchant {
     repeated MerchantUserRelation merchant_user_relation = 17;
     repeated MerchantOrganizationRelation merchant_organization_relation = 18;
     repeated MerchantDirector merchant_director = 19;
-    MerchantUserRelation merchant_user_relation_aggregate = 20;
-    MerchantUserRelationConnection merchant_user_relation_connection = 21;
-    MerchantOrganizationRelation merchant_organization_relation_aggregate = 22;
-    MerchantOrganizationRelationConnection merchant_organization_relation_connection = 23;
-    MerchantDirector merchant_director_aggregate = 24;
-    MerchantDirectorConnection merchant_director_connection = 25;
-    int32 id_count = 26;
-    int32 id_max = 27;
-    int32 id_min = 28;
-    int32 name_count = 29;
-    string name_max = 30;
-    string name_min = 31;
-    int32 organization_id_count = 32;
-    int32 organization_id_sum = 33;
-    int32 organization_id_avg = 34;
-    int32 organization_id_max = 35;
-    int32 organization_id_min = 36;
+    int32 id_count = 20;
+    int32 id_max = 21;
+    int32 id_min = 22;
+    int32 name_count = 23;
+    string name_max = 24;
+    string name_min = 25;
+    int32 organization_id_count = 26;
+    int32 organization_id_sum = 27;
+    int32 organization_id_avg = 28;
+    int32 organization_id_max = 29;
+    int32 organization_id_min = 30;
 }
 message GoodOrderRelation {
     string id = 1;
