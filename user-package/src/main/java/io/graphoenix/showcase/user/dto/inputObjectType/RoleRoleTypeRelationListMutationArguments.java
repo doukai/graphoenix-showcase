@@ -21,7 +21,7 @@ public class RoleRoleTypeRelationListMutationArguments implements MetaInput {
 
   private String roleRef;
 
-  private RoleInput role;
+  private RoleInput roleRefType;
 
   private RoleType roleTypeRef;
 
@@ -64,12 +64,12 @@ public class RoleRoleTypeRelationListMutationArguments implements MetaInput {
     this.roleRef = roleRef;
   }
 
-  public RoleInput getRole() {
-    return this.role;
+  public RoleInput getRoleRefType() {
+    return this.roleRefType;
   }
 
-  public void setRole(RoleInput role) {
-    this.role = role;
+  public void setRoleRefType(RoleInput roleRefType) {
+    this.roleRefType = roleRefType;
   }
 
   public RoleType getRoleTypeRef() {

@@ -20,11 +20,11 @@ public @interface GoodProductRelationExpression1 {
 
   StringExpression2 goodRef() default @StringExpression2;
 
-  GoodExpression2 good() default @GoodExpression2;
+  GoodExpression2 goodRefType() default @GoodExpression2;
 
   StringExpression2 productRef() default @StringExpression2;
 
-  ProductExpression2 product() default @ProductExpression2;
+  ProductExpression2 productRefType() default @ProductExpression2;
 
   boolean includeDeprecated() default false;
 
@@ -54,11 +54,11 @@ public @interface GoodProductRelationExpression1 {
 
   String $goodRef() default "";
 
-  String $good() default "";
+  String $goodRefType() default "";
 
   String $productRef() default "";
 
-  String $product() default "";
+  String $productRefType() default "";
 
   String $includeDeprecated() default "";
 

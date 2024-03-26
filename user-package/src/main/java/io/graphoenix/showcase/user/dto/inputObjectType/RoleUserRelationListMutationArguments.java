@@ -20,11 +20,11 @@ public class RoleUserRelationListMutationArguments implements MetaInput {
 
   private String userRef;
 
-  private UserInput user;
+  private UserInput userRefType;
 
   private String roleRef;
 
-  private RoleInput role;
+  private RoleInput roleRefType;
 
   private Boolean isDeprecated;
 
@@ -65,12 +65,12 @@ public class RoleUserRelationListMutationArguments implements MetaInput {
     this.userRef = userRef;
   }
 
-  public UserInput getUser() {
-    return this.user;
+  public UserInput getUserRefType() {
+    return this.userRefType;
   }
 
-  public void setUser(UserInput user) {
-    this.user = user;
+  public void setUserRefType(UserInput userRefType) {
+    this.userRefType = userRefType;
   }
 
   public String getRoleRef() {
@@ -81,12 +81,12 @@ public class RoleUserRelationListMutationArguments implements MetaInput {
     this.roleRef = roleRef;
   }
 
-  public RoleInput getRole() {
-    return this.role;
+  public RoleInput getRoleRefType() {
+    return this.roleRefType;
   }
 
-  public void setRole(RoleInput role) {
-    this.role = role;
+  public void setRoleRefType(RoleInput roleRefType) {
+    this.roleRefType = roleRefType;
   }
 
   public Boolean getIsDeprecated() {

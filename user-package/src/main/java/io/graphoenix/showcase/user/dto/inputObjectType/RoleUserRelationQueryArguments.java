@@ -21,11 +21,11 @@ public class RoleUserRelationQueryArguments implements MetaExpression {
 
   private StringExpression userRef;
 
-  private UserExpression user;
+  private UserExpression userRefType;
 
   private StringExpression roleRef;
 
-  private RoleExpression role;
+  private RoleExpression roleRefType;
 
   @DefaultValue("false")
   private Boolean includeDeprecated;
@@ -72,12 +72,12 @@ public class RoleUserRelationQueryArguments implements MetaExpression {
     this.userRef = userRef;
   }
 
-  public UserExpression getUser() {
-    return this.user;
+  public UserExpression getUserRefType() {
+    return this.userRefType;
   }
 
-  public void setUser(UserExpression user) {
-    this.user = user;
+  public void setUserRefType(UserExpression userRefType) {
+    this.userRefType = userRefType;
   }
 
   public StringExpression getRoleRef() {
@@ -88,12 +88,12 @@ public class RoleUserRelationQueryArguments implements MetaExpression {
     this.roleRef = roleRef;
   }
 
-  public RoleExpression getRole() {
-    return this.role;
+  public RoleExpression getRoleRefType() {
+    return this.roleRefType;
   }
 
-  public void setRole(RoleExpression role) {
-    this.role = role;
+  public void setRoleRefType(RoleExpression roleRefType) {
+    this.roleRefType = roleRefType;
   }
 
   public Boolean getIncludeDeprecated() {

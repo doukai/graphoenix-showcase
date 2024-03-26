@@ -21,11 +21,11 @@ public class MerchantDirector implements Meta {
 
   private String merchantId;
 
-  private Merchant merchant;
+  private Merchant merchantIdType;
 
   private Integer userId;
 
-  private User user;
+  private User userIdType;
 
   private Boolean isDeprecated;
 
@@ -83,12 +83,12 @@ public class MerchantDirector implements Meta {
     this.merchantId = merchantId;
   }
 
-  public Merchant getMerchant() {
-    return this.merchant;
+  public Merchant getMerchantIdType() {
+    return this.merchantIdType;
   }
 
-  public void setMerchant(Merchant merchant) {
-    this.merchant = merchant;
+  public void setMerchantIdType(Merchant merchantIdType) {
+    this.merchantIdType = merchantIdType;
   }
 
   public Integer getUserId() {
@@ -99,12 +99,12 @@ public class MerchantDirector implements Meta {
     this.userId = userId;
   }
 
-  public User getUser() {
-    return this.user;
+  public User getUserIdType() {
+    return this.userIdType;
   }
 
-  public void setUser(User user) {
-    this.user = user;
+  public void setUserIdType(User userIdType) {
+    this.userIdType = userIdType;
   }
 
   @Override

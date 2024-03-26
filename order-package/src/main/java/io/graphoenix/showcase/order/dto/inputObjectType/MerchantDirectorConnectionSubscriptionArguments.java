@@ -23,11 +23,11 @@ public class MerchantDirectorConnectionSubscriptionArguments implements MetaExpr
 
   private StringExpression merchantId;
 
-  private MerchantExpression merchant;
+  private MerchantExpression merchantIdType;
 
   private IntExpression userId;
 
-  private UserExpression user;
+  private UserExpression userIdType;
 
   @DefaultValue("false")
   private Boolean includeDeprecated;
@@ -86,12 +86,12 @@ public class MerchantDirectorConnectionSubscriptionArguments implements MetaExpr
     this.merchantId = merchantId;
   }
 
-  public MerchantExpression getMerchant() {
-    return this.merchant;
+  public MerchantExpression getMerchantIdType() {
+    return this.merchantIdType;
   }
 
-  public void setMerchant(MerchantExpression merchant) {
-    this.merchant = merchant;
+  public void setMerchantIdType(MerchantExpression merchantIdType) {
+    this.merchantIdType = merchantIdType;
   }
 
   public IntExpression getUserId() {
@@ -102,12 +102,12 @@ public class MerchantDirectorConnectionSubscriptionArguments implements MetaExpr
     this.userId = userId;
   }
 
-  public UserExpression getUser() {
-    return this.user;
+  public UserExpression getUserIdType() {
+    return this.userIdType;
   }
 
-  public void setUser(UserExpression user) {
-    this.user = user;
+  public void setUserIdType(UserExpression userIdType) {
+    this.userIdType = userIdType;
   }
 
   public Boolean getIncludeDeprecated() {

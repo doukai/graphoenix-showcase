@@ -19,11 +19,11 @@ public class OrganizationUserRelationMutationArguments implements MetaInput {
 
   private String userRef;
 
-  private UserInput user;
+  private UserInput userRefType;
 
   private String organizationRef;
 
-  private OrganizationInput organization;
+  private OrganizationInput organizationRefType;
 
   private Boolean isDeprecated;
 
@@ -62,12 +62,12 @@ public class OrganizationUserRelationMutationArguments implements MetaInput {
     this.userRef = userRef;
   }
 
-  public UserInput getUser() {
-    return this.user;
+  public UserInput getUserRefType() {
+    return this.userRefType;
   }
 
-  public void setUser(UserInput user) {
-    this.user = user;
+  public void setUserRefType(UserInput userRefType) {
+    this.userRefType = userRefType;
   }
 
   public String getOrganizationRef() {
@@ -78,12 +78,12 @@ public class OrganizationUserRelationMutationArguments implements MetaInput {
     this.organizationRef = organizationRef;
   }
 
-  public OrganizationInput getOrganization() {
-    return this.organization;
+  public OrganizationInput getOrganizationRefType() {
+    return this.organizationRefType;
   }
 
-  public void setOrganization(OrganizationInput organization) {
-    this.organization = organization;
+  public void setOrganizationRefType(OrganizationInput organizationRefType) {
+    this.organizationRefType = organizationRefType;
   }
 
   public Boolean getIsDeprecated() {

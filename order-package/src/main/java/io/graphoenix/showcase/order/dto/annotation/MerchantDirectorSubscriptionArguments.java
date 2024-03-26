@@ -21,11 +21,11 @@ public @interface MerchantDirectorSubscriptionArguments {
 
   StringExpression1 merchantId() default @StringExpression1;
 
-  MerchantExpression1 merchant() default @MerchantExpression1;
+  MerchantExpression1 merchantIdType() default @MerchantExpression1;
 
   IntExpression1 userId() default @IntExpression1;
 
-  UserExpression1 user() default @UserExpression1;
+  UserExpression1 userIdType() default @UserExpression1;
 
   boolean includeDeprecated() default false;
 
@@ -57,11 +57,11 @@ public @interface MerchantDirectorSubscriptionArguments {
 
   String $merchantId() default "";
 
-  String $merchant() default "";
+  String $merchantIdType() default "";
 
   String $userId() default "";
 
-  String $user() default "";
+  String $userIdType() default "";
 
   String $includeDeprecated() default "";
 

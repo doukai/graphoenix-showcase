@@ -17,11 +17,11 @@ public @interface GoodOrderRelationListMutationArguments {
 
   String orderRef() default "";
 
-  OrderInput1 order() default @OrderInput1;
+  OrderInput1 orderRefType() default @OrderInput1;
 
   String goodRef() default "";
 
-  GoodInput1 good() default @GoodInput1;
+  GoodInput1 goodRefType() default @GoodInput1;
 
   boolean isDeprecated() default false;
 
@@ -49,11 +49,11 @@ public @interface GoodOrderRelationListMutationArguments {
 
   String $orderRef() default "";
 
-  String $order() default "";
+  String $orderRefType() default "";
 
   String $goodRef() default "";
 
-  String $good() default "";
+  String $goodRefType() default "";
 
   String $isDeprecated() default "";
 

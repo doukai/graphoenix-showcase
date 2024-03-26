@@ -21,11 +21,11 @@ public class MerchantOrganizationRelationListMutationArguments implements MetaIn
 
   private String merchantRef;
 
-  private MerchantInput merchant;
+  private MerchantInput merchantRefType;
 
   private Integer organizationRef;
 
-  private OrganizationInput organization;
+  private OrganizationInput organizationRefType;
 
   private Boolean isDeprecated;
 
@@ -66,12 +66,12 @@ public class MerchantOrganizationRelationListMutationArguments implements MetaIn
     this.merchantRef = merchantRef;
   }
 
-  public MerchantInput getMerchant() {
-    return this.merchant;
+  public MerchantInput getMerchantRefType() {
+    return this.merchantRefType;
   }
 
-  public void setMerchant(MerchantInput merchant) {
-    this.merchant = merchant;
+  public void setMerchantRefType(MerchantInput merchantRefType) {
+    this.merchantRefType = merchantRefType;
   }
 
   public Integer getOrganizationRef() {
@@ -82,12 +82,12 @@ public class MerchantOrganizationRelationListMutationArguments implements MetaIn
     this.organizationRef = organizationRef;
   }
 
-  public OrganizationInput getOrganization() {
-    return this.organization;
+  public OrganizationInput getOrganizationRefType() {
+    return this.organizationRefType;
   }
 
-  public void setOrganization(OrganizationInput organization) {
-    this.organization = organization;
+  public void setOrganizationRefType(OrganizationInput organizationRefType) {
+    this.organizationRefType = organizationRefType;
   }
 
   public Boolean getIsDeprecated() {

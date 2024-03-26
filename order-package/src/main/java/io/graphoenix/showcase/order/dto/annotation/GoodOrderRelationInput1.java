@@ -17,11 +17,11 @@ public @interface GoodOrderRelationInput1 {
 
   String orderRef() default "";
 
-  OrderInput2 order() default @OrderInput2;
+  OrderInput2 orderRefType() default @OrderInput2;
 
   String goodRef() default "";
 
-  GoodInput2 good() default @GoodInput2;
+  GoodInput2 goodRefType() default @GoodInput2;
 
   boolean isDeprecated() default false;
 
@@ -47,11 +47,11 @@ public @interface GoodOrderRelationInput1 {
 
   String $orderRef() default "";
 
-  String $order() default "";
+  String $orderRefType() default "";
 
   String $goodRef() default "";
 
-  String $good() default "";
+  String $goodRefType() default "";
 
   String $isDeprecated() default "";
 

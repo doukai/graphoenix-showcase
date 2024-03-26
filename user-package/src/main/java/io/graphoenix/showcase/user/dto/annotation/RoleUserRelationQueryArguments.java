@@ -20,11 +20,11 @@ public @interface RoleUserRelationQueryArguments {
 
   StringExpression1 userRef() default @StringExpression1;
 
-  UserExpression1 user() default @UserExpression1;
+  UserExpression1 userRefType() default @UserExpression1;
 
   StringExpression1 roleRef() default @StringExpression1;
 
-  RoleExpression1 role() default @RoleExpression1;
+  RoleExpression1 roleRefType() default @RoleExpression1;
 
   boolean includeDeprecated() default false;
 
@@ -56,11 +56,11 @@ public @interface RoleUserRelationQueryArguments {
 
   String $userRef() default "";
 
-  String $user() default "";
+  String $userRefType() default "";
 
   String $roleRef() default "";
 
-  String $role() default "";
+  String $roleRefType() default "";
 
   String $includeDeprecated() default "";
 

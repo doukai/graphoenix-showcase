@@ -21,11 +21,11 @@ public class MerchantOrganizationRelation implements Meta {
 
   private String merchantRef;
 
-  private Merchant merchant;
+  private Merchant merchantRefType;
 
   private Integer organizationRef;
 
-  private Organization organization;
+  private Organization organizationRefType;
 
   private Boolean isDeprecated;
 
@@ -83,12 +83,12 @@ public class MerchantOrganizationRelation implements Meta {
     this.merchantRef = merchantRef;
   }
 
-  public Merchant getMerchant() {
-    return this.merchant;
+  public Merchant getMerchantRefType() {
+    return this.merchantRefType;
   }
 
-  public void setMerchant(Merchant merchant) {
-    this.merchant = merchant;
+  public void setMerchantRefType(Merchant merchantRefType) {
+    this.merchantRefType = merchantRefType;
   }
 
   public Integer getOrganizationRef() {
@@ -99,12 +99,12 @@ public class MerchantOrganizationRelation implements Meta {
     this.organizationRef = organizationRef;
   }
 
-  public Organization getOrganization() {
-    return this.organization;
+  public Organization getOrganizationRefType() {
+    return this.organizationRefType;
   }
 
-  public void setOrganization(Organization organization) {
-    this.organization = organization;
+  public void setOrganizationRefType(Organization organizationRefType) {
+    this.organizationRefType = organizationRefType;
   }
 
   @Override

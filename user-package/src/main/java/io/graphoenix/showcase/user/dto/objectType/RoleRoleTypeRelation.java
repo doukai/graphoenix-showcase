@@ -21,7 +21,7 @@ public class RoleRoleTypeRelation implements Meta {
 
   private String roleRef;
 
-  private Role role;
+  private Role roleRefType;
 
   private RoleType roleTypeRef;
 
@@ -71,12 +71,12 @@ public class RoleRoleTypeRelation implements Meta {
     this.roleRef = roleRef;
   }
 
-  public Role getRole() {
-    return this.role;
+  public Role getRoleRefType() {
+    return this.roleRefType;
   }
 
-  public void setRole(Role role) {
-    this.role = role;
+  public void setRoleRefType(Role roleRefType) {
+    this.roleRefType = roleRefType;
   }
 
   public RoleType getRoleTypeRef() {

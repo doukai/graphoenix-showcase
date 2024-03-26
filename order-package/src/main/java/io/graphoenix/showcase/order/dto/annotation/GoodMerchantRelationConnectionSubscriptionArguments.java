@@ -20,11 +20,11 @@ public @interface GoodMerchantRelationConnectionSubscriptionArguments {
 
   StringExpression1 goodRef() default @StringExpression1;
 
-  GoodExpression1 good() default @GoodExpression1;
+  GoodExpression1 goodRefType() default @GoodExpression1;
 
   StringExpression1 merchantRef() default @StringExpression1;
 
-  MerchantExpression1 merchant() default @MerchantExpression1;
+  MerchantExpression1 merchantRefType() default @MerchantExpression1;
 
   boolean includeDeprecated() default false;
 
@@ -68,11 +68,11 @@ public @interface GoodMerchantRelationConnectionSubscriptionArguments {
 
   String $goodRef() default "";
 
-  String $good() default "";
+  String $goodRefType() default "";
 
   String $merchantRef() default "";
 
-  String $merchant() default "";
+  String $merchantRefType() default "";
 
   String $includeDeprecated() default "";
 

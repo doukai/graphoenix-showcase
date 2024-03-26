@@ -196,9 +196,9 @@ message MutationOrganizationUserRelationRequest {
     optional string arguments = 2;
     string id = 3;
     string user_ref = 4;
-    UserInput user = 5;
+    UserInput user_ref_type = 5;
     string organization_ref = 6;
-    OrganizationInput organization = 7;
+    OrganizationInput organization_ref_type = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -215,9 +215,9 @@ message MutationOrganizationUserRelationListRequest {
     optional string arguments = 2;
     string id = 3;
     string user_ref = 4;
-    UserInput user = 5;
+    UserInput user_ref_type = 5;
     string organization_ref = 6;
-    OrganizationInput organization = 7;
+    OrganizationInput organization_ref_type = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -235,9 +235,9 @@ message MutationRoleUserRelationRequest {
     optional string arguments = 2;
     string id = 3;
     string user_ref = 4;
-    UserInput user = 5;
+    UserInput user_ref_type = 5;
     string role_ref = 6;
-    RoleInput role = 7;
+    RoleInput role_ref_type = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -254,9 +254,9 @@ message MutationRoleUserRelationListRequest {
     optional string arguments = 2;
     string id = 3;
     string user_ref = 4;
-    UserInput user = 5;
+    UserInput user_ref_type = 5;
     string role_ref = 6;
-    RoleInput role = 7;
+    RoleInput role_ref_type = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -274,7 +274,7 @@ message MutationUserMobileNumbersRelationRequest {
     optional string arguments = 2;
     string id = 3;
     string user_ref = 4;
-    UserInput user = 5;
+    UserInput user_ref_type = 5;
     string mobile_numbers_ref = 6;
     bool is_deprecated = 7;
     int32 version = 8;
@@ -292,7 +292,7 @@ message MutationUserMobileNumbersRelationListRequest {
     optional string arguments = 2;
     string id = 3;
     string user_ref = 4;
-    UserInput user = 5;
+    UserInput user_ref_type = 5;
     string mobile_numbers_ref = 6;
     bool is_deprecated = 7;
     int32 version = 8;
@@ -311,9 +311,9 @@ message MutationUserUserProfileRelationRequest {
     optional string arguments = 2;
     string id = 3;
     string user_profile_ref = 4;
-    UserProfileInput user_profile = 5;
+    UserProfileInput user_profile_ref_type = 5;
     string user_ref = 6;
-    UserInput user = 7;
+    UserInput user_ref_type = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -330,9 +330,9 @@ message MutationUserUserProfileRelationListRequest {
     optional string arguments = 2;
     string id = 3;
     string user_profile_ref = 4;
-    UserProfileInput user_profile = 5;
+    UserProfileInput user_profile_ref_type = 5;
     string user_ref = 6;
-    UserInput user = 7;
+    UserInput user_ref_type = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -350,7 +350,7 @@ message MutationRoleRoleTypeRelationRequest {
     optional string arguments = 2;
     string id = 3;
     string role_ref = 4;
-    RoleInput role = 5;
+    RoleInput role_ref_type = 5;
     RoleType role_type_ref = 6;
     bool is_deprecated = 7;
     int32 version = 8;
@@ -368,7 +368,7 @@ message MutationRoleRoleTypeRelationListRequest {
     optional string arguments = 2;
     string id = 3;
     string role_ref = 4;
-    RoleInput role = 5;
+    RoleInput role_ref_type = 5;
     RoleType role_type_ref = 6;
     bool is_deprecated = 7;
     int32 version = 8;

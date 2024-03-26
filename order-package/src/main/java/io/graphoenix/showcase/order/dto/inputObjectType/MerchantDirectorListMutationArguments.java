@@ -21,11 +21,11 @@ public class MerchantDirectorListMutationArguments implements MetaInput {
 
   private String merchantId;
 
-  private MerchantInput merchant;
+  private MerchantInput merchantIdType;
 
   private Integer userId;
 
-  private UserInput user;
+  private UserInput userIdType;
 
   private Boolean isDeprecated;
 
@@ -66,12 +66,12 @@ public class MerchantDirectorListMutationArguments implements MetaInput {
     this.merchantId = merchantId;
   }
 
-  public MerchantInput getMerchant() {
-    return this.merchant;
+  public MerchantInput getMerchantIdType() {
+    return this.merchantIdType;
   }
 
-  public void setMerchant(MerchantInput merchant) {
-    this.merchant = merchant;
+  public void setMerchantIdType(MerchantInput merchantIdType) {
+    this.merchantIdType = merchantIdType;
   }
 
   public Integer getUserId() {
@@ -82,12 +82,12 @@ public class MerchantDirectorListMutationArguments implements MetaInput {
     this.userId = userId;
   }
 
-  public UserInput getUser() {
-    return this.user;
+  public UserInput getUserIdType() {
+    return this.userIdType;
   }
 
-  public void setUser(UserInput user) {
-    this.user = user;
+  public void setUserIdType(UserInput userIdType) {
+    this.userIdType = userIdType;
   }
 
   public Boolean getIsDeprecated() {

@@ -18,11 +18,11 @@ public @interface MerchantDirectorMutationArguments {
 
   String merchantId() default "";
 
-  MerchantInput1 merchant() default @MerchantInput1;
+  MerchantInput1 merchantIdType() default @MerchantInput1;
 
   int userId() default 0;
 
-  UserInput1 user() default @UserInput1;
+  UserInput1 userIdType() default @UserInput1;
 
   boolean isDeprecated() default false;
 
@@ -48,11 +48,11 @@ public @interface MerchantDirectorMutationArguments {
 
   String $merchantId() default "";
 
-  String $merchant() default "";
+  String $merchantIdType() default "";
 
   String $userId() default "";
 
-  String $user() default "";
+  String $userIdType() default "";
 
   String $isDeprecated() default "";
 

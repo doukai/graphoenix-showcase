@@ -20,11 +20,11 @@ public class GoodMerchantRelation implements Meta {
 
   private String goodRef;
 
-  private Good good;
+  private Good goodRefType;
 
   private String merchantRef;
 
-  private Merchant merchant;
+  private Merchant merchantRefType;
 
   private Boolean isDeprecated;
 
@@ -78,12 +78,12 @@ public class GoodMerchantRelation implements Meta {
     this.goodRef = goodRef;
   }
 
-  public Good getGood() {
-    return this.good;
+  public Good getGoodRefType() {
+    return this.goodRefType;
   }
 
-  public void setGood(Good good) {
-    this.good = good;
+  public void setGoodRefType(Good goodRefType) {
+    this.goodRefType = goodRefType;
   }
 
   public String getMerchantRef() {
@@ -94,12 +94,12 @@ public class GoodMerchantRelation implements Meta {
     this.merchantRef = merchantRef;
   }
 
-  public Merchant getMerchant() {
-    return this.merchant;
+  public Merchant getMerchantRefType() {
+    return this.merchantRefType;
   }
 
-  public void setMerchant(Merchant merchant) {
-    this.merchant = merchant;
+  public void setMerchantRefType(Merchant merchantRefType) {
+    this.merchantRefType = merchantRefType;
   }
 
   @Override

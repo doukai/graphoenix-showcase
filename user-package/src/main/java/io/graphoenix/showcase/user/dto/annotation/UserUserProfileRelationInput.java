@@ -17,11 +17,11 @@ public @interface UserUserProfileRelationInput {
 
   String userProfileRef() default "";
 
-  UserProfileInput1 userProfile() default @UserProfileInput1;
+  UserProfileInput1 userProfileRefType() default @UserProfileInput1;
 
   String userRef() default "";
 
-  UserInput1 user() default @UserInput1;
+  UserInput1 userRefType() default @UserInput1;
 
   boolean isDeprecated() default false;
 
@@ -47,11 +47,11 @@ public @interface UserUserProfileRelationInput {
 
   String $userProfileRef() default "";
 
-  String $userProfile() default "";
+  String $userProfileRefType() default "";
 
   String $userRef() default "";
 
-  String $user() default "";
+  String $userRefType() default "";
 
   String $isDeprecated() default "";
 

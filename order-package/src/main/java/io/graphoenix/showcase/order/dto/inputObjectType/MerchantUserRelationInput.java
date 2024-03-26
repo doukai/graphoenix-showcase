@@ -20,11 +20,11 @@ public class MerchantUserRelationInput implements MetaInput {
 
   private String merchantRef;
 
-  private MerchantInput merchant;
+  private MerchantInput merchantRefType;
 
   private Integer userRef;
 
-  private UserInput user;
+  private UserInput userRefType;
 
   private Boolean isDeprecated;
 
@@ -63,12 +63,12 @@ public class MerchantUserRelationInput implements MetaInput {
     this.merchantRef = merchantRef;
   }
 
-  public MerchantInput getMerchant() {
-    return this.merchant;
+  public MerchantInput getMerchantRefType() {
+    return this.merchantRefType;
   }
 
-  public void setMerchant(MerchantInput merchant) {
-    this.merchant = merchant;
+  public void setMerchantRefType(MerchantInput merchantRefType) {
+    this.merchantRefType = merchantRefType;
   }
 
   public Integer getUserRef() {
@@ -79,12 +79,12 @@ public class MerchantUserRelationInput implements MetaInput {
     this.userRef = userRef;
   }
 
-  public UserInput getUser() {
-    return this.user;
+  public UserInput getUserRefType() {
+    return this.userRefType;
   }
 
-  public void setUser(UserInput user) {
-    this.user = user;
+  public void setUserRefType(UserInput userRefType) {
+    this.userRefType = userRefType;
   }
 
   public Boolean getIsDeprecated() {

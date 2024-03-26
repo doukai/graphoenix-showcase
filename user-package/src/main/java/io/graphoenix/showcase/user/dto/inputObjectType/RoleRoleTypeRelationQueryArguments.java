@@ -21,7 +21,7 @@ public class RoleRoleTypeRelationQueryArguments implements MetaExpression {
 
   private StringExpression roleRef;
 
-  private RoleExpression role;
+  private RoleExpression roleRefType;
 
   private RoleTypeExpression roleTypeRef;
 
@@ -70,12 +70,12 @@ public class RoleRoleTypeRelationQueryArguments implements MetaExpression {
     this.roleRef = roleRef;
   }
 
-  public RoleExpression getRole() {
-    return this.role;
+  public RoleExpression getRoleRefType() {
+    return this.roleRefType;
   }
 
-  public void setRole(RoleExpression role) {
-    this.role = role;
+  public void setRoleRefType(RoleExpression roleRefType) {
+    this.roleRefType = roleRefType;
   }
 
   public RoleTypeExpression getRoleTypeRef() {

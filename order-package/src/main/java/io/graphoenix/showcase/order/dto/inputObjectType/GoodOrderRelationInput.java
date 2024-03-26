@@ -19,11 +19,11 @@ public class GoodOrderRelationInput implements MetaInput {
 
   private String orderRef;
 
-  private OrderInput order;
+  private OrderInput orderRefType;
 
   private String goodRef;
 
-  private GoodInput good;
+  private GoodInput goodRefType;
 
   private Boolean isDeprecated;
 
@@ -62,12 +62,12 @@ public class GoodOrderRelationInput implements MetaInput {
     this.orderRef = orderRef;
   }
 
-  public OrderInput getOrder() {
-    return this.order;
+  public OrderInput getOrderRefType() {
+    return this.orderRefType;
   }
 
-  public void setOrder(OrderInput order) {
-    this.order = order;
+  public void setOrderRefType(OrderInput orderRefType) {
+    this.orderRefType = orderRefType;
   }
 
   public String getGoodRef() {
@@ -78,12 +78,12 @@ public class GoodOrderRelationInput implements MetaInput {
     this.goodRef = goodRef;
   }
 
-  public GoodInput getGood() {
-    return this.good;
+  public GoodInput getGoodRefType() {
+    return this.goodRefType;
   }
 
-  public void setGood(GoodInput good) {
-    this.good = good;
+  public void setGoodRefType(GoodInput goodRefType) {
+    this.goodRefType = goodRefType;
   }
 
   public Boolean getIsDeprecated() {

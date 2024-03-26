@@ -20,11 +20,11 @@ public class GoodOrderRelation implements Meta {
 
   private String orderRef;
 
-  private Order order;
+  private Order orderRefType;
 
   private String goodRef;
 
-  private Good good;
+  private Good goodRefType;
 
   private Boolean isDeprecated;
 
@@ -78,12 +78,12 @@ public class GoodOrderRelation implements Meta {
     this.orderRef = orderRef;
   }
 
-  public Order getOrder() {
-    return this.order;
+  public Order getOrderRefType() {
+    return this.orderRefType;
   }
 
-  public void setOrder(Order order) {
-    this.order = order;
+  public void setOrderRefType(Order orderRefType) {
+    this.orderRefType = orderRefType;
   }
 
   public String getGoodRef() {
@@ -94,12 +94,12 @@ public class GoodOrderRelation implements Meta {
     this.goodRef = goodRef;
   }
 
-  public Good getGood() {
-    return this.good;
+  public Good getGoodRefType() {
+    return this.goodRefType;
   }
 
-  public void setGood(Good good) {
-    this.good = good;
+  public void setGoodRefType(Good goodRefType) {
+    this.goodRefType = goodRefType;
   }
 
   @Override

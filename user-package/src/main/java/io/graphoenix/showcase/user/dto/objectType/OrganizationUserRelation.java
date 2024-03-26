@@ -20,11 +20,11 @@ public class OrganizationUserRelation implements Meta {
 
   private String userRef;
 
-  private User user;
+  private User userRefType;
 
   private String organizationRef;
 
-  private Organization organization;
+  private Organization organizationRefType;
 
   private Boolean isDeprecated;
 
@@ -78,12 +78,12 @@ public class OrganizationUserRelation implements Meta {
     this.userRef = userRef;
   }
 
-  public User getUser() {
-    return this.user;
+  public User getUserRefType() {
+    return this.userRefType;
   }
 
-  public void setUser(User user) {
-    this.user = user;
+  public void setUserRefType(User userRefType) {
+    this.userRefType = userRefType;
   }
 
   public String getOrganizationRef() {
@@ -94,12 +94,12 @@ public class OrganizationUserRelation implements Meta {
     this.organizationRef = organizationRef;
   }
 
-  public Organization getOrganization() {
-    return this.organization;
+  public Organization getOrganizationRefType() {
+    return this.organizationRefType;
   }
 
-  public void setOrganization(Organization organization) {
-    this.organization = organization;
+  public void setOrganizationRefType(Organization organizationRefType) {
+    this.organizationRefType = organizationRefType;
   }
 
   @Override

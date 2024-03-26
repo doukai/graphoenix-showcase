@@ -20,11 +20,11 @@ public class UserUserProfileRelationExpression implements MetaExpression {
 
   private StringExpression userProfileRef;
 
-  private UserProfileExpression userProfile;
+  private UserProfileExpression userProfileRefType;
 
   private StringExpression userRef;
 
-  private UserExpression user;
+  private UserExpression userRefType;
 
   @DefaultValue("false")
   private Boolean includeDeprecated;
@@ -69,12 +69,12 @@ public class UserUserProfileRelationExpression implements MetaExpression {
     this.userProfileRef = userProfileRef;
   }
 
-  public UserProfileExpression getUserProfile() {
-    return this.userProfile;
+  public UserProfileExpression getUserProfileRefType() {
+    return this.userProfileRefType;
   }
 
-  public void setUserProfile(UserProfileExpression userProfile) {
-    this.userProfile = userProfile;
+  public void setUserProfileRefType(UserProfileExpression userProfileRefType) {
+    this.userProfileRefType = userProfileRefType;
   }
 
   public StringExpression getUserRef() {
@@ -85,12 +85,12 @@ public class UserUserProfileRelationExpression implements MetaExpression {
     this.userRef = userRef;
   }
 
-  public UserExpression getUser() {
-    return this.user;
+  public UserExpression getUserRefType() {
+    return this.userRefType;
   }
 
-  public void setUser(UserExpression user) {
-    this.user = user;
+  public void setUserRefType(UserExpression userRefType) {
+    this.userRefType = userRefType;
   }
 
   public Boolean getIncludeDeprecated() {

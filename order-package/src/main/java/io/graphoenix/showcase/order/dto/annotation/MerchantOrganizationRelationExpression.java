@@ -21,11 +21,11 @@ public @interface MerchantOrganizationRelationExpression {
 
   StringExpression1 merchantRef() default @StringExpression1;
 
-  MerchantExpression1 merchant() default @MerchantExpression1;
+  MerchantExpression1 merchantRefType() default @MerchantExpression1;
 
   IntExpression1 organizationRef() default @IntExpression1;
 
-  OrganizationExpression1 organization() default @OrganizationExpression1;
+  OrganizationExpression1 organizationRefType() default @OrganizationExpression1;
 
   boolean includeDeprecated() default false;
 
@@ -55,11 +55,11 @@ public @interface MerchantOrganizationRelationExpression {
 
   String $merchantRef() default "";
 
-  String $merchant() default "";
+  String $merchantRefType() default "";
 
   String $organizationRef() default "";
 
-  String $organization() default "";
+  String $organizationRefType() default "";
 
   String $includeDeprecated() default "";
 

@@ -20,11 +20,11 @@ public class GoodProductRelationListMutationArguments implements MetaInput {
 
   private String goodRef;
 
-  private GoodInput good;
+  private GoodInput goodRefType;
 
   private String productRef;
 
-  private ProductInput product;
+  private ProductInput productRefType;
 
   private Boolean isDeprecated;
 
@@ -65,12 +65,12 @@ public class GoodProductRelationListMutationArguments implements MetaInput {
     this.goodRef = goodRef;
   }
 
-  public GoodInput getGood() {
-    return this.good;
+  public GoodInput getGoodRefType() {
+    return this.goodRefType;
   }
 
-  public void setGood(GoodInput good) {
-    this.good = good;
+  public void setGoodRefType(GoodInput goodRefType) {
+    this.goodRefType = goodRefType;
   }
 
   public String getProductRef() {
@@ -81,12 +81,12 @@ public class GoodProductRelationListMutationArguments implements MetaInput {
     this.productRef = productRef;
   }
 
-  public ProductInput getProduct() {
-    return this.product;
+  public ProductInput getProductRefType() {
+    return this.productRefType;
   }
 
-  public void setProduct(ProductInput product) {
-    this.product = product;
+  public void setProductRefType(ProductInput productRefType) {
+    this.productRefType = productRefType;
   }
 
   public Boolean getIsDeprecated() {

@@ -135,9 +135,9 @@ message Merchant {
 message GoodOrderRelation {
     string id = 1;
     string order_ref = 2;
-    Order order = 3;
+    Order order_ref_type = 3;
     string good_ref = 4;
-    Good good = 5;
+    Good good_ref_type = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -160,9 +160,9 @@ message GoodOrderRelation {
 message GoodProductRelation {
     string id = 1;
     string good_ref = 2;
-    Good good = 3;
+    Good good_ref_type = 3;
     string product_ref = 4;
-    Product product = 5;
+    Product product_ref_type = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -185,9 +185,9 @@ message GoodProductRelation {
 message GoodMerchantRelation {
     string id = 1;
     string good_ref = 2;
-    Good good = 3;
+    Good good_ref_type = 3;
     string merchant_ref = 4;
-    Merchant merchant = 5;
+    Merchant merchant_ref_type = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -210,9 +210,9 @@ message GoodMerchantRelation {
 message MerchantUserRelation {
     string id = 1;
     string merchant_ref = 2;
-    Merchant merchant = 3;
+    Merchant merchant_ref_type = 3;
     int32 user_ref = 4;
-    io.graphoenix.showcase.user.User user = 5;
+    io.graphoenix.showcase.user.User user_ref_type = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -237,9 +237,9 @@ message MerchantUserRelation {
 message MerchantOrganizationRelation {
     string id = 1;
     string merchant_ref = 2;
-    Merchant merchant = 3;
+    Merchant merchant_ref_type = 3;
     int32 organization_ref = 4;
-    io.graphoenix.showcase.user.Organization organization = 5;
+    io.graphoenix.showcase.user.Organization organization_ref_type = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -264,9 +264,9 @@ message MerchantOrganizationRelation {
 message MerchantDirector {
     string id = 1;
     string merchant_id = 2;
-    Merchant merchant = 3;
+    Merchant merchant_id_type = 3;
     int32 user_id = 4;
-    io.graphoenix.showcase.user.User user = 5;
+    io.graphoenix.showcase.user.User user_id_type = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;

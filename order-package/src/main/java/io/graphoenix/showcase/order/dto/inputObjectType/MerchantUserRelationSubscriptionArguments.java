@@ -22,11 +22,11 @@ public class MerchantUserRelationSubscriptionArguments implements MetaExpression
 
   private StringExpression merchantRef;
 
-  private MerchantExpression merchant;
+  private MerchantExpression merchantRefType;
 
   private IntExpression userRef;
 
-  private UserExpression user;
+  private UserExpression userRefType;
 
   @DefaultValue("false")
   private Boolean includeDeprecated;
@@ -73,12 +73,12 @@ public class MerchantUserRelationSubscriptionArguments implements MetaExpression
     this.merchantRef = merchantRef;
   }
 
-  public MerchantExpression getMerchant() {
-    return this.merchant;
+  public MerchantExpression getMerchantRefType() {
+    return this.merchantRefType;
   }
 
-  public void setMerchant(MerchantExpression merchant) {
-    this.merchant = merchant;
+  public void setMerchantRefType(MerchantExpression merchantRefType) {
+    this.merchantRefType = merchantRefType;
   }
 
   public IntExpression getUserRef() {
@@ -89,12 +89,12 @@ public class MerchantUserRelationSubscriptionArguments implements MetaExpression
     this.userRef = userRef;
   }
 
-  public UserExpression getUser() {
-    return this.user;
+  public UserExpression getUserRefType() {
+    return this.userRefType;
   }
 
-  public void setUser(UserExpression user) {
-    this.user = user;
+  public void setUserRefType(UserExpression userRefType) {
+    this.userRefType = userRefType;
   }
 
   public Boolean getIncludeDeprecated() {

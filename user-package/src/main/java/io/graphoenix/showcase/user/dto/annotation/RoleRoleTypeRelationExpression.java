@@ -20,7 +20,7 @@ public @interface RoleRoleTypeRelationExpression {
 
   StringExpression1 roleRef() default @StringExpression1;
 
-  RoleExpression1 role() default @RoleExpression1;
+  RoleExpression1 roleRefType() default @RoleExpression1;
 
   RoleTypeExpression1 roleTypeRef() default @RoleTypeExpression1;
 
@@ -52,7 +52,7 @@ public @interface RoleRoleTypeRelationExpression {
 
   String $roleRef() default "";
 
-  String $role() default "";
+  String $roleRefType() default "";
 
   String $roleTypeRef() default "";
 

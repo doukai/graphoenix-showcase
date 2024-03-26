@@ -20,11 +20,11 @@ public class GoodProductRelation implements Meta {
 
   private String goodRef;
 
-  private Good good;
+  private Good goodRefType;
 
   private String productRef;
 
-  private Product product;
+  private Product productRefType;
 
   private Boolean isDeprecated;
 
@@ -78,12 +78,12 @@ public class GoodProductRelation implements Meta {
     this.goodRef = goodRef;
   }
 
-  public Good getGood() {
-    return this.good;
+  public Good getGoodRefType() {
+    return this.goodRefType;
   }
 
-  public void setGood(Good good) {
-    this.good = good;
+  public void setGoodRefType(Good goodRefType) {
+    this.goodRefType = goodRefType;
   }
 
   public String getProductRef() {
@@ -94,12 +94,12 @@ public class GoodProductRelation implements Meta {
     this.productRef = productRef;
   }
 
-  public Product getProduct() {
-    return this.product;
+  public Product getProductRefType() {
+    return this.productRefType;
   }
 
-  public void setProduct(Product product) {
-    this.product = product;
+  public void setProductRefType(Product productRefType) {
+    this.productRefType = productRefType;
   }
 
   @Override

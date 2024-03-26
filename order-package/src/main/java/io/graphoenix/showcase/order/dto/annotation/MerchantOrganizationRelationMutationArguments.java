@@ -18,11 +18,11 @@ public @interface MerchantOrganizationRelationMutationArguments {
 
   String merchantRef() default "";
 
-  MerchantInput1 merchant() default @MerchantInput1;
+  MerchantInput1 merchantRefType() default @MerchantInput1;
 
   int organizationRef() default 0;
 
-  OrganizationInput1 organization() default @OrganizationInput1;
+  OrganizationInput1 organizationRefType() default @OrganizationInput1;
 
   boolean isDeprecated() default false;
 
@@ -48,11 +48,11 @@ public @interface MerchantOrganizationRelationMutationArguments {
 
   String $merchantRef() default "";
 
-  String $merchant() default "";
+  String $merchantRefType() default "";
 
   String $organizationRef() default "";
 
-  String $organization() default "";
+  String $organizationRefType() default "";
 
   String $isDeprecated() default "";
 

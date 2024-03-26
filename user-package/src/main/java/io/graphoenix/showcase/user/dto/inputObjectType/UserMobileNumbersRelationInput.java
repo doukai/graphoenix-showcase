@@ -19,7 +19,7 @@ public class UserMobileNumbersRelationInput implements MetaInput {
 
   private String userRef;
 
-  private UserInput user;
+  private UserInput userRefType;
 
   private String mobileNumbersRef;
 
@@ -60,12 +60,12 @@ public class UserMobileNumbersRelationInput implements MetaInput {
     this.userRef = userRef;
   }
 
-  public UserInput getUser() {
-    return this.user;
+  public UserInput getUserRefType() {
+    return this.userRefType;
   }
 
-  public void setUser(UserInput user) {
-    this.user = user;
+  public void setUserRefType(UserInput userRefType) {
+    this.userRefType = userRefType;
   }
 
   public String getMobileNumbersRef() {

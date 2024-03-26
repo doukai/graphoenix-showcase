@@ -18,11 +18,11 @@ public @interface MerchantDirectorInput1 {
 
   String merchantId() default "";
 
-  MerchantInput2 merchant() default @MerchantInput2;
+  MerchantInput2 merchantIdType() default @MerchantInput2;
 
   int userId() default 0;
 
-  UserInput2 user() default @UserInput2;
+  UserInput2 userIdType() default @UserInput2;
 
   boolean isDeprecated() default false;
 
@@ -48,11 +48,11 @@ public @interface MerchantDirectorInput1 {
 
   String $merchantId() default "";
 
-  String $merchant() default "";
+  String $merchantIdType() default "";
 
   String $userId() default "";
 
-  String $user() default "";
+  String $userIdType() default "";
 
   String $isDeprecated() default "";
 

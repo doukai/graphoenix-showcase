@@ -22,11 +22,11 @@ public class GoodOrderRelationConnectionQueryArguments implements MetaExpression
 
   private StringExpression orderRef;
 
-  private OrderExpression order;
+  private OrderExpression orderRefType;
 
   private StringExpression goodRef;
 
-  private GoodExpression good;
+  private GoodExpression goodRefType;
 
   @DefaultValue("false")
   private Boolean includeDeprecated;
@@ -85,12 +85,12 @@ public class GoodOrderRelationConnectionQueryArguments implements MetaExpression
     this.orderRef = orderRef;
   }
 
-  public OrderExpression getOrder() {
-    return this.order;
+  public OrderExpression getOrderRefType() {
+    return this.orderRefType;
   }
 
-  public void setOrder(OrderExpression order) {
-    this.order = order;
+  public void setOrderRefType(OrderExpression orderRefType) {
+    this.orderRefType = orderRefType;
   }
 
   public StringExpression getGoodRef() {
@@ -101,12 +101,12 @@ public class GoodOrderRelationConnectionQueryArguments implements MetaExpression
     this.goodRef = goodRef;
   }
 
-  public GoodExpression getGood() {
-    return this.good;
+  public GoodExpression getGoodRefType() {
+    return this.goodRefType;
   }
 
-  public void setGood(GoodExpression good) {
-    this.good = good;
+  public void setGoodRefType(GoodExpression goodRefType) {
+    this.goodRefType = goodRefType;
   }
 
   public Boolean getIncludeDeprecated() {

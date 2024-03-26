@@ -17,11 +17,11 @@ public @interface GoodProductRelationListMutationArguments {
 
   String goodRef() default "";
 
-  GoodInput1 good() default @GoodInput1;
+  GoodInput1 goodRefType() default @GoodInput1;
 
   String productRef() default "";
 
-  ProductInput1 product() default @ProductInput1;
+  ProductInput1 productRefType() default @ProductInput1;
 
   boolean isDeprecated() default false;
 
@@ -49,11 +49,11 @@ public @interface GoodProductRelationListMutationArguments {
 
   String $goodRef() default "";
 
-  String $good() default "";
+  String $goodRefType() default "";
 
   String $productRef() default "";
 
-  String $product() default "";
+  String $productRefType() default "";
 
   String $isDeprecated() default "";
 

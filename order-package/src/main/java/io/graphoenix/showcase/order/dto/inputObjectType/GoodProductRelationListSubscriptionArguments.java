@@ -22,11 +22,11 @@ public class GoodProductRelationListSubscriptionArguments implements MetaExpress
 
   private StringExpression goodRef;
 
-  private GoodExpression good;
+  private GoodExpression goodRefType;
 
   private StringExpression productRef;
 
-  private ProductExpression product;
+  private ProductExpression productRefType;
 
   @DefaultValue("false")
   private Boolean includeDeprecated;
@@ -85,12 +85,12 @@ public class GoodProductRelationListSubscriptionArguments implements MetaExpress
     this.goodRef = goodRef;
   }
 
-  public GoodExpression getGood() {
-    return this.good;
+  public GoodExpression getGoodRefType() {
+    return this.goodRefType;
   }
 
-  public void setGood(GoodExpression good) {
-    this.good = good;
+  public void setGoodRefType(GoodExpression goodRefType) {
+    this.goodRefType = goodRefType;
   }
 
   public StringExpression getProductRef() {
@@ -101,12 +101,12 @@ public class GoodProductRelationListSubscriptionArguments implements MetaExpress
     this.productRef = productRef;
   }
 
-  public ProductExpression getProduct() {
-    return this.product;
+  public ProductExpression getProductRefType() {
+    return this.productRefType;
   }
 
-  public void setProduct(ProductExpression product) {
-    this.product = product;
+  public void setProductRefType(ProductExpression productRefType) {
+    this.productRefType = productRefType;
   }
 
   public Boolean getIncludeDeprecated() {

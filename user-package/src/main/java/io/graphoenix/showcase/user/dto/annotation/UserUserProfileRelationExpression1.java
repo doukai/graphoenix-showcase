@@ -20,11 +20,11 @@ public @interface UserUserProfileRelationExpression1 {
 
   StringExpression2 userProfileRef() default @StringExpression2;
 
-  UserProfileExpression2 userProfile() default @UserProfileExpression2;
+  UserProfileExpression2 userProfileRefType() default @UserProfileExpression2;
 
   StringExpression2 userRef() default @StringExpression2;
 
-  UserExpression2 user() default @UserExpression2;
+  UserExpression2 userRefType() default @UserExpression2;
 
   boolean includeDeprecated() default false;
 
@@ -54,11 +54,11 @@ public @interface UserUserProfileRelationExpression1 {
 
   String $userProfileRef() default "";
 
-  String $userProfile() default "";
+  String $userProfileRefType() default "";
 
   String $userRef() default "";
 
-  String $user() default "";
+  String $userRefType() default "";
 
   String $includeDeprecated() default "";
 

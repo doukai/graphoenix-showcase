@@ -20,7 +20,7 @@ public class UserMobileNumbersRelationExpression implements MetaExpression {
 
   private StringExpression userRef;
 
-  private UserExpression user;
+  private UserExpression userRefType;
 
   private StringExpression mobileNumbersRef;
 
@@ -67,12 +67,12 @@ public class UserMobileNumbersRelationExpression implements MetaExpression {
     this.userRef = userRef;
   }
 
-  public UserExpression getUser() {
-    return this.user;
+  public UserExpression getUserRefType() {
+    return this.userRefType;
   }
 
-  public void setUser(UserExpression user) {
-    this.user = user;
+  public void setUserRefType(UserExpression userRefType) {
+    this.userRefType = userRefType;
   }
 
   public StringExpression getMobileNumbersRef() {

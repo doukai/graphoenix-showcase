@@ -159,9 +159,9 @@ message Organization {
 message OrganizationUserRelation {
     string id = 1;
     string user_ref = 2;
-    User user = 3;
+    User user_ref_type = 3;
     string organization_ref = 4;
-    Organization organization = 5;
+    Organization organization_ref_type = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -184,9 +184,9 @@ message OrganizationUserRelation {
 message RoleUserRelation {
     string id = 1;
     string user_ref = 2;
-    User user = 3;
+    User user_ref_type = 3;
     string role_ref = 4;
-    Role role = 5;
+    Role role_ref_type = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -209,7 +209,7 @@ message RoleUserRelation {
 message UserMobileNumbersRelation {
     string id = 1;
     string user_ref = 2;
-    User user = 3;
+    User user_ref_type = 3;
     string mobile_numbers_ref = 4;
     bool is_deprecated = 5;
     int32 version = 6;
@@ -233,9 +233,9 @@ message UserMobileNumbersRelation {
 message UserUserProfileRelation {
     string id = 1;
     string user_profile_ref = 2;
-    UserProfile user_profile = 3;
+    UserProfile user_profile_ref_type = 3;
     string user_ref = 4;
-    User user = 5;
+    User user_ref_type = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -258,7 +258,7 @@ message UserUserProfileRelation {
 message RoleRoleTypeRelation {
     string id = 1;
     string role_ref = 2;
-    Role role = 3;
+    Role role_ref_type = 3;
     RoleType role_type_ref = 4;
     bool is_deprecated = 5;
     int32 version = 6;

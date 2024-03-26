@@ -21,11 +21,11 @@ public @interface MerchantUserRelationExpression1 {
 
   StringExpression2 merchantRef() default @StringExpression2;
 
-  MerchantExpression2 merchant() default @MerchantExpression2;
+  MerchantExpression2 merchantRefType() default @MerchantExpression2;
 
   IntExpression2 userRef() default @IntExpression2;
 
-  UserExpression2 user() default @UserExpression2;
+  UserExpression2 userRefType() default @UserExpression2;
 
   boolean includeDeprecated() default false;
 
@@ -55,11 +55,11 @@ public @interface MerchantUserRelationExpression1 {
 
   String $merchantRef() default "";
 
-  String $merchant() default "";
+  String $merchantRefType() default "";
 
   String $userRef() default "";
 
-  String $user() default "";
+  String $userRefType() default "";
 
   String $includeDeprecated() default "";
 

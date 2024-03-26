@@ -17,7 +17,7 @@ public @interface UserMobileNumbersRelationMutationArguments {
 
   String userRef() default "";
 
-  UserInput1 user() default @UserInput1;
+  UserInput1 userRefType() default @UserInput1;
 
   String mobileNumbersRef() default "";
 
@@ -45,7 +45,7 @@ public @interface UserMobileNumbersRelationMutationArguments {
 
   String $userRef() default "";
 
-  String $user() default "";
+  String $userRefType() default "";
 
   String $mobileNumbersRef() default "";
 

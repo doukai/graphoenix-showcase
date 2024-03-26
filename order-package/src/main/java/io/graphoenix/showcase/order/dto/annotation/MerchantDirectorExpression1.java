@@ -21,11 +21,11 @@ public @interface MerchantDirectorExpression1 {
 
   StringExpression2 merchantId() default @StringExpression2;
 
-  MerchantExpression2 merchant() default @MerchantExpression2;
+  MerchantExpression2 merchantIdType() default @MerchantExpression2;
 
   IntExpression2 userId() default @IntExpression2;
 
-  UserExpression2 user() default @UserExpression2;
+  UserExpression2 userIdType() default @UserExpression2;
 
   boolean includeDeprecated() default false;
 
@@ -55,11 +55,11 @@ public @interface MerchantDirectorExpression1 {
 
   String $merchantId() default "";
 
-  String $merchant() default "";
+  String $merchantIdType() default "";
 
   String $userId() default "";
 
-  String $user() default "";
+  String $userIdType() default "";
 
   String $includeDeprecated() default "";
 

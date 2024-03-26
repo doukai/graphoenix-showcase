@@ -17,11 +17,11 @@ public @interface OrganizationUserRelationInput1 {
 
   String userRef() default "";
 
-  UserInput2 user() default @UserInput2;
+  UserInput2 userRefType() default @UserInput2;
 
   String organizationRef() default "";
 
-  OrganizationInput2 organization() default @OrganizationInput2;
+  OrganizationInput2 organizationRefType() default @OrganizationInput2;
 
   boolean isDeprecated() default false;
 
@@ -47,11 +47,11 @@ public @interface OrganizationUserRelationInput1 {
 
   String $userRef() default "";
 
-  String $user() default "";
+  String $userRefType() default "";
 
   String $organizationRef() default "";
 
-  String $organization() default "";
+  String $organizationRefType() default "";
 
   String $isDeprecated() default "";
 

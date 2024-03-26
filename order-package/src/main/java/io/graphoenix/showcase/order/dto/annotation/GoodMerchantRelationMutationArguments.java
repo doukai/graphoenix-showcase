@@ -17,11 +17,11 @@ public @interface GoodMerchantRelationMutationArguments {
 
   String goodRef() default "";
 
-  GoodInput1 good() default @GoodInput1;
+  GoodInput1 goodRefType() default @GoodInput1;
 
   String merchantRef() default "";
 
-  MerchantInput1 merchant() default @MerchantInput1;
+  MerchantInput1 merchantRefType() default @MerchantInput1;
 
   boolean isDeprecated() default false;
 
@@ -47,11 +47,11 @@ public @interface GoodMerchantRelationMutationArguments {
 
   String $goodRef() default "";
 
-  String $good() default "";
+  String $goodRefType() default "";
 
   String $merchantRef() default "";
 
-  String $merchant() default "";
+  String $merchantRefType() default "";
 
   String $isDeprecated() default "";
 

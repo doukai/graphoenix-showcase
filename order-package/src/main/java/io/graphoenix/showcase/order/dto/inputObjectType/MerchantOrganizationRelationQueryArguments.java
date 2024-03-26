@@ -22,11 +22,11 @@ public class MerchantOrganizationRelationQueryArguments implements MetaExpressio
 
   private StringExpression merchantRef;
 
-  private MerchantExpression merchant;
+  private MerchantExpression merchantRefType;
 
   private IntExpression organizationRef;
 
-  private OrganizationExpression organization;
+  private OrganizationExpression organizationRefType;
 
   @DefaultValue("false")
   private Boolean includeDeprecated;
@@ -73,12 +73,12 @@ public class MerchantOrganizationRelationQueryArguments implements MetaExpressio
     this.merchantRef = merchantRef;
   }
 
-  public MerchantExpression getMerchant() {
-    return this.merchant;
+  public MerchantExpression getMerchantRefType() {
+    return this.merchantRefType;
   }
 
-  public void setMerchant(MerchantExpression merchant) {
-    this.merchant = merchant;
+  public void setMerchantRefType(MerchantExpression merchantRefType) {
+    this.merchantRefType = merchantRefType;
   }
 
   public IntExpression getOrganizationRef() {
@@ -89,12 +89,12 @@ public class MerchantOrganizationRelationQueryArguments implements MetaExpressio
     this.organizationRef = organizationRef;
   }
 
-  public OrganizationExpression getOrganization() {
-    return this.organization;
+  public OrganizationExpression getOrganizationRefType() {
+    return this.organizationRefType;
   }
 
-  public void setOrganization(OrganizationExpression organization) {
-    this.organization = organization;
+  public void setOrganizationRefType(OrganizationExpression organizationRefType) {
+    this.organizationRefType = organizationRefType;
   }
 
   public Boolean getIncludeDeprecated() {

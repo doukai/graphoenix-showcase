@@ -20,11 +20,11 @@ public class GoodMerchantRelationExpression implements MetaExpression {
 
   private StringExpression goodRef;
 
-  private GoodExpression good;
+  private GoodExpression goodRefType;
 
   private StringExpression merchantRef;
 
-  private MerchantExpression merchant;
+  private MerchantExpression merchantRefType;
 
   @DefaultValue("false")
   private Boolean includeDeprecated;
@@ -69,12 +69,12 @@ public class GoodMerchantRelationExpression implements MetaExpression {
     this.goodRef = goodRef;
   }
 
-  public GoodExpression getGood() {
-    return this.good;
+  public GoodExpression getGoodRefType() {
+    return this.goodRefType;
   }
 
-  public void setGood(GoodExpression good) {
-    this.good = good;
+  public void setGoodRefType(GoodExpression goodRefType) {
+    this.goodRefType = goodRefType;
   }
 
   public StringExpression getMerchantRef() {
@@ -85,12 +85,12 @@ public class GoodMerchantRelationExpression implements MetaExpression {
     this.merchantRef = merchantRef;
   }
 
-  public MerchantExpression getMerchant() {
-    return this.merchant;
+  public MerchantExpression getMerchantRefType() {
+    return this.merchantRefType;
   }
 
-  public void setMerchant(MerchantExpression merchant) {
-    this.merchant = merchant;
+  public void setMerchantRefType(MerchantExpression merchantRefType) {
+    this.merchantRefType = merchantRefType;
   }
 
   public Boolean getIncludeDeprecated() {

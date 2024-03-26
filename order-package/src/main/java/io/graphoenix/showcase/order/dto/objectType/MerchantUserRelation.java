@@ -21,11 +21,11 @@ public class MerchantUserRelation implements Meta {
 
   private String merchantRef;
 
-  private Merchant merchant;
+  private Merchant merchantRefType;
 
   private Integer userRef;
 
-  private User user;
+  private User userRefType;
 
   private Boolean isDeprecated;
 
@@ -83,12 +83,12 @@ public class MerchantUserRelation implements Meta {
     this.merchantRef = merchantRef;
   }
 
-  public Merchant getMerchant() {
-    return this.merchant;
+  public Merchant getMerchantRefType() {
+    return this.merchantRefType;
   }
 
-  public void setMerchant(Merchant merchant) {
-    this.merchant = merchant;
+  public void setMerchantRefType(Merchant merchantRefType) {
+    this.merchantRefType = merchantRefType;
   }
 
   public Integer getUserRef() {
@@ -99,12 +99,12 @@ public class MerchantUserRelation implements Meta {
     this.userRef = userRef;
   }
 
-  public User getUser() {
-    return this.user;
+  public User getUserRefType() {
+    return this.userRefType;
   }
 
-  public void setUser(User user) {
-    this.user = user;
+  public void setUserRefType(User userRefType) {
+    this.userRefType = userRefType;
   }
 
   @Override

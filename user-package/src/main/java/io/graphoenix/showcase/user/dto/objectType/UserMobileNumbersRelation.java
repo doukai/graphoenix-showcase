@@ -20,7 +20,7 @@ public class UserMobileNumbersRelation implements Meta {
 
   private String userRef;
 
-  private User user;
+  private User userRefType;
 
   private String mobileNumbersRef;
 
@@ -76,12 +76,12 @@ public class UserMobileNumbersRelation implements Meta {
     this.userRef = userRef;
   }
 
-  public User getUser() {
-    return this.user;
+  public User getUserRefType() {
+    return this.userRefType;
   }
 
-  public void setUser(User user) {
-    this.user = user;
+  public void setUserRefType(User userRefType) {
+    this.userRefType = userRefType;
   }
 
   public String getMobileNumbersRef() {

@@ -19,11 +19,11 @@ public class GoodMerchantRelationInput implements MetaInput {
 
   private String goodRef;
 
-  private GoodInput good;
+  private GoodInput goodRefType;
 
   private String merchantRef;
 
-  private MerchantInput merchant;
+  private MerchantInput merchantRefType;
 
   private Boolean isDeprecated;
 
@@ -62,12 +62,12 @@ public class GoodMerchantRelationInput implements MetaInput {
     this.goodRef = goodRef;
   }
 
-  public GoodInput getGood() {
-    return this.good;
+  public GoodInput getGoodRefType() {
+    return this.goodRefType;
   }
 
-  public void setGood(GoodInput good) {
-    this.good = good;
+  public void setGoodRefType(GoodInput goodRefType) {
+    this.goodRefType = goodRefType;
   }
 
   public String getMerchantRef() {
@@ -78,12 +78,12 @@ public class GoodMerchantRelationInput implements MetaInput {
     this.merchantRef = merchantRef;
   }
 
-  public MerchantInput getMerchant() {
-    return this.merchant;
+  public MerchantInput getMerchantRefType() {
+    return this.merchantRefType;
   }
 
-  public void setMerchant(MerchantInput merchant) {
-    this.merchant = merchant;
+  public void setMerchantRefType(MerchantInput merchantRefType) {
+    this.merchantRefType = merchantRefType;
   }
 
   public Boolean getIsDeprecated() {

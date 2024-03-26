@@ -20,11 +20,11 @@ public @interface GoodMerchantRelationExpression1 {
 
   StringExpression2 goodRef() default @StringExpression2;
 
-  GoodExpression2 good() default @GoodExpression2;
+  GoodExpression2 goodRefType() default @GoodExpression2;
 
   StringExpression2 merchantRef() default @StringExpression2;
 
-  MerchantExpression2 merchant() default @MerchantExpression2;
+  MerchantExpression2 merchantRefType() default @MerchantExpression2;
 
   boolean includeDeprecated() default false;
 
@@ -54,11 +54,11 @@ public @interface GoodMerchantRelationExpression1 {
 
   String $goodRef() default "";
 
-  String $good() default "";
+  String $goodRefType() default "";
 
   String $merchantRef() default "";
 
-  String $merchant() default "";
+  String $merchantRefType() default "";
 
   String $includeDeprecated() default "";
 

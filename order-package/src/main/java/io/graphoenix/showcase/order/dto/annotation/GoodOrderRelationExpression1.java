@@ -20,11 +20,11 @@ public @interface GoodOrderRelationExpression1 {
 
   StringExpression2 orderRef() default @StringExpression2;
 
-  OrderExpression2 order() default @OrderExpression2;
+  OrderExpression2 orderRefType() default @OrderExpression2;
 
   StringExpression2 goodRef() default @StringExpression2;
 
-  GoodExpression2 good() default @GoodExpression2;
+  GoodExpression2 goodRefType() default @GoodExpression2;
 
   boolean includeDeprecated() default false;
 
@@ -54,11 +54,11 @@ public @interface GoodOrderRelationExpression1 {
 
   String $orderRef() default "";
 
-  String $order() default "";
+  String $orderRefType() default "";
 
   String $goodRef() default "";
 
-  String $good() default "";
+  String $goodRefType() default "";
 
   String $includeDeprecated() default "";
 

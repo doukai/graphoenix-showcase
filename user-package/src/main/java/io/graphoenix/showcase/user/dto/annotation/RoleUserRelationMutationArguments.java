@@ -17,11 +17,11 @@ public @interface RoleUserRelationMutationArguments {
 
   String userRef() default "";
 
-  UserInput1 user() default @UserInput1;
+  UserInput1 userRefType() default @UserInput1;
 
   String roleRef() default "";
 
-  RoleInput1 role() default @RoleInput1;
+  RoleInput1 roleRefType() default @RoleInput1;
 
   boolean isDeprecated() default false;
 
@@ -47,11 +47,11 @@ public @interface RoleUserRelationMutationArguments {
 
   String $userRef() default "";
 
-  String $user() default "";
+  String $userRefType() default "";
 
   String $roleRef() default "";
 
-  String $role() default "";
+  String $roleRefType() default "";
 
   String $isDeprecated() default "";
 

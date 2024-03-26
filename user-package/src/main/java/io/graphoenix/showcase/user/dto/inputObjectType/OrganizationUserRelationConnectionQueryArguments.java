@@ -22,11 +22,11 @@ public class OrganizationUserRelationConnectionQueryArguments implements MetaExp
 
   private StringExpression userRef;
 
-  private UserExpression user;
+  private UserExpression userRefType;
 
   private StringExpression organizationRef;
 
-  private OrganizationExpression organization;
+  private OrganizationExpression organizationRefType;
 
   @DefaultValue("false")
   private Boolean includeDeprecated;
@@ -85,12 +85,12 @@ public class OrganizationUserRelationConnectionQueryArguments implements MetaExp
     this.userRef = userRef;
   }
 
-  public UserExpression getUser() {
-    return this.user;
+  public UserExpression getUserRefType() {
+    return this.userRefType;
   }
 
-  public void setUser(UserExpression user) {
-    this.user = user;
+  public void setUserRefType(UserExpression userRefType) {
+    this.userRefType = userRefType;
   }
 
   public StringExpression getOrganizationRef() {
@@ -101,12 +101,12 @@ public class OrganizationUserRelationConnectionQueryArguments implements MetaExp
     this.organizationRef = organizationRef;
   }
 
-  public OrganizationExpression getOrganization() {
-    return this.organization;
+  public OrganizationExpression getOrganizationRefType() {
+    return this.organizationRefType;
   }
 
-  public void setOrganization(OrganizationExpression organization) {
-    this.organization = organization;
+  public void setOrganizationRefType(OrganizationExpression organizationRefType) {
+    this.organizationRefType = organizationRefType;
   }
 
   public Boolean getIncludeDeprecated() {

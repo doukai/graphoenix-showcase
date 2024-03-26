@@ -20,11 +20,11 @@ public class UserUserProfileRelation implements Meta {
 
   private String userProfileRef;
 
-  private UserProfile userProfile;
+  private UserProfile userProfileRefType;
 
   private String userRef;
 
-  private User user;
+  private User userRefType;
 
   private Boolean isDeprecated;
 
@@ -78,12 +78,12 @@ public class UserUserProfileRelation implements Meta {
     this.userProfileRef = userProfileRef;
   }
 
-  public UserProfile getUserProfile() {
-    return this.userProfile;
+  public UserProfile getUserProfileRefType() {
+    return this.userProfileRefType;
   }
 
-  public void setUserProfile(UserProfile userProfile) {
-    this.userProfile = userProfile;
+  public void setUserProfileRefType(UserProfile userProfileRefType) {
+    this.userProfileRefType = userProfileRefType;
   }
 
   public String getUserRef() {
@@ -94,12 +94,12 @@ public class UserUserProfileRelation implements Meta {
     this.userRef = userRef;
   }
 
-  public User getUser() {
-    return this.user;
+  public User getUserRefType() {
+    return this.userRefType;
   }
 
-  public void setUser(User user) {
-    this.user = user;
+  public void setUserRefType(User userRefType) {
+    this.userRefType = userRefType;
   }
 
   @Override
