@@ -21,6 +21,7 @@ dependencies {
     implementation 'io.graphoenix:graphoenix-gossip:0.0.1-SNAPSHOT'
     implementation 'io.graphoenix:graphoenix-json-schema:0.0.1-SNAPSHOT'
     implementation 'io.graphoenix:graphoenix-introspection:0.0.1-SNAPSHOT'
+    implementation 'io.graphoenix:graphoenix-admin:0.0.1-SNAPSHOT'
 
     implementation 'io.nozdormu:nozdormu-inject:0.0.1-SNAPSHOT'
     implementation 'io.nozdormu:nozdormu-async:0.0.1-SNAPSHOT'
