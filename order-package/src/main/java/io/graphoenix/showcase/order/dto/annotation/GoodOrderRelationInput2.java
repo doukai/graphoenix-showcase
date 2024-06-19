@@ -36,4 +36,28 @@ public @interface GoodOrderRelationInput2 {
   String createGroupId() default "";
 
   String __typename() default "GoodOrderRelation";
+
+  String $id() default "";
+
+  String $orderRef() default "";
+
+  String $goodRef() default "";
+
+  String $isDeprecated() default "";
+
+  String $version() default "";
+
+  String $realmId() default "";
+
+  String $createUserId() default "";
+
+  String $createTime() default "";
+
+  String $updateUserId() default "";
+
+  String $updateTime() default "";
+
+  String $createGroupId() default "";
+
+  String $__typename() default "";
 }

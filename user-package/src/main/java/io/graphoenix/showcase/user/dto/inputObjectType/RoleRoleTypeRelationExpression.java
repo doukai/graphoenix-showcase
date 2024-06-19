@@ -20,12 +20,12 @@ public class RoleRoleTypeRelationExpression implements MetaExpression {
 
   private StringExpression roleRef;
 
-  private RoleExpression roleRefType;
+  private RoleExpression role;
 
   private RoleTypeExpression roleTypeRef;
 
   @DefaultValue("false")
-  private Boolean includeDeprecated;
+  private Boolean includeDeprecated = false;
 
   private IntExpression version;
 
@@ -44,10 +44,10 @@ public class RoleRoleTypeRelationExpression implements MetaExpression {
   private StringExpression __typename;
 
   @DefaultValue("false")
-  private Boolean not;
+  private Boolean not = false;
 
   @DefaultValue("AND")
-  private Conditional cond;
+  private Conditional cond = Conditional.AND;
 
   private Collection<RoleRoleTypeRelationExpression> exs;
 
@@ -67,12 +67,12 @@ public class RoleRoleTypeRelationExpression implements MetaExpression {
     this.roleRef = roleRef;
   }
 
-  public RoleExpression getRoleRefType() {
-    return this.roleRefType;
+  public RoleExpression getRole() {
+    return this.role;
   }
 
-  public void setRoleRefType(RoleExpression roleRefType) {
-    this.roleRefType = roleRefType;
+  public void setRole(RoleExpression role) {
+    this.role = role;
   }
 
   public RoleTypeExpression getRoleTypeRef() {
@@ -106,7 +106,7 @@ public class RoleRoleTypeRelationExpression implements MetaExpression {
 
   @Override
   public void setRealmId(IntExpression realmId) {
-    this.realmId = realmId;
+    this.realmId = (IntExpression)realmId;
   }
 
   @Override
@@ -116,7 +116,7 @@ public class RoleRoleTypeRelationExpression implements MetaExpression {
 
   @Override
   public void setCreateUserId(StringExpression createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (StringExpression)createUserId;
   }
 
   @Override
@@ -126,7 +126,7 @@ public class RoleRoleTypeRelationExpression implements MetaExpression {
 
   @Override
   public void setCreateTime(StringExpression createTime) {
-    this.createTime = createTime;
+    this.createTime = (StringExpression)createTime;
   }
 
   @Override
@@ -136,7 +136,7 @@ public class RoleRoleTypeRelationExpression implements MetaExpression {
 
   @Override
   public void setUpdateUserId(StringExpression updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (StringExpression)updateUserId;
   }
 
   @Override
@@ -146,7 +146,7 @@ public class RoleRoleTypeRelationExpression implements MetaExpression {
 
   @Override
   public void setUpdateTime(StringExpression updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (StringExpression)updateTime;
   }
 
   @Override
@@ -156,7 +156,7 @@ public class RoleRoleTypeRelationExpression implements MetaExpression {
 
   @Override
   public void setCreateGroupId(StringExpression createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (StringExpression)createGroupId;
   }
 
   public StringExpression get__typename() {

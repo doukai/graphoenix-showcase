@@ -29,7 +29,7 @@ public class UserProfileConnectionQueryArguments implements MetaExpression {
   private StringExpression address;
 
   @DefaultValue("false")
-  private Boolean includeDeprecated;
+  private Boolean includeDeprecated = false;
 
   private IntExpression version;
 
@@ -54,10 +54,10 @@ public class UserProfileConnectionQueryArguments implements MetaExpression {
   private Collection<String> groupBy;
 
   @DefaultValue("false")
-  private Boolean not;
+  private Boolean not = false;
 
   @DefaultValue("AND")
-  private Conditional cond;
+  private Conditional cond = Conditional.AND;
 
   private Collection<UserProfileExpression> exs;
 
@@ -134,7 +134,7 @@ public class UserProfileConnectionQueryArguments implements MetaExpression {
 
   @Override
   public void setRealmId(IntExpression realmId) {
-    this.realmId = realmId;
+    this.realmId = (IntExpression)realmId;
   }
 
   @Override
@@ -144,7 +144,7 @@ public class UserProfileConnectionQueryArguments implements MetaExpression {
 
   @Override
   public void setCreateUserId(StringExpression createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (StringExpression)createUserId;
   }
 
   @Override
@@ -154,7 +154,7 @@ public class UserProfileConnectionQueryArguments implements MetaExpression {
 
   @Override
   public void setCreateTime(StringExpression createTime) {
-    this.createTime = createTime;
+    this.createTime = (StringExpression)createTime;
   }
 
   @Override
@@ -164,7 +164,7 @@ public class UserProfileConnectionQueryArguments implements MetaExpression {
 
   @Override
   public void setUpdateUserId(StringExpression updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (StringExpression)updateUserId;
   }
 
   @Override
@@ -174,7 +174,7 @@ public class UserProfileConnectionQueryArguments implements MetaExpression {
 
   @Override
   public void setUpdateTime(StringExpression updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (StringExpression)updateTime;
   }
 
   @Override
@@ -184,7 +184,7 @@ public class UserProfileConnectionQueryArguments implements MetaExpression {
 
   @Override
   public void setCreateGroupId(StringExpression createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (StringExpression)createGroupId;
   }
 
   public StringExpression get__typename() {

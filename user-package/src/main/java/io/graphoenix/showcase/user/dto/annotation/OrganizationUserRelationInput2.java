@@ -36,4 +36,28 @@ public @interface OrganizationUserRelationInput2 {
   String createGroupId() default "";
 
   String __typename() default "OrganizationUserRelation";
+
+  String $id() default "";
+
+  String $userRef() default "";
+
+  String $organizationRef() default "";
+
+  String $isDeprecated() default "";
+
+  String $version() default "";
+
+  String $realmId() default "";
+
+  String $createUserId() default "";
+
+  String $createTime() default "";
+
+  String $updateUserId() default "";
+
+  String $updateTime() default "";
+
+  String $createGroupId() default "";
+
+  String $__typename() default "";
 }

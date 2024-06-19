@@ -47,6 +47,8 @@ public @interface GoodMutationArguments {
 
   GoodMerchantRelationInput1[] goodMerchantRelation() default {};
 
+  GoodInput1 input() default @GoodInput1;
+
   GoodExpression1 where() default @GoodExpression1;
 
   String $id() default "";
@@ -82,6 +84,8 @@ public @interface GoodMutationArguments {
   String $goodProductRelation() default "";
 
   String $goodMerchantRelation() default "";
+
+  String $input() default "";
 
   String $where() default "";
 }

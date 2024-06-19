@@ -36,4 +36,28 @@ public @interface OrderInput2 {
   String __typename() default "Order";
 
   int buyerId() default 0;
+
+  String $id() default "";
+
+  String $number() default "";
+
+  String $isDeprecated() default "";
+
+  String $version() default "";
+
+  String $realmId() default "";
+
+  String $createUserId() default "";
+
+  String $createTime() default "";
+
+  String $updateUserId() default "";
+
+  String $updateTime() default "";
+
+  String $createGroupId() default "";
+
+  String $__typename() default "";
+
+  String $buyerId() default "";
 }

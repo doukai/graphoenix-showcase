@@ -20,7 +20,7 @@ public @interface RoleRoleTypeRelationSubscriptionArguments {
 
   StringExpression1 roleRef() default @StringExpression1;
 
-  RoleExpression1 roleRefType() default @RoleExpression1;
+  RoleExpression1 role() default @RoleExpression1;
 
   RoleTypeExpression1 roleTypeRef() default @RoleTypeExpression1;
 
@@ -54,7 +54,7 @@ public @interface RoleRoleTypeRelationSubscriptionArguments {
 
   String $roleRef() default "";
 
-  String $roleRefType() default "";
+  String $role() default "";
 
   String $roleTypeRef() default "";
 

@@ -18,11 +18,11 @@ public @interface MerchantOrganizationRelationMutationArguments {
 
   String merchantRef() default "";
 
-  MerchantInput1 merchantRefType() default @MerchantInput1;
+  MerchantInput1 merchant() default @MerchantInput1;
 
   int organizationRef() default 0;
 
-  OrganizationInput1 organizationRefType() default @OrganizationInput1;
+  OrganizationInput1 organization() default @OrganizationInput1;
 
   boolean isDeprecated() default false;
 
@@ -42,17 +42,19 @@ public @interface MerchantOrganizationRelationMutationArguments {
 
   String __typename() default "MerchantOrganizationRelation";
 
+  MerchantOrganizationRelationInput1 input() default @MerchantOrganizationRelationInput1;
+
   MerchantOrganizationRelationExpression1 where() default @MerchantOrganizationRelationExpression1;
 
   String $id() default "";
 
   String $merchantRef() default "";
 
-  String $merchantRefType() default "";
+  String $merchant() default "";
 
   String $organizationRef() default "";
 
-  String $organizationRefType() default "";
+  String $organization() default "";
 
   String $isDeprecated() default "";
 
@@ -71,6 +73,8 @@ public @interface MerchantOrganizationRelationMutationArguments {
   String $createGroupId() default "";
 
   String $__typename() default "";
+
+  String $input() default "";
 
   String $where() default "";
 }

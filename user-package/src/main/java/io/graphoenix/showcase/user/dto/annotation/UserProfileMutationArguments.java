@@ -43,6 +43,8 @@ public @interface UserProfileMutationArguments {
 
   UserUserProfileRelationInput1[] userUserProfileRelation() default {};
 
+  UserProfileInput1 input() default @UserProfileInput1;
+
   UserProfileExpression1 where() default @UserProfileExpression1;
 
   String $id() default "";
@@ -74,6 +76,8 @@ public @interface UserProfileMutationArguments {
   String $__typename() default "";
 
   String $userUserProfileRelation() default "";
+
+  String $input() default "";
 
   String $where() default "";
 }

@@ -241,9 +241,9 @@ message OrganizationOrderBy {
 message OrganizationUserRelationExpression {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression organization_ref = 4;
-    OrganizationExpression organization_ref_type = 5;
+    OrganizationExpression organization = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -260,9 +260,9 @@ message OrganizationUserRelationExpression {
 message OrganizationUserRelationInput {
     string id = 1;
     string user_ref = 2;
-    UserInput user_ref_type = 3;
+    UserInput user = 3;
     string organization_ref = 4;
-    OrganizationInput organization_ref_type = 5;
+    OrganizationInput organization = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -291,9 +291,9 @@ message OrganizationUserRelationOrderBy {
 message RoleUserRelationExpression {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression role_ref = 4;
-    RoleExpression role_ref_type = 5;
+    RoleExpression role = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -310,9 +310,9 @@ message RoleUserRelationExpression {
 message RoleUserRelationInput {
     string id = 1;
     string user_ref = 2;
-    UserInput user_ref_type = 3;
+    UserInput user = 3;
     string role_ref = 4;
-    RoleInput role_ref_type = 5;
+    RoleInput role = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -341,7 +341,7 @@ message RoleUserRelationOrderBy {
 message UserMobileNumbersRelationExpression {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression mobile_numbers_ref = 4;
     bool include_deprecated = 5;
     io.graphoenix.core.IntExpression version = 6;
@@ -359,7 +359,7 @@ message UserMobileNumbersRelationExpression {
 message UserMobileNumbersRelationInput {
     string id = 1;
     string user_ref = 2;
-    UserInput user_ref_type = 3;
+    UserInput user = 3;
     string mobile_numbers_ref = 4;
     bool is_deprecated = 5;
     int32 version = 6;
@@ -389,9 +389,9 @@ message UserMobileNumbersRelationOrderBy {
 message UserUserProfileRelationExpression {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_profile_ref = 2;
-    UserProfileExpression user_profile_ref_type = 3;
+    UserProfileExpression user_profile = 3;
     io.graphoenix.core.StringExpression user_ref = 4;
-    UserExpression user_ref_type = 5;
+    UserExpression user = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -408,9 +408,9 @@ message UserUserProfileRelationExpression {
 message UserUserProfileRelationInput {
     string id = 1;
     string user_profile_ref = 2;
-    UserProfileInput user_profile_ref_type = 3;
+    UserProfileInput user_profile = 3;
     string user_ref = 4;
-    UserInput user_ref_type = 5;
+    UserInput user = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -439,7 +439,7 @@ message UserUserProfileRelationOrderBy {
 message RoleRoleTypeRelationExpression {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression role_ref = 2;
-    RoleExpression role_ref_type = 3;
+    RoleExpression role = 3;
     RoleTypeExpression role_type_ref = 4;
     bool include_deprecated = 5;
     io.graphoenix.core.IntExpression version = 6;
@@ -457,7 +457,7 @@ message RoleRoleTypeRelationExpression {
 message RoleRoleTypeRelationInput {
     string id = 1;
     string role_ref = 2;
-    RoleInput role_ref_type = 3;
+    RoleInput role = 3;
     RoleType role_type_ref = 4;
     bool is_deprecated = 5;
     int32 version = 6;
@@ -821,9 +821,9 @@ message OrganizationConnectionQueryArguments {
 message OrganizationUserRelationQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression organization_ref = 4;
-    OrganizationExpression organization_ref_type = 5;
+    OrganizationExpression organization = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -841,9 +841,9 @@ message OrganizationUserRelationQueryArguments {
 message OrganizationUserRelationListQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression organization_ref = 4;
-    OrganizationExpression organization_ref_type = 5;
+    OrganizationExpression organization = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -867,9 +867,9 @@ message OrganizationUserRelationListQueryArguments {
 message OrganizationUserRelationConnectionQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression organization_ref = 4;
-    OrganizationExpression organization_ref_type = 5;
+    OrganizationExpression organization = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -893,9 +893,9 @@ message OrganizationUserRelationConnectionQueryArguments {
 message RoleUserRelationQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression role_ref = 4;
-    RoleExpression role_ref_type = 5;
+    RoleExpression role = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -913,9 +913,9 @@ message RoleUserRelationQueryArguments {
 message RoleUserRelationListQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression role_ref = 4;
-    RoleExpression role_ref_type = 5;
+    RoleExpression role = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -939,9 +939,9 @@ message RoleUserRelationListQueryArguments {
 message RoleUserRelationConnectionQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression role_ref = 4;
-    RoleExpression role_ref_type = 5;
+    RoleExpression role = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -965,7 +965,7 @@ message RoleUserRelationConnectionQueryArguments {
 message UserMobileNumbersRelationQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression mobile_numbers_ref = 4;
     bool include_deprecated = 5;
     io.graphoenix.core.IntExpression version = 6;
@@ -984,7 +984,7 @@ message UserMobileNumbersRelationQueryArguments {
 message UserMobileNumbersRelationListQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression mobile_numbers_ref = 4;
     bool include_deprecated = 5;
     io.graphoenix.core.IntExpression version = 6;
@@ -1009,7 +1009,7 @@ message UserMobileNumbersRelationListQueryArguments {
 message UserMobileNumbersRelationConnectionQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression mobile_numbers_ref = 4;
     bool include_deprecated = 5;
     io.graphoenix.core.IntExpression version = 6;
@@ -1034,9 +1034,9 @@ message UserMobileNumbersRelationConnectionQueryArguments {
 message UserUserProfileRelationQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_profile_ref = 2;
-    UserProfileExpression user_profile_ref_type = 3;
+    UserProfileExpression user_profile = 3;
     io.graphoenix.core.StringExpression user_ref = 4;
-    UserExpression user_ref_type = 5;
+    UserExpression user = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -1054,9 +1054,9 @@ message UserUserProfileRelationQueryArguments {
 message UserUserProfileRelationListQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_profile_ref = 2;
-    UserProfileExpression user_profile_ref_type = 3;
+    UserProfileExpression user_profile = 3;
     io.graphoenix.core.StringExpression user_ref = 4;
-    UserExpression user_ref_type = 5;
+    UserExpression user = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -1080,9 +1080,9 @@ message UserUserProfileRelationListQueryArguments {
 message UserUserProfileRelationConnectionQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_profile_ref = 2;
-    UserProfileExpression user_profile_ref_type = 3;
+    UserProfileExpression user_profile = 3;
     io.graphoenix.core.StringExpression user_ref = 4;
-    UserExpression user_ref_type = 5;
+    UserExpression user = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -1106,7 +1106,7 @@ message UserUserProfileRelationConnectionQueryArguments {
 message RoleRoleTypeRelationQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression role_ref = 2;
-    RoleExpression role_ref_type = 3;
+    RoleExpression role = 3;
     RoleTypeExpression role_type_ref = 4;
     bool include_deprecated = 5;
     io.graphoenix.core.IntExpression version = 6;
@@ -1125,7 +1125,7 @@ message RoleRoleTypeRelationQueryArguments {
 message RoleRoleTypeRelationListQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression role_ref = 2;
-    RoleExpression role_ref_type = 3;
+    RoleExpression role = 3;
     RoleTypeExpression role_type_ref = 4;
     bool include_deprecated = 5;
     io.graphoenix.core.IntExpression version = 6;
@@ -1150,7 +1150,7 @@ message RoleRoleTypeRelationListQueryArguments {
 message RoleRoleTypeRelationConnectionQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression role_ref = 2;
-    RoleExpression role_ref_type = 3;
+    RoleExpression role = 3;
     RoleTypeExpression role_type_ref = 4;
     bool include_deprecated = 5;
     io.graphoenix.core.IntExpression version = 6;
@@ -1196,7 +1196,8 @@ message UserMutationArguments {
     repeated OrganizationUserRelationInput organization_user_relation = 21;
     repeated RoleUserRelationInput role_user_relation = 22;
     repeated UserMobileNumbersRelationInput user_mobile_numbers_relation = 23;
-    UserExpression where = 24;
+    UserInput input = 24;
+    UserExpression where = 25;
 }
 message UserListMutationArguments {
     string id = 1;
@@ -1241,7 +1242,8 @@ message UserProfileMutationArguments {
     string create_group_id = 13;
     string intro_typename = 14;
     repeated UserUserProfileRelationInput user_user_profile_relation = 15;
-    UserProfileExpression where = 16;
+    UserProfileInput input = 16;
+    UserProfileExpression where = 17;
 }
 message UserProfileListMutationArguments {
     string id = 1;
@@ -1278,7 +1280,8 @@ message RoleMutationArguments {
     string intro_typename = 13;
     repeated RoleRoleTypeRelationInput role_role_type_relation = 14;
     repeated RoleUserRelationInput role_user_relation = 15;
-    RoleExpression where = 16;
+    RoleInput input = 16;
+    RoleExpression where = 17;
 }
 message RoleListMutationArguments {
     string id = 1;
@@ -1315,7 +1318,8 @@ message OrganizationMutationArguments {
     string create_group_id = 13;
     string intro_typename = 14;
     repeated OrganizationUserRelationInput organization_user_relation = 15;
-    OrganizationExpression where = 16;
+    OrganizationInput input = 16;
+    OrganizationExpression where = 17;
 }
 message OrganizationListMutationArguments {
     string id = 1;
@@ -1339,9 +1343,9 @@ message OrganizationListMutationArguments {
 message OrganizationUserRelationMutationArguments {
     string id = 1;
     string user_ref = 2;
-    UserInput user_ref_type = 3;
+    UserInput user = 3;
     string organization_ref = 4;
-    OrganizationInput organization_ref_type = 5;
+    OrganizationInput organization = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -1351,14 +1355,15 @@ message OrganizationUserRelationMutationArguments {
     google.protobuf.Timestamp update_time = 12;
     string create_group_id = 13;
     string intro_typename = 14;
-    OrganizationUserRelationExpression where = 15;
+    OrganizationUserRelationInput input = 15;
+    OrganizationUserRelationExpression where = 16;
 }
 message OrganizationUserRelationListMutationArguments {
     string id = 1;
     string user_ref = 2;
-    UserInput user_ref_type = 3;
+    UserInput user = 3;
     string organization_ref = 4;
-    OrganizationInput organization_ref_type = 5;
+    OrganizationInput organization = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -1374,9 +1379,9 @@ message OrganizationUserRelationListMutationArguments {
 message RoleUserRelationMutationArguments {
     string id = 1;
     string user_ref = 2;
-    UserInput user_ref_type = 3;
+    UserInput user = 3;
     string role_ref = 4;
-    RoleInput role_ref_type = 5;
+    RoleInput role = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -1386,14 +1391,15 @@ message RoleUserRelationMutationArguments {
     google.protobuf.Timestamp update_time = 12;
     string create_group_id = 13;
     string intro_typename = 14;
-    RoleUserRelationExpression where = 15;
+    RoleUserRelationInput input = 15;
+    RoleUserRelationExpression where = 16;
 }
 message RoleUserRelationListMutationArguments {
     string id = 1;
     string user_ref = 2;
-    UserInput user_ref_type = 3;
+    UserInput user = 3;
     string role_ref = 4;
-    RoleInput role_ref_type = 5;
+    RoleInput role = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -1409,7 +1415,7 @@ message RoleUserRelationListMutationArguments {
 message UserMobileNumbersRelationMutationArguments {
     string id = 1;
     string user_ref = 2;
-    UserInput user_ref_type = 3;
+    UserInput user = 3;
     string mobile_numbers_ref = 4;
     bool is_deprecated = 5;
     int32 version = 6;
@@ -1420,12 +1426,13 @@ message UserMobileNumbersRelationMutationArguments {
     google.protobuf.Timestamp update_time = 11;
     string create_group_id = 12;
     string intro_typename = 13;
-    UserMobileNumbersRelationExpression where = 14;
+    UserMobileNumbersRelationInput input = 14;
+    UserMobileNumbersRelationExpression where = 15;
 }
 message UserMobileNumbersRelationListMutationArguments {
     string id = 1;
     string user_ref = 2;
-    UserInput user_ref_type = 3;
+    UserInput user = 3;
     string mobile_numbers_ref = 4;
     bool is_deprecated = 5;
     int32 version = 6;
@@ -1442,9 +1449,9 @@ message UserMobileNumbersRelationListMutationArguments {
 message UserUserProfileRelationMutationArguments {
     string id = 1;
     string user_profile_ref = 2;
-    UserProfileInput user_profile_ref_type = 3;
+    UserProfileInput user_profile = 3;
     string user_ref = 4;
-    UserInput user_ref_type = 5;
+    UserInput user = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -1454,14 +1461,15 @@ message UserUserProfileRelationMutationArguments {
     google.protobuf.Timestamp update_time = 12;
     string create_group_id = 13;
     string intro_typename = 14;
-    UserUserProfileRelationExpression where = 15;
+    UserUserProfileRelationInput input = 15;
+    UserUserProfileRelationExpression where = 16;
 }
 message UserUserProfileRelationListMutationArguments {
     string id = 1;
     string user_profile_ref = 2;
-    UserProfileInput user_profile_ref_type = 3;
+    UserProfileInput user_profile = 3;
     string user_ref = 4;
-    UserInput user_ref_type = 5;
+    UserInput user = 5;
     bool is_deprecated = 6;
     int32 version = 7;
     int32 realm_id = 8;
@@ -1477,7 +1485,7 @@ message UserUserProfileRelationListMutationArguments {
 message RoleRoleTypeRelationMutationArguments {
     string id = 1;
     string role_ref = 2;
-    RoleInput role_ref_type = 3;
+    RoleInput role = 3;
     RoleType role_type_ref = 4;
     bool is_deprecated = 5;
     int32 version = 6;
@@ -1488,12 +1496,13 @@ message RoleRoleTypeRelationMutationArguments {
     google.protobuf.Timestamp update_time = 11;
     string create_group_id = 12;
     string intro_typename = 13;
-    RoleRoleTypeRelationExpression where = 14;
+    RoleRoleTypeRelationInput input = 14;
+    RoleRoleTypeRelationExpression where = 15;
 }
 message RoleRoleTypeRelationListMutationArguments {
     string id = 1;
     string role_ref = 2;
-    RoleInput role_ref_type = 3;
+    RoleInput role = 3;
     RoleType role_type_ref = 4;
     bool is_deprecated = 5;
     int32 version = 6;
@@ -1834,9 +1843,9 @@ message OrganizationConnectionSubscriptionArguments {
 message OrganizationUserRelationSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression organization_ref = 4;
-    OrganizationExpression organization_ref_type = 5;
+    OrganizationExpression organization = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -1854,9 +1863,9 @@ message OrganizationUserRelationSubscriptionArguments {
 message OrganizationUserRelationListSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression organization_ref = 4;
-    OrganizationExpression organization_ref_type = 5;
+    OrganizationExpression organization = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -1880,9 +1889,9 @@ message OrganizationUserRelationListSubscriptionArguments {
 message OrganizationUserRelationConnectionSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression organization_ref = 4;
-    OrganizationExpression organization_ref_type = 5;
+    OrganizationExpression organization = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -1906,9 +1915,9 @@ message OrganizationUserRelationConnectionSubscriptionArguments {
 message RoleUserRelationSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression role_ref = 4;
-    RoleExpression role_ref_type = 5;
+    RoleExpression role = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -1926,9 +1935,9 @@ message RoleUserRelationSubscriptionArguments {
 message RoleUserRelationListSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression role_ref = 4;
-    RoleExpression role_ref_type = 5;
+    RoleExpression role = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -1952,9 +1961,9 @@ message RoleUserRelationListSubscriptionArguments {
 message RoleUserRelationConnectionSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression role_ref = 4;
-    RoleExpression role_ref_type = 5;
+    RoleExpression role = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -1978,7 +1987,7 @@ message RoleUserRelationConnectionSubscriptionArguments {
 message UserMobileNumbersRelationSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression mobile_numbers_ref = 4;
     bool include_deprecated = 5;
     io.graphoenix.core.IntExpression version = 6;
@@ -1997,7 +2006,7 @@ message UserMobileNumbersRelationSubscriptionArguments {
 message UserMobileNumbersRelationListSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression mobile_numbers_ref = 4;
     bool include_deprecated = 5;
     io.graphoenix.core.IntExpression version = 6;
@@ -2022,7 +2031,7 @@ message UserMobileNumbersRelationListSubscriptionArguments {
 message UserMobileNumbersRelationConnectionSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_ref = 2;
-    UserExpression user_ref_type = 3;
+    UserExpression user = 3;
     io.graphoenix.core.StringExpression mobile_numbers_ref = 4;
     bool include_deprecated = 5;
     io.graphoenix.core.IntExpression version = 6;
@@ -2047,9 +2056,9 @@ message UserMobileNumbersRelationConnectionSubscriptionArguments {
 message UserUserProfileRelationSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_profile_ref = 2;
-    UserProfileExpression user_profile_ref_type = 3;
+    UserProfileExpression user_profile = 3;
     io.graphoenix.core.StringExpression user_ref = 4;
-    UserExpression user_ref_type = 5;
+    UserExpression user = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -2067,9 +2076,9 @@ message UserUserProfileRelationSubscriptionArguments {
 message UserUserProfileRelationListSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_profile_ref = 2;
-    UserProfileExpression user_profile_ref_type = 3;
+    UserProfileExpression user_profile = 3;
     io.graphoenix.core.StringExpression user_ref = 4;
-    UserExpression user_ref_type = 5;
+    UserExpression user = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -2093,9 +2102,9 @@ message UserUserProfileRelationListSubscriptionArguments {
 message UserUserProfileRelationConnectionSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression user_profile_ref = 2;
-    UserProfileExpression user_profile_ref_type = 3;
+    UserProfileExpression user_profile = 3;
     io.graphoenix.core.StringExpression user_ref = 4;
-    UserExpression user_ref_type = 5;
+    UserExpression user = 5;
     bool include_deprecated = 6;
     io.graphoenix.core.IntExpression version = 7;
     io.graphoenix.core.IntExpression realm_id = 8;
@@ -2119,7 +2128,7 @@ message UserUserProfileRelationConnectionSubscriptionArguments {
 message RoleRoleTypeRelationSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression role_ref = 2;
-    RoleExpression role_ref_type = 3;
+    RoleExpression role = 3;
     RoleTypeExpression role_type_ref = 4;
     bool include_deprecated = 5;
     io.graphoenix.core.IntExpression version = 6;
@@ -2138,7 +2147,7 @@ message RoleRoleTypeRelationSubscriptionArguments {
 message RoleRoleTypeRelationListSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression role_ref = 2;
-    RoleExpression role_ref_type = 3;
+    RoleExpression role = 3;
     RoleTypeExpression role_type_ref = 4;
     bool include_deprecated = 5;
     io.graphoenix.core.IntExpression version = 6;
@@ -2163,7 +2172,7 @@ message RoleRoleTypeRelationListSubscriptionArguments {
 message RoleRoleTypeRelationConnectionSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression role_ref = 2;
-    RoleExpression role_ref_type = 3;
+    RoleExpression role = 3;
     RoleTypeExpression role_type_ref = 4;
     bool include_deprecated = 5;
     io.graphoenix.core.IntExpression version = 6;

@@ -24,7 +24,7 @@ public class ProductExpression implements MetaExpression {
   private FloatExpression price;
 
   @DefaultValue("false")
-  private Boolean includeDeprecated;
+  private Boolean includeDeprecated = false;
 
   private IntExpression version;
 
@@ -43,10 +43,10 @@ public class ProductExpression implements MetaExpression {
   private StringExpression __typename;
 
   @DefaultValue("false")
-  private Boolean not;
+  private Boolean not = false;
 
   @DefaultValue("AND")
-  private Conditional cond;
+  private Conditional cond = Conditional.AND;
 
   private Collection<ProductExpression> exs;
 
@@ -97,7 +97,7 @@ public class ProductExpression implements MetaExpression {
 
   @Override
   public void setRealmId(IntExpression realmId) {
-    this.realmId = realmId;
+    this.realmId = (IntExpression)realmId;
   }
 
   @Override
@@ -107,7 +107,7 @@ public class ProductExpression implements MetaExpression {
 
   @Override
   public void setCreateUserId(StringExpression createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (StringExpression)createUserId;
   }
 
   @Override
@@ -117,7 +117,7 @@ public class ProductExpression implements MetaExpression {
 
   @Override
   public void setCreateTime(StringExpression createTime) {
-    this.createTime = createTime;
+    this.createTime = (StringExpression)createTime;
   }
 
   @Override
@@ -127,7 +127,7 @@ public class ProductExpression implements MetaExpression {
 
   @Override
   public void setUpdateUserId(StringExpression updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (StringExpression)updateUserId;
   }
 
   @Override
@@ -137,7 +137,7 @@ public class ProductExpression implements MetaExpression {
 
   @Override
   public void setUpdateTime(StringExpression updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (StringExpression)updateTime;
   }
 
   @Override
@@ -147,7 +147,7 @@ public class ProductExpression implements MetaExpression {
 
   @Override
   public void setCreateGroupId(StringExpression createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (StringExpression)createGroupId;
   }
 
   public StringExpression get__typename() {

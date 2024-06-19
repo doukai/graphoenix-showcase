@@ -19,11 +19,12 @@ public class UserMobileNumbersRelationMutationArguments implements MetaInput {
 
   private String userRef;
 
-  private UserInput userRefType;
+  private UserInput user;
 
   private String mobileNumbersRef;
 
-  private Boolean isDeprecated;
+  @DefaultValue("false")
+  private Boolean isDeprecated = false;
 
   private Integer version;
 
@@ -40,7 +41,9 @@ public class UserMobileNumbersRelationMutationArguments implements MetaInput {
   private String createGroupId;
 
   @DefaultValue("\"UserMobileNumbersRelation\"")
-  private String __typename;
+  private String __typename = "UserMobileNumbersRelation";
+
+  private UserMobileNumbersRelationInput input;
 
   private UserMobileNumbersRelationExpression where;
 
@@ -60,12 +63,12 @@ public class UserMobileNumbersRelationMutationArguments implements MetaInput {
     this.userRef = userRef;
   }
 
-  public UserInput getUserRefType() {
-    return this.userRefType;
+  public UserInput getUser() {
+    return this.user;
   }
 
-  public void setUserRefType(UserInput userRefType) {
-    this.userRefType = userRefType;
+  public void setUser(UserInput user) {
+    this.user = user;
   }
 
   public String getMobileNumbersRef() {
@@ -91,7 +94,7 @@ public class UserMobileNumbersRelationMutationArguments implements MetaInput {
 
   @Override
   public void setVersion(Integer version) {
-    this.version = version;
+    this.version = (Integer)version;
   }
 
   @Override
@@ -101,7 +104,7 @@ public class UserMobileNumbersRelationMutationArguments implements MetaInput {
 
   @Override
   public void setRealmId(Integer realmId) {
-    this.realmId = realmId;
+    this.realmId = (Integer)realmId;
   }
 
   @Override
@@ -111,7 +114,7 @@ public class UserMobileNumbersRelationMutationArguments implements MetaInput {
 
   @Override
   public void setCreateUserId(String createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (String)createUserId;
   }
 
   @Override
@@ -121,7 +124,7 @@ public class UserMobileNumbersRelationMutationArguments implements MetaInput {
 
   @Override
   public void setCreateTime(LocalDateTime createTime) {
-    this.createTime = createTime;
+    this.createTime = (LocalDateTime)createTime;
   }
 
   @Override
@@ -131,7 +134,7 @@ public class UserMobileNumbersRelationMutationArguments implements MetaInput {
 
   @Override
   public void setUpdateUserId(String updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (String)updateUserId;
   }
 
   @Override
@@ -141,7 +144,7 @@ public class UserMobileNumbersRelationMutationArguments implements MetaInput {
 
   @Override
   public void setUpdateTime(LocalDateTime updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (LocalDateTime)updateTime;
   }
 
   @Override
@@ -151,7 +154,7 @@ public class UserMobileNumbersRelationMutationArguments implements MetaInput {
 
   @Override
   public void setCreateGroupId(String createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (String)createGroupId;
   }
 
   public String get__typename() {
@@ -160,6 +163,14 @@ public class UserMobileNumbersRelationMutationArguments implements MetaInput {
 
   public void set__typename(String __typename) {
     this.__typename = __typename;
+  }
+
+  public UserMobileNumbersRelationInput getInput() {
+    return this.input;
+  }
+
+  public void setInput(UserMobileNumbersRelationInput input) {
+    this.input = input;
   }
 
   public UserMobileNumbersRelationExpression getWhere() {

@@ -20,14 +20,14 @@ public class OrganizationUserRelationExpression implements MetaExpression {
 
   private StringExpression userRef;
 
-  private UserExpression userRefType;
+  private UserExpression user;
 
   private StringExpression organizationRef;
 
-  private OrganizationExpression organizationRefType;
+  private OrganizationExpression organization;
 
   @DefaultValue("false")
-  private Boolean includeDeprecated;
+  private Boolean includeDeprecated = false;
 
   private IntExpression version;
 
@@ -46,10 +46,10 @@ public class OrganizationUserRelationExpression implements MetaExpression {
   private StringExpression __typename;
 
   @DefaultValue("false")
-  private Boolean not;
+  private Boolean not = false;
 
   @DefaultValue("AND")
-  private Conditional cond;
+  private Conditional cond = Conditional.AND;
 
   private Collection<OrganizationUserRelationExpression> exs;
 
@@ -69,12 +69,12 @@ public class OrganizationUserRelationExpression implements MetaExpression {
     this.userRef = userRef;
   }
 
-  public UserExpression getUserRefType() {
-    return this.userRefType;
+  public UserExpression getUser() {
+    return this.user;
   }
 
-  public void setUserRefType(UserExpression userRefType) {
-    this.userRefType = userRefType;
+  public void setUser(UserExpression user) {
+    this.user = user;
   }
 
   public StringExpression getOrganizationRef() {
@@ -85,12 +85,12 @@ public class OrganizationUserRelationExpression implements MetaExpression {
     this.organizationRef = organizationRef;
   }
 
-  public OrganizationExpression getOrganizationRefType() {
-    return this.organizationRefType;
+  public OrganizationExpression getOrganization() {
+    return this.organization;
   }
 
-  public void setOrganizationRefType(OrganizationExpression organizationRefType) {
-    this.organizationRefType = organizationRefType;
+  public void setOrganization(OrganizationExpression organization) {
+    this.organization = organization;
   }
 
   public Boolean getIncludeDeprecated() {
@@ -116,7 +116,7 @@ public class OrganizationUserRelationExpression implements MetaExpression {
 
   @Override
   public void setRealmId(IntExpression realmId) {
-    this.realmId = realmId;
+    this.realmId = (IntExpression)realmId;
   }
 
   @Override
@@ -126,7 +126,7 @@ public class OrganizationUserRelationExpression implements MetaExpression {
 
   @Override
   public void setCreateUserId(StringExpression createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (StringExpression)createUserId;
   }
 
   @Override
@@ -136,7 +136,7 @@ public class OrganizationUserRelationExpression implements MetaExpression {
 
   @Override
   public void setCreateTime(StringExpression createTime) {
-    this.createTime = createTime;
+    this.createTime = (StringExpression)createTime;
   }
 
   @Override
@@ -146,7 +146,7 @@ public class OrganizationUserRelationExpression implements MetaExpression {
 
   @Override
   public void setUpdateUserId(StringExpression updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (StringExpression)updateUserId;
   }
 
   @Override
@@ -156,7 +156,7 @@ public class OrganizationUserRelationExpression implements MetaExpression {
 
   @Override
   public void setUpdateTime(StringExpression updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (StringExpression)updateTime;
   }
 
   @Override
@@ -166,7 +166,7 @@ public class OrganizationUserRelationExpression implements MetaExpression {
 
   @Override
   public void setCreateGroupId(StringExpression createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (StringExpression)createGroupId;
   }
 
   public StringExpression get__typename() {

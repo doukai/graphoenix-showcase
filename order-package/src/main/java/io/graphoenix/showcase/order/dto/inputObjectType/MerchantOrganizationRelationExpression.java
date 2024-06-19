@@ -21,14 +21,14 @@ public class MerchantOrganizationRelationExpression implements MetaExpression {
 
   private StringExpression merchantRef;
 
-  private MerchantExpression merchantRefType;
+  private MerchantExpression merchant;
 
   private IntExpression organizationRef;
 
-  private OrganizationExpression organizationRefType;
+  private OrganizationExpression organization;
 
   @DefaultValue("false")
-  private Boolean includeDeprecated;
+  private Boolean includeDeprecated = false;
 
   private IntExpression version;
 
@@ -47,10 +47,10 @@ public class MerchantOrganizationRelationExpression implements MetaExpression {
   private StringExpression __typename;
 
   @DefaultValue("false")
-  private Boolean not;
+  private Boolean not = false;
 
   @DefaultValue("AND")
-  private Conditional cond;
+  private Conditional cond = Conditional.AND;
 
   private Collection<MerchantOrganizationRelationExpression> exs;
 
@@ -70,12 +70,12 @@ public class MerchantOrganizationRelationExpression implements MetaExpression {
     this.merchantRef = merchantRef;
   }
 
-  public MerchantExpression getMerchantRefType() {
-    return this.merchantRefType;
+  public MerchantExpression getMerchant() {
+    return this.merchant;
   }
 
-  public void setMerchantRefType(MerchantExpression merchantRefType) {
-    this.merchantRefType = merchantRefType;
+  public void setMerchant(MerchantExpression merchant) {
+    this.merchant = merchant;
   }
 
   public IntExpression getOrganizationRef() {
@@ -86,12 +86,12 @@ public class MerchantOrganizationRelationExpression implements MetaExpression {
     this.organizationRef = organizationRef;
   }
 
-  public OrganizationExpression getOrganizationRefType() {
-    return this.organizationRefType;
+  public OrganizationExpression getOrganization() {
+    return this.organization;
   }
 
-  public void setOrganizationRefType(OrganizationExpression organizationRefType) {
-    this.organizationRefType = organizationRefType;
+  public void setOrganization(OrganizationExpression organization) {
+    this.organization = organization;
   }
 
   public Boolean getIncludeDeprecated() {
@@ -117,7 +117,7 @@ public class MerchantOrganizationRelationExpression implements MetaExpression {
 
   @Override
   public void setRealmId(IntExpression realmId) {
-    this.realmId = realmId;
+    this.realmId = (IntExpression)realmId;
   }
 
   @Override
@@ -127,7 +127,7 @@ public class MerchantOrganizationRelationExpression implements MetaExpression {
 
   @Override
   public void setCreateUserId(StringExpression createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (StringExpression)createUserId;
   }
 
   @Override
@@ -137,7 +137,7 @@ public class MerchantOrganizationRelationExpression implements MetaExpression {
 
   @Override
   public void setCreateTime(StringExpression createTime) {
-    this.createTime = createTime;
+    this.createTime = (StringExpression)createTime;
   }
 
   @Override
@@ -147,7 +147,7 @@ public class MerchantOrganizationRelationExpression implements MetaExpression {
 
   @Override
   public void setUpdateUserId(StringExpression updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (StringExpression)updateUserId;
   }
 
   @Override
@@ -157,7 +157,7 @@ public class MerchantOrganizationRelationExpression implements MetaExpression {
 
   @Override
   public void setUpdateTime(StringExpression updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (StringExpression)updateTime;
   }
 
   @Override
@@ -167,7 +167,7 @@ public class MerchantOrganizationRelationExpression implements MetaExpression {
 
   @Override
   public void setCreateGroupId(StringExpression createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (StringExpression)createGroupId;
   }
 
   public StringExpression get__typename() {

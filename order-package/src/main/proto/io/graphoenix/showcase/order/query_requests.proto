@@ -91,6 +91,8 @@ message QueryOrderConnectionRequest {
     int32 first = 23;
     int32 last = 24;
     int32 offset = 25;
+    string after = 26;
+    string before = 27;
 }
 message QueryGoodRequest {
     optional string selection_set = 1;
@@ -176,6 +178,8 @@ message QueryGoodConnectionRequest {
     int32 first = 25;
     int32 last = 26;
     int32 offset = 27;
+    string after = 28;
+    string before = 29;
 }
 message QueryProductRequest {
     optional string selection_set = 1;
@@ -246,6 +250,8 @@ message QueryProductConnectionRequest {
     int32 first = 20;
     int32 last = 21;
     int32 offset = 22;
+    string after = 23;
+    string before = 24;
 }
 message QueryMerchantRequest {
     optional string selection_set = 1;
@@ -337,15 +343,17 @@ message QueryMerchantConnectionRequest {
     int32 first = 27;
     int32 last = 28;
     int32 offset = 29;
+    string after = 30;
+    string before = 31;
 }
 message QueryGoodOrderRelationRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     io.graphoenix.core.StringExpression id = 3;
     io.graphoenix.core.StringExpression order_ref = 4;
-    OrderExpression order_ref_type = 5;
+    OrderExpression order = 5;
     io.graphoenix.core.StringExpression good_ref = 6;
-    GoodExpression good_ref_type = 7;
+    GoodExpression good = 7;
     bool include_deprecated = 8;
     io.graphoenix.core.IntExpression version = 9;
     io.graphoenix.core.IntExpression realm_id = 10;
@@ -365,9 +373,9 @@ message QueryGoodOrderRelationListRequest {
     optional string arguments = 2;
     io.graphoenix.core.StringExpression id = 3;
     io.graphoenix.core.StringExpression order_ref = 4;
-    OrderExpression order_ref_type = 5;
+    OrderExpression order = 5;
     io.graphoenix.core.StringExpression good_ref = 6;
-    GoodExpression good_ref_type = 7;
+    GoodExpression good = 7;
     bool include_deprecated = 8;
     io.graphoenix.core.IntExpression version = 9;
     io.graphoenix.core.IntExpression realm_id = 10;
@@ -393,9 +401,9 @@ message QueryGoodOrderRelationConnectionRequest {
     optional string arguments = 2;
     io.graphoenix.core.StringExpression id = 3;
     io.graphoenix.core.StringExpression order_ref = 4;
-    OrderExpression order_ref_type = 5;
+    OrderExpression order = 5;
     io.graphoenix.core.StringExpression good_ref = 6;
-    GoodExpression good_ref_type = 7;
+    GoodExpression good = 7;
     bool include_deprecated = 8;
     io.graphoenix.core.IntExpression version = 9;
     io.graphoenix.core.IntExpression realm_id = 10;
@@ -413,15 +421,17 @@ message QueryGoodOrderRelationConnectionRequest {
     int32 first = 22;
     int32 last = 23;
     int32 offset = 24;
+    string after = 25;
+    string before = 26;
 }
 message QueryGoodProductRelationRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     io.graphoenix.core.StringExpression id = 3;
     io.graphoenix.core.StringExpression good_ref = 4;
-    GoodExpression good_ref_type = 5;
+    GoodExpression good = 5;
     io.graphoenix.core.StringExpression product_ref = 6;
-    ProductExpression product_ref_type = 7;
+    ProductExpression product = 7;
     bool include_deprecated = 8;
     io.graphoenix.core.IntExpression version = 9;
     io.graphoenix.core.IntExpression realm_id = 10;
@@ -441,9 +451,9 @@ message QueryGoodProductRelationListRequest {
     optional string arguments = 2;
     io.graphoenix.core.StringExpression id = 3;
     io.graphoenix.core.StringExpression good_ref = 4;
-    GoodExpression good_ref_type = 5;
+    GoodExpression good = 5;
     io.graphoenix.core.StringExpression product_ref = 6;
-    ProductExpression product_ref_type = 7;
+    ProductExpression product = 7;
     bool include_deprecated = 8;
     io.graphoenix.core.IntExpression version = 9;
     io.graphoenix.core.IntExpression realm_id = 10;
@@ -469,9 +479,9 @@ message QueryGoodProductRelationConnectionRequest {
     optional string arguments = 2;
     io.graphoenix.core.StringExpression id = 3;
     io.graphoenix.core.StringExpression good_ref = 4;
-    GoodExpression good_ref_type = 5;
+    GoodExpression good = 5;
     io.graphoenix.core.StringExpression product_ref = 6;
-    ProductExpression product_ref_type = 7;
+    ProductExpression product = 7;
     bool include_deprecated = 8;
     io.graphoenix.core.IntExpression version = 9;
     io.graphoenix.core.IntExpression realm_id = 10;
@@ -489,15 +499,17 @@ message QueryGoodProductRelationConnectionRequest {
     int32 first = 22;
     int32 last = 23;
     int32 offset = 24;
+    string after = 25;
+    string before = 26;
 }
 message QueryGoodMerchantRelationRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     io.graphoenix.core.StringExpression id = 3;
     io.graphoenix.core.StringExpression good_ref = 4;
-    GoodExpression good_ref_type = 5;
+    GoodExpression good = 5;
     io.graphoenix.core.StringExpression merchant_ref = 6;
-    MerchantExpression merchant_ref_type = 7;
+    MerchantExpression merchant = 7;
     bool include_deprecated = 8;
     io.graphoenix.core.IntExpression version = 9;
     io.graphoenix.core.IntExpression realm_id = 10;
@@ -517,9 +529,9 @@ message QueryGoodMerchantRelationListRequest {
     optional string arguments = 2;
     io.graphoenix.core.StringExpression id = 3;
     io.graphoenix.core.StringExpression good_ref = 4;
-    GoodExpression good_ref_type = 5;
+    GoodExpression good = 5;
     io.graphoenix.core.StringExpression merchant_ref = 6;
-    MerchantExpression merchant_ref_type = 7;
+    MerchantExpression merchant = 7;
     bool include_deprecated = 8;
     io.graphoenix.core.IntExpression version = 9;
     io.graphoenix.core.IntExpression realm_id = 10;
@@ -545,9 +557,9 @@ message QueryGoodMerchantRelationConnectionRequest {
     optional string arguments = 2;
     io.graphoenix.core.StringExpression id = 3;
     io.graphoenix.core.StringExpression good_ref = 4;
-    GoodExpression good_ref_type = 5;
+    GoodExpression good = 5;
     io.graphoenix.core.StringExpression merchant_ref = 6;
-    MerchantExpression merchant_ref_type = 7;
+    MerchantExpression merchant = 7;
     bool include_deprecated = 8;
     io.graphoenix.core.IntExpression version = 9;
     io.graphoenix.core.IntExpression realm_id = 10;
@@ -565,15 +577,17 @@ message QueryGoodMerchantRelationConnectionRequest {
     int32 first = 22;
     int32 last = 23;
     int32 offset = 24;
+    string after = 25;
+    string before = 26;
 }
 message QueryMerchantUserRelationRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     io.graphoenix.core.StringExpression id = 3;
     io.graphoenix.core.StringExpression merchant_ref = 4;
-    MerchantExpression merchant_ref_type = 5;
+    MerchantExpression merchant = 5;
     io.graphoenix.core.IntExpression user_ref = 6;
-    io.graphoenix.showcase.user.UserExpression user_ref_type = 7;
+    io.graphoenix.showcase.user.UserExpression user = 7;
     bool include_deprecated = 8;
     io.graphoenix.core.IntExpression version = 9;
     io.graphoenix.core.IntExpression realm_id = 10;
@@ -593,9 +607,9 @@ message QueryMerchantUserRelationListRequest {
     optional string arguments = 2;
     io.graphoenix.core.StringExpression id = 3;
     io.graphoenix.core.StringExpression merchant_ref = 4;
-    MerchantExpression merchant_ref_type = 5;
+    MerchantExpression merchant = 5;
     io.graphoenix.core.IntExpression user_ref = 6;
-    io.graphoenix.showcase.user.UserExpression user_ref_type = 7;
+    io.graphoenix.showcase.user.UserExpression user = 7;
     bool include_deprecated = 8;
     io.graphoenix.core.IntExpression version = 9;
     io.graphoenix.core.IntExpression realm_id = 10;
@@ -621,9 +635,9 @@ message QueryMerchantUserRelationConnectionRequest {
     optional string arguments = 2;
     io.graphoenix.core.StringExpression id = 3;
     io.graphoenix.core.StringExpression merchant_ref = 4;
-    MerchantExpression merchant_ref_type = 5;
+    MerchantExpression merchant = 5;
     io.graphoenix.core.IntExpression user_ref = 6;
-    io.graphoenix.showcase.user.UserExpression user_ref_type = 7;
+    io.graphoenix.showcase.user.UserExpression user = 7;
     bool include_deprecated = 8;
     io.graphoenix.core.IntExpression version = 9;
     io.graphoenix.core.IntExpression realm_id = 10;
@@ -641,15 +655,17 @@ message QueryMerchantUserRelationConnectionRequest {
     int32 first = 22;
     int32 last = 23;
     int32 offset = 24;
+    string after = 25;
+    string before = 26;
 }
 message QueryMerchantOrganizationRelationRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     io.graphoenix.core.StringExpression id = 3;
     io.graphoenix.core.StringExpression merchant_ref = 4;
-    MerchantExpression merchant_ref_type = 5;
+    MerchantExpression merchant = 5;
     io.graphoenix.core.IntExpression organization_ref = 6;
-    io.graphoenix.showcase.user.OrganizationExpression organization_ref_type = 7;
+    io.graphoenix.showcase.user.OrganizationExpression organization = 7;
     bool include_deprecated = 8;
     io.graphoenix.core.IntExpression version = 9;
     io.graphoenix.core.IntExpression realm_id = 10;
@@ -669,9 +685,9 @@ message QueryMerchantOrganizationRelationListRequest {
     optional string arguments = 2;
     io.graphoenix.core.StringExpression id = 3;
     io.graphoenix.core.StringExpression merchant_ref = 4;
-    MerchantExpression merchant_ref_type = 5;
+    MerchantExpression merchant = 5;
     io.graphoenix.core.IntExpression organization_ref = 6;
-    io.graphoenix.showcase.user.OrganizationExpression organization_ref_type = 7;
+    io.graphoenix.showcase.user.OrganizationExpression organization = 7;
     bool include_deprecated = 8;
     io.graphoenix.core.IntExpression version = 9;
     io.graphoenix.core.IntExpression realm_id = 10;
@@ -697,9 +713,9 @@ message QueryMerchantOrganizationRelationConnectionRequest {
     optional string arguments = 2;
     io.graphoenix.core.StringExpression id = 3;
     io.graphoenix.core.StringExpression merchant_ref = 4;
-    MerchantExpression merchant_ref_type = 5;
+    MerchantExpression merchant = 5;
     io.graphoenix.core.IntExpression organization_ref = 6;
-    io.graphoenix.showcase.user.OrganizationExpression organization_ref_type = 7;
+    io.graphoenix.showcase.user.OrganizationExpression organization = 7;
     bool include_deprecated = 8;
     io.graphoenix.core.IntExpression version = 9;
     io.graphoenix.core.IntExpression realm_id = 10;
@@ -717,6 +733,8 @@ message QueryMerchantOrganizationRelationConnectionRequest {
     int32 first = 22;
     int32 last = 23;
     int32 offset = 24;
+    string after = 25;
+    string before = 26;
 }
 message QueryMerchantDirectorRequest {
     optional string selection_set = 1;
@@ -793,4 +811,6 @@ message QueryMerchantDirectorConnectionRequest {
     int32 first = 22;
     int32 last = 23;
     int32 offset = 24;
+    string after = 25;
+    string before = 26;
 }

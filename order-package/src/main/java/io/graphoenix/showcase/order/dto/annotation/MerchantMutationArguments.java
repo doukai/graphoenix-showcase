@@ -53,6 +53,8 @@ public @interface MerchantMutationArguments {
 
   MerchantDirectorInput1[] merchantDirector() default {};
 
+  MerchantInput1 input() default @MerchantInput1;
+
   MerchantExpression1 where() default @MerchantExpression1;
 
   String $id() default "";
@@ -92,6 +94,8 @@ public @interface MerchantMutationArguments {
   String $merchantOrganizationRelation() default "";
 
   String $merchantDirector() default "";
+
+  String $input() default "";
 
   String $where() default "";
 }

@@ -17,11 +17,11 @@ public @interface UserUserProfileRelationMutationArguments {
 
   String userProfileRef() default "";
 
-  UserProfileInput1 userProfileRefType() default @UserProfileInput1;
+  UserProfileInput1 userProfile() default @UserProfileInput1;
 
   String userRef() default "";
 
-  UserInput1 userRefType() default @UserInput1;
+  UserInput1 user() default @UserInput1;
 
   boolean isDeprecated() default false;
 
@@ -41,17 +41,19 @@ public @interface UserUserProfileRelationMutationArguments {
 
   String __typename() default "UserUserProfileRelation";
 
+  UserUserProfileRelationInput1 input() default @UserUserProfileRelationInput1;
+
   UserUserProfileRelationExpression1 where() default @UserUserProfileRelationExpression1;
 
   String $id() default "";
 
   String $userProfileRef() default "";
 
-  String $userProfileRefType() default "";
+  String $userProfile() default "";
 
   String $userRef() default "";
 
-  String $userRefType() default "";
+  String $user() default "";
 
   String $isDeprecated() default "";
 
@@ -70,6 +72,8 @@ public @interface UserUserProfileRelationMutationArguments {
   String $createGroupId() default "";
 
   String $__typename() default "";
+
+  String $input() default "";
 
   String $where() default "";
 }

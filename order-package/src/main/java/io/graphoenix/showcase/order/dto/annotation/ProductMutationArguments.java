@@ -37,6 +37,8 @@ public @interface ProductMutationArguments {
 
   String __typename() default "Product";
 
+  ProductInput1 input() default @ProductInput1;
+
   ProductExpression1 where() default @ProductExpression1;
 
   String $id() default "";
@@ -62,6 +64,8 @@ public @interface ProductMutationArguments {
   String $createGroupId() default "";
 
   String $__typename() default "";
+
+  String $input() default "";
 
   String $where() default "";
 }

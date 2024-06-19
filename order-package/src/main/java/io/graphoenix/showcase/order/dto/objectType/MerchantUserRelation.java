@@ -21,13 +21,13 @@ public class MerchantUserRelation implements Meta {
 
   private String merchantRef;
 
-  private Merchant merchantRefType;
+  private Merchant merchant;
 
   private Integer userRef;
 
-  private User userRefType;
+  private User user;
 
-  private Boolean isDeprecated;
+  private Boolean isDeprecated = false;
 
   private Integer version;
 
@@ -43,7 +43,7 @@ public class MerchantUserRelation implements Meta {
 
   private String createGroupId;
 
-  private String __typename;
+  private String __typename = "MerchantUserRelation";
 
   private Integer idCount;
 
@@ -83,12 +83,12 @@ public class MerchantUserRelation implements Meta {
     this.merchantRef = merchantRef;
   }
 
-  public Merchant getMerchantRefType() {
-    return this.merchantRefType;
+  public Merchant getMerchant() {
+    return this.merchant;
   }
 
-  public void setMerchantRefType(Merchant merchantRefType) {
-    this.merchantRefType = merchantRefType;
+  public void setMerchant(Merchant merchant) {
+    this.merchant = merchant;
   }
 
   public Integer getUserRef() {
@@ -99,12 +99,12 @@ public class MerchantUserRelation implements Meta {
     this.userRef = userRef;
   }
 
-  public User getUserRefType() {
-    return this.userRefType;
+  public User getUser() {
+    return this.user;
   }
 
-  public void setUserRefType(User userRefType) {
-    this.userRefType = userRefType;
+  public void setUser(User user) {
+    this.user = user;
   }
 
   @Override
@@ -114,7 +114,7 @@ public class MerchantUserRelation implements Meta {
 
   @Override
   public void setIsDeprecated(Boolean isDeprecated) {
-    this.isDeprecated = isDeprecated;
+    this.isDeprecated = (Boolean)isDeprecated;
   }
 
   @Override
@@ -124,7 +124,7 @@ public class MerchantUserRelation implements Meta {
 
   @Override
   public void setVersion(Integer version) {
-    this.version = version;
+    this.version = (Integer)version;
   }
 
   @Override
@@ -134,7 +134,7 @@ public class MerchantUserRelation implements Meta {
 
   @Override
   public void setRealmId(Integer realmId) {
-    this.realmId = realmId;
+    this.realmId = (Integer)realmId;
   }
 
   @Override
@@ -144,7 +144,7 @@ public class MerchantUserRelation implements Meta {
 
   @Override
   public void setCreateUserId(String createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (String)createUserId;
   }
 
   @Override
@@ -154,7 +154,7 @@ public class MerchantUserRelation implements Meta {
 
   @Override
   public void setCreateTime(LocalDateTime createTime) {
-    this.createTime = createTime;
+    this.createTime = (LocalDateTime)createTime;
   }
 
   @Override
@@ -164,7 +164,7 @@ public class MerchantUserRelation implements Meta {
 
   @Override
   public void setUpdateUserId(String updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (String)updateUserId;
   }
 
   @Override
@@ -174,7 +174,7 @@ public class MerchantUserRelation implements Meta {
 
   @Override
   public void setUpdateTime(LocalDateTime updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (LocalDateTime)updateTime;
   }
 
   @Override
@@ -184,7 +184,7 @@ public class MerchantUserRelation implements Meta {
 
   @Override
   public void setCreateGroupId(String createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (String)createGroupId;
   }
 
   public String get__typename() {

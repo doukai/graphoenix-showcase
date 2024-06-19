@@ -18,7 +18,7 @@ public @interface RoleRoleTypeRelationMutationArguments {
 
   String roleRef() default "";
 
-  RoleInput1 roleRefType() default @RoleInput1;
+  RoleInput1 role() default @RoleInput1;
 
   RoleType roleTypeRef() default RoleType.ADMIN;
 
@@ -40,13 +40,15 @@ public @interface RoleRoleTypeRelationMutationArguments {
 
   String __typename() default "RoleRoleTypeRelation";
 
+  RoleRoleTypeRelationInput1 input() default @RoleRoleTypeRelationInput1;
+
   RoleRoleTypeRelationExpression1 where() default @RoleRoleTypeRelationExpression1;
 
   String $id() default "";
 
   String $roleRef() default "";
 
-  String $roleRefType() default "";
+  String $role() default "";
 
   String $roleTypeRef() default "";
 
@@ -67,6 +69,8 @@ public @interface RoleRoleTypeRelationMutationArguments {
   String $createGroupId() default "";
 
   String $__typename() default "";
+
+  String $input() default "";
 
   String $where() default "";
 }

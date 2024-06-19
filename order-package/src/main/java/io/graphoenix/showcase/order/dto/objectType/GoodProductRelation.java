@@ -20,13 +20,13 @@ public class GoodProductRelation implements Meta {
 
   private String goodRef;
 
-  private Good goodRefType;
+  private Good good;
 
   private String productRef;
 
-  private Product productRefType;
+  private Product product;
 
-  private Boolean isDeprecated;
+  private Boolean isDeprecated = false;
 
   private Integer version;
 
@@ -42,7 +42,7 @@ public class GoodProductRelation implements Meta {
 
   private String createGroupId;
 
-  private String __typename;
+  private String __typename = "GoodProductRelation";
 
   private Integer idCount;
 
@@ -78,12 +78,12 @@ public class GoodProductRelation implements Meta {
     this.goodRef = goodRef;
   }
 
-  public Good getGoodRefType() {
-    return this.goodRefType;
+  public Good getGood() {
+    return this.good;
   }
 
-  public void setGoodRefType(Good goodRefType) {
-    this.goodRefType = goodRefType;
+  public void setGood(Good good) {
+    this.good = good;
   }
 
   public String getProductRef() {
@@ -94,12 +94,12 @@ public class GoodProductRelation implements Meta {
     this.productRef = productRef;
   }
 
-  public Product getProductRefType() {
-    return this.productRefType;
+  public Product getProduct() {
+    return this.product;
   }
 
-  public void setProductRefType(Product productRefType) {
-    this.productRefType = productRefType;
+  public void setProduct(Product product) {
+    this.product = product;
   }
 
   @Override
@@ -109,7 +109,7 @@ public class GoodProductRelation implements Meta {
 
   @Override
   public void setIsDeprecated(Boolean isDeprecated) {
-    this.isDeprecated = isDeprecated;
+    this.isDeprecated = (Boolean)isDeprecated;
   }
 
   @Override
@@ -119,7 +119,7 @@ public class GoodProductRelation implements Meta {
 
   @Override
   public void setVersion(Integer version) {
-    this.version = version;
+    this.version = (Integer)version;
   }
 
   @Override
@@ -129,7 +129,7 @@ public class GoodProductRelation implements Meta {
 
   @Override
   public void setRealmId(Integer realmId) {
-    this.realmId = realmId;
+    this.realmId = (Integer)realmId;
   }
 
   @Override
@@ -139,7 +139,7 @@ public class GoodProductRelation implements Meta {
 
   @Override
   public void setCreateUserId(String createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (String)createUserId;
   }
 
   @Override
@@ -149,7 +149,7 @@ public class GoodProductRelation implements Meta {
 
   @Override
   public void setCreateTime(LocalDateTime createTime) {
-    this.createTime = createTime;
+    this.createTime = (LocalDateTime)createTime;
   }
 
   @Override
@@ -159,7 +159,7 @@ public class GoodProductRelation implements Meta {
 
   @Override
   public void setUpdateUserId(String updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (String)updateUserId;
   }
 
   @Override
@@ -169,7 +169,7 @@ public class GoodProductRelation implements Meta {
 
   @Override
   public void setUpdateTime(LocalDateTime updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (LocalDateTime)updateTime;
   }
 
   @Override
@@ -179,7 +179,7 @@ public class GoodProductRelation implements Meta {
 
   @Override
   public void setCreateGroupId(String createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (String)createGroupId;
   }
 
   public String get__typename() {

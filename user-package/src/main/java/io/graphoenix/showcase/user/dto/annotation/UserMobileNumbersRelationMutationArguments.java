@@ -17,7 +17,7 @@ public @interface UserMobileNumbersRelationMutationArguments {
 
   String userRef() default "";
 
-  UserInput1 userRefType() default @UserInput1;
+  UserInput1 user() default @UserInput1;
 
   String mobileNumbersRef() default "";
 
@@ -39,13 +39,15 @@ public @interface UserMobileNumbersRelationMutationArguments {
 
   String __typename() default "UserMobileNumbersRelation";
 
+  UserMobileNumbersRelationInput1 input() default @UserMobileNumbersRelationInput1;
+
   UserMobileNumbersRelationExpression1 where() default @UserMobileNumbersRelationExpression1;
 
   String $id() default "";
 
   String $userRef() default "";
 
-  String $userRefType() default "";
+  String $user() default "";
 
   String $mobileNumbersRef() default "";
 
@@ -66,6 +68,8 @@ public @interface UserMobileNumbersRelationMutationArguments {
   String $createGroupId() default "";
 
   String $__typename() default "";
+
+  String $input() default "";
 
   String $where() default "";
 }

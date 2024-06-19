@@ -23,14 +23,14 @@ public class MerchantUserRelationConnectionQueryArguments implements MetaExpress
 
   private StringExpression merchantRef;
 
-  private MerchantExpression merchantRefType;
+  private MerchantExpression merchant;
 
   private IntExpression userRef;
 
-  private UserExpression userRefType;
+  private UserExpression user;
 
   @DefaultValue("false")
-  private Boolean includeDeprecated;
+  private Boolean includeDeprecated = false;
 
   private IntExpression version;
 
@@ -53,10 +53,10 @@ public class MerchantUserRelationConnectionQueryArguments implements MetaExpress
   private Collection<String> groupBy;
 
   @DefaultValue("false")
-  private Boolean not;
+  private Boolean not = false;
 
   @DefaultValue("AND")
-  private Conditional cond;
+  private Conditional cond = Conditional.AND;
 
   private Collection<MerchantUserRelationExpression> exs;
 
@@ -86,12 +86,12 @@ public class MerchantUserRelationConnectionQueryArguments implements MetaExpress
     this.merchantRef = merchantRef;
   }
 
-  public MerchantExpression getMerchantRefType() {
-    return this.merchantRefType;
+  public MerchantExpression getMerchant() {
+    return this.merchant;
   }
 
-  public void setMerchantRefType(MerchantExpression merchantRefType) {
-    this.merchantRefType = merchantRefType;
+  public void setMerchant(MerchantExpression merchant) {
+    this.merchant = merchant;
   }
 
   public IntExpression getUserRef() {
@@ -102,12 +102,12 @@ public class MerchantUserRelationConnectionQueryArguments implements MetaExpress
     this.userRef = userRef;
   }
 
-  public UserExpression getUserRefType() {
-    return this.userRefType;
+  public UserExpression getUser() {
+    return this.user;
   }
 
-  public void setUserRefType(UserExpression userRefType) {
-    this.userRefType = userRefType;
+  public void setUser(UserExpression user) {
+    this.user = user;
   }
 
   public Boolean getIncludeDeprecated() {
@@ -133,7 +133,7 @@ public class MerchantUserRelationConnectionQueryArguments implements MetaExpress
 
   @Override
   public void setRealmId(IntExpression realmId) {
-    this.realmId = realmId;
+    this.realmId = (IntExpression)realmId;
   }
 
   @Override
@@ -143,7 +143,7 @@ public class MerchantUserRelationConnectionQueryArguments implements MetaExpress
 
   @Override
   public void setCreateUserId(StringExpression createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (StringExpression)createUserId;
   }
 
   @Override
@@ -153,7 +153,7 @@ public class MerchantUserRelationConnectionQueryArguments implements MetaExpress
 
   @Override
   public void setCreateTime(StringExpression createTime) {
-    this.createTime = createTime;
+    this.createTime = (StringExpression)createTime;
   }
 
   @Override
@@ -163,7 +163,7 @@ public class MerchantUserRelationConnectionQueryArguments implements MetaExpress
 
   @Override
   public void setUpdateUserId(StringExpression updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (StringExpression)updateUserId;
   }
 
   @Override
@@ -173,7 +173,7 @@ public class MerchantUserRelationConnectionQueryArguments implements MetaExpress
 
   @Override
   public void setUpdateTime(StringExpression updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (StringExpression)updateTime;
   }
 
   @Override
@@ -183,7 +183,7 @@ public class MerchantUserRelationConnectionQueryArguments implements MetaExpress
 
   @Override
   public void setCreateGroupId(StringExpression createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (StringExpression)createGroupId;
   }
 
   public StringExpression get__typename() {

@@ -37,7 +37,8 @@ message MutationUserRequest {
     repeated OrganizationUserRelationInput organization_user_relation = 23;
     repeated RoleUserRelationInput role_user_relation = 24;
     repeated UserMobileNumbersRelationInput user_mobile_numbers_relation = 25;
-    UserExpression where = 26;
+    UserInput input = 26;
+    UserExpression where = 27;
 }
 message MutationUserListRequest {
     optional string selection_set = 1;
@@ -86,7 +87,8 @@ message MutationUserProfileRequest {
     string create_group_id = 15;
     string intro_typename = 16;
     repeated UserUserProfileRelationInput user_user_profile_relation = 17;
-    UserProfileExpression where = 18;
+    UserProfileInput input = 18;
+    UserProfileExpression where = 19;
 }
 message MutationUserProfileListRequest {
     optional string selection_set = 1;
@@ -127,7 +129,8 @@ message MutationRoleRequest {
     string intro_typename = 15;
     repeated RoleRoleTypeRelationInput role_role_type_relation = 16;
     repeated RoleUserRelationInput role_user_relation = 17;
-    RoleExpression where = 18;
+    RoleInput input = 18;
+    RoleExpression where = 19;
 }
 message MutationRoleListRequest {
     optional string selection_set = 1;
@@ -168,7 +171,8 @@ message MutationOrganizationRequest {
     string create_group_id = 15;
     string intro_typename = 16;
     repeated OrganizationUserRelationInput organization_user_relation = 17;
-    OrganizationExpression where = 18;
+    OrganizationInput input = 18;
+    OrganizationExpression where = 19;
 }
 message MutationOrganizationListRequest {
     optional string selection_set = 1;
@@ -196,9 +200,9 @@ message MutationOrganizationUserRelationRequest {
     optional string arguments = 2;
     string id = 3;
     string user_ref = 4;
-    UserInput user_ref_type = 5;
+    UserInput user = 5;
     string organization_ref = 6;
-    OrganizationInput organization_ref_type = 7;
+    OrganizationInput organization = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -208,16 +212,17 @@ message MutationOrganizationUserRelationRequest {
     google.protobuf.Timestamp update_time = 14;
     string create_group_id = 15;
     string intro_typename = 16;
-    OrganizationUserRelationExpression where = 17;
+    OrganizationUserRelationInput input = 17;
+    OrganizationUserRelationExpression where = 18;
 }
 message MutationOrganizationUserRelationListRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     string id = 3;
     string user_ref = 4;
-    UserInput user_ref_type = 5;
+    UserInput user = 5;
     string organization_ref = 6;
-    OrganizationInput organization_ref_type = 7;
+    OrganizationInput organization = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -235,9 +240,9 @@ message MutationRoleUserRelationRequest {
     optional string arguments = 2;
     string id = 3;
     string user_ref = 4;
-    UserInput user_ref_type = 5;
+    UserInput user = 5;
     string role_ref = 6;
-    RoleInput role_ref_type = 7;
+    RoleInput role = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -247,16 +252,17 @@ message MutationRoleUserRelationRequest {
     google.protobuf.Timestamp update_time = 14;
     string create_group_id = 15;
     string intro_typename = 16;
-    RoleUserRelationExpression where = 17;
+    RoleUserRelationInput input = 17;
+    RoleUserRelationExpression where = 18;
 }
 message MutationRoleUserRelationListRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     string id = 3;
     string user_ref = 4;
-    UserInput user_ref_type = 5;
+    UserInput user = 5;
     string role_ref = 6;
-    RoleInput role_ref_type = 7;
+    RoleInput role = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -274,7 +280,7 @@ message MutationUserMobileNumbersRelationRequest {
     optional string arguments = 2;
     string id = 3;
     string user_ref = 4;
-    UserInput user_ref_type = 5;
+    UserInput user = 5;
     string mobile_numbers_ref = 6;
     bool is_deprecated = 7;
     int32 version = 8;
@@ -285,14 +291,15 @@ message MutationUserMobileNumbersRelationRequest {
     google.protobuf.Timestamp update_time = 13;
     string create_group_id = 14;
     string intro_typename = 15;
-    UserMobileNumbersRelationExpression where = 16;
+    UserMobileNumbersRelationInput input = 16;
+    UserMobileNumbersRelationExpression where = 17;
 }
 message MutationUserMobileNumbersRelationListRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     string id = 3;
     string user_ref = 4;
-    UserInput user_ref_type = 5;
+    UserInput user = 5;
     string mobile_numbers_ref = 6;
     bool is_deprecated = 7;
     int32 version = 8;
@@ -311,9 +318,9 @@ message MutationUserUserProfileRelationRequest {
     optional string arguments = 2;
     string id = 3;
     string user_profile_ref = 4;
-    UserProfileInput user_profile_ref_type = 5;
+    UserProfileInput user_profile = 5;
     string user_ref = 6;
-    UserInput user_ref_type = 7;
+    UserInput user = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -323,16 +330,17 @@ message MutationUserUserProfileRelationRequest {
     google.protobuf.Timestamp update_time = 14;
     string create_group_id = 15;
     string intro_typename = 16;
-    UserUserProfileRelationExpression where = 17;
+    UserUserProfileRelationInput input = 17;
+    UserUserProfileRelationExpression where = 18;
 }
 message MutationUserUserProfileRelationListRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     string id = 3;
     string user_profile_ref = 4;
-    UserProfileInput user_profile_ref_type = 5;
+    UserProfileInput user_profile = 5;
     string user_ref = 6;
-    UserInput user_ref_type = 7;
+    UserInput user = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -350,7 +358,7 @@ message MutationRoleRoleTypeRelationRequest {
     optional string arguments = 2;
     string id = 3;
     string role_ref = 4;
-    RoleInput role_ref_type = 5;
+    RoleInput role = 5;
     RoleType role_type_ref = 6;
     bool is_deprecated = 7;
     int32 version = 8;
@@ -361,14 +369,15 @@ message MutationRoleRoleTypeRelationRequest {
     google.protobuf.Timestamp update_time = 13;
     string create_group_id = 14;
     string intro_typename = 15;
-    RoleRoleTypeRelationExpression where = 16;
+    RoleRoleTypeRelationInput input = 16;
+    RoleRoleTypeRelationExpression where = 17;
 }
 message MutationRoleRoleTypeRelationListRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     string id = 3;
     string role_ref = 4;
-    RoleInput role_ref_type = 5;
+    RoleInput role = 5;
     RoleType role_type_ref = 6;
     bool is_deprecated = 7;
     int32 version = 8;

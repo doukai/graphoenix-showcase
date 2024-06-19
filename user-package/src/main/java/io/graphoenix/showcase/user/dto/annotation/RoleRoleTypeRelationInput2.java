@@ -37,4 +37,28 @@ public @interface RoleRoleTypeRelationInput2 {
   String createGroupId() default "";
 
   String __typename() default "RoleRoleTypeRelation";
+
+  String $id() default "";
+
+  String $roleRef() default "";
+
+  String $roleTypeRef() default "";
+
+  String $isDeprecated() default "";
+
+  String $version() default "";
+
+  String $realmId() default "";
+
+  String $createUserId() default "";
+
+  String $createTime() default "";
+
+  String $updateUserId() default "";
+
+  String $updateTime() default "";
+
+  String $createGroupId() default "";
+
+  String $__typename() default "";
 }

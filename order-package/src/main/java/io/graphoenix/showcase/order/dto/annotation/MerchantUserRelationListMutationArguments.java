@@ -18,11 +18,11 @@ public @interface MerchantUserRelationListMutationArguments {
 
   String merchantRef() default "";
 
-  MerchantInput1 merchantRefType() default @MerchantInput1;
+  MerchantInput1 merchant() default @MerchantInput1;
 
   int userRef() default 0;
 
-  UserInput1 userRefType() default @UserInput1;
+  UserInput1 user() default @UserInput1;
 
   boolean isDeprecated() default false;
 
@@ -50,11 +50,11 @@ public @interface MerchantUserRelationListMutationArguments {
 
   String $merchantRef() default "";
 
-  String $merchantRefType() default "";
+  String $merchant() default "";
 
   String $userRef() default "";
 
-  String $userRefType() default "";
+  String $user() default "";
 
   String $isDeprecated() default "";
 

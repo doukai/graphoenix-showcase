@@ -17,11 +17,11 @@ public @interface OrganizationUserRelationListMutationArguments {
 
   String userRef() default "";
 
-  UserInput1 userRefType() default @UserInput1;
+  UserInput1 user() default @UserInput1;
 
   String organizationRef() default "";
 
-  OrganizationInput1 organizationRefType() default @OrganizationInput1;
+  OrganizationInput1 organization() default @OrganizationInput1;
 
   boolean isDeprecated() default false;
 
@@ -49,11 +49,11 @@ public @interface OrganizationUserRelationListMutationArguments {
 
   String $userRef() default "";
 
-  String $userRefType() default "";
+  String $user() default "";
 
   String $organizationRef() default "";
 
-  String $organizationRefType() default "";
+  String $organization() default "";
 
   String $isDeprecated() default "";
 

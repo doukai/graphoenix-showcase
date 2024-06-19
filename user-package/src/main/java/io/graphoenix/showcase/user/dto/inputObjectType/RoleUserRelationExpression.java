@@ -20,14 +20,14 @@ public class RoleUserRelationExpression implements MetaExpression {
 
   private StringExpression userRef;
 
-  private UserExpression userRefType;
+  private UserExpression user;
 
   private StringExpression roleRef;
 
-  private RoleExpression roleRefType;
+  private RoleExpression role;
 
   @DefaultValue("false")
-  private Boolean includeDeprecated;
+  private Boolean includeDeprecated = false;
 
   private IntExpression version;
 
@@ -46,10 +46,10 @@ public class RoleUserRelationExpression implements MetaExpression {
   private StringExpression __typename;
 
   @DefaultValue("false")
-  private Boolean not;
+  private Boolean not = false;
 
   @DefaultValue("AND")
-  private Conditional cond;
+  private Conditional cond = Conditional.AND;
 
   private Collection<RoleUserRelationExpression> exs;
 
@@ -69,12 +69,12 @@ public class RoleUserRelationExpression implements MetaExpression {
     this.userRef = userRef;
   }
 
-  public UserExpression getUserRefType() {
-    return this.userRefType;
+  public UserExpression getUser() {
+    return this.user;
   }
 
-  public void setUserRefType(UserExpression userRefType) {
-    this.userRefType = userRefType;
+  public void setUser(UserExpression user) {
+    this.user = user;
   }
 
   public StringExpression getRoleRef() {
@@ -85,12 +85,12 @@ public class RoleUserRelationExpression implements MetaExpression {
     this.roleRef = roleRef;
   }
 
-  public RoleExpression getRoleRefType() {
-    return this.roleRefType;
+  public RoleExpression getRole() {
+    return this.role;
   }
 
-  public void setRoleRefType(RoleExpression roleRefType) {
-    this.roleRefType = roleRefType;
+  public void setRole(RoleExpression role) {
+    this.role = role;
   }
 
   public Boolean getIncludeDeprecated() {
@@ -116,7 +116,7 @@ public class RoleUserRelationExpression implements MetaExpression {
 
   @Override
   public void setRealmId(IntExpression realmId) {
-    this.realmId = realmId;
+    this.realmId = (IntExpression)realmId;
   }
 
   @Override
@@ -126,7 +126,7 @@ public class RoleUserRelationExpression implements MetaExpression {
 
   @Override
   public void setCreateUserId(StringExpression createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (StringExpression)createUserId;
   }
 
   @Override
@@ -136,7 +136,7 @@ public class RoleUserRelationExpression implements MetaExpression {
 
   @Override
   public void setCreateTime(StringExpression createTime) {
-    this.createTime = createTime;
+    this.createTime = (StringExpression)createTime;
   }
 
   @Override
@@ -146,7 +146,7 @@ public class RoleUserRelationExpression implements MetaExpression {
 
   @Override
   public void setUpdateUserId(StringExpression updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (StringExpression)updateUserId;
   }
 
   @Override
@@ -156,7 +156,7 @@ public class RoleUserRelationExpression implements MetaExpression {
 
   @Override
   public void setUpdateTime(StringExpression updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (StringExpression)updateTime;
   }
 
   @Override
@@ -166,7 +166,7 @@ public class RoleUserRelationExpression implements MetaExpression {
 
   @Override
   public void setCreateGroupId(StringExpression createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (StringExpression)createGroupId;
   }
 
   public StringExpression get__typename() {

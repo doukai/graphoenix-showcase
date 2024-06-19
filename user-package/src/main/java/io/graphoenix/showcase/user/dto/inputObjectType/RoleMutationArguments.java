@@ -25,7 +25,8 @@ public class RoleMutationArguments implements MetaInput {
 
   private Collection<UserInput> users;
 
-  private Boolean isDeprecated;
+  @DefaultValue("false")
+  private Boolean isDeprecated = false;
 
   private Integer version;
 
@@ -42,11 +43,13 @@ public class RoleMutationArguments implements MetaInput {
   private String createGroupId;
 
   @DefaultValue("\"Role\"")
-  private String __typename;
+  private String __typename = "Role";
 
   private Collection<RoleRoleTypeRelationInput> roleRoleTypeRelation;
 
   private Collection<RoleUserRelationInput> roleUserRelation;
+
+  private RoleInput input;
 
   private RoleExpression where;
 
@@ -97,7 +100,7 @@ public class RoleMutationArguments implements MetaInput {
 
   @Override
   public void setVersion(Integer version) {
-    this.version = version;
+    this.version = (Integer)version;
   }
 
   @Override
@@ -107,7 +110,7 @@ public class RoleMutationArguments implements MetaInput {
 
   @Override
   public void setRealmId(Integer realmId) {
-    this.realmId = realmId;
+    this.realmId = (Integer)realmId;
   }
 
   @Override
@@ -117,7 +120,7 @@ public class RoleMutationArguments implements MetaInput {
 
   @Override
   public void setCreateUserId(String createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (String)createUserId;
   }
 
   @Override
@@ -127,7 +130,7 @@ public class RoleMutationArguments implements MetaInput {
 
   @Override
   public void setCreateTime(LocalDateTime createTime) {
-    this.createTime = createTime;
+    this.createTime = (LocalDateTime)createTime;
   }
 
   @Override
@@ -137,7 +140,7 @@ public class RoleMutationArguments implements MetaInput {
 
   @Override
   public void setUpdateUserId(String updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (String)updateUserId;
   }
 
   @Override
@@ -147,7 +150,7 @@ public class RoleMutationArguments implements MetaInput {
 
   @Override
   public void setUpdateTime(LocalDateTime updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (LocalDateTime)updateTime;
   }
 
   @Override
@@ -157,7 +160,7 @@ public class RoleMutationArguments implements MetaInput {
 
   @Override
   public void setCreateGroupId(String createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (String)createGroupId;
   }
 
   public String get__typename() {
@@ -182,6 +185,14 @@ public class RoleMutationArguments implements MetaInput {
 
   public void setRoleUserRelation(Collection<RoleUserRelationInput> roleUserRelation) {
     this.roleUserRelation = roleUserRelation;
+  }
+
+  public RoleInput getInput() {
+    return this.input;
+  }
+
+  public void setInput(RoleInput input) {
+    this.input = input;
   }
 
   public RoleExpression getWhere() {

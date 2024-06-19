@@ -36,4 +36,28 @@ public @interface UserUserProfileRelationInput2 {
   String createGroupId() default "";
 
   String __typename() default "UserUserProfileRelation";
+
+  String $id() default "";
+
+  String $userProfileRef() default "";
+
+  String $userRef() default "";
+
+  String $isDeprecated() default "";
+
+  String $version() default "";
+
+  String $realmId() default "";
+
+  String $createUserId() default "";
+
+  String $createTime() default "";
+
+  String $updateUserId() default "";
+
+  String $updateTime() default "";
+
+  String $createGroupId() default "";
+
+  String $__typename() default "";
 }

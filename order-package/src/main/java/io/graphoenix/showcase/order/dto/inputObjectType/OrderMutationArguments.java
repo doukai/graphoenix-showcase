@@ -25,7 +25,8 @@ public class OrderMutationArguments implements MetaInput {
 
   private Collection<GoodInput> goods;
 
-  private Boolean isDeprecated;
+  @DefaultValue("false")
+  private Boolean isDeprecated = false;
 
   private Integer version;
 
@@ -42,11 +43,13 @@ public class OrderMutationArguments implements MetaInput {
   private String createGroupId;
 
   @DefaultValue("\"Order\"")
-  private String __typename;
+  private String __typename = "Order";
 
   private Integer buyerId;
 
   private Collection<GoodOrderRelationInput> goodOrderRelation;
+
+  private OrderInput input;
 
   private OrderExpression where;
 
@@ -97,7 +100,7 @@ public class OrderMutationArguments implements MetaInput {
 
   @Override
   public void setVersion(Integer version) {
-    this.version = version;
+    this.version = (Integer)version;
   }
 
   @Override
@@ -107,7 +110,7 @@ public class OrderMutationArguments implements MetaInput {
 
   @Override
   public void setRealmId(Integer realmId) {
-    this.realmId = realmId;
+    this.realmId = (Integer)realmId;
   }
 
   @Override
@@ -117,7 +120,7 @@ public class OrderMutationArguments implements MetaInput {
 
   @Override
   public void setCreateUserId(String createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (String)createUserId;
   }
 
   @Override
@@ -127,7 +130,7 @@ public class OrderMutationArguments implements MetaInput {
 
   @Override
   public void setCreateTime(LocalDateTime createTime) {
-    this.createTime = createTime;
+    this.createTime = (LocalDateTime)createTime;
   }
 
   @Override
@@ -137,7 +140,7 @@ public class OrderMutationArguments implements MetaInput {
 
   @Override
   public void setUpdateUserId(String updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (String)updateUserId;
   }
 
   @Override
@@ -147,7 +150,7 @@ public class OrderMutationArguments implements MetaInput {
 
   @Override
   public void setUpdateTime(LocalDateTime updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (LocalDateTime)updateTime;
   }
 
   @Override
@@ -157,7 +160,7 @@ public class OrderMutationArguments implements MetaInput {
 
   @Override
   public void setCreateGroupId(String createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (String)createGroupId;
   }
 
   public String get__typename() {
@@ -182,6 +185,14 @@ public class OrderMutationArguments implements MetaInput {
 
   public void setGoodOrderRelation(Collection<GoodOrderRelationInput> goodOrderRelation) {
     this.goodOrderRelation = goodOrderRelation;
+  }
+
+  public OrderInput getInput() {
+    return this.input;
+  }
+
+  public void setInput(OrderInput input) {
+    this.input = input;
   }
 
   public OrderExpression getWhere() {

@@ -20,11 +20,11 @@ public @interface OrganizationUserRelationExpression1 {
 
   StringExpression2 userRef() default @StringExpression2;
 
-  UserExpression2 userRefType() default @UserExpression2;
+  UserExpression2 user() default @UserExpression2;
 
   StringExpression2 organizationRef() default @StringExpression2;
 
-  OrganizationExpression2 organizationRefType() default @OrganizationExpression2;
+  OrganizationExpression2 organization() default @OrganizationExpression2;
 
   boolean includeDeprecated() default false;
 
@@ -54,11 +54,11 @@ public @interface OrganizationUserRelationExpression1 {
 
   String $userRef() default "";
 
-  String $userRefType() default "";
+  String $user() default "";
 
   String $organizationRef() default "";
 
-  String $organizationRefType() default "";
+  String $organization() default "";
 
   String $includeDeprecated() default "";
 

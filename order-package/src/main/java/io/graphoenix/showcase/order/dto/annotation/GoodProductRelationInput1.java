@@ -17,11 +17,11 @@ public @interface GoodProductRelationInput1 {
 
   String goodRef() default "";
 
-  GoodInput2 goodRefType() default @GoodInput2;
+  GoodInput2 good() default @GoodInput2;
 
   String productRef() default "";
 
-  ProductInput2 productRefType() default @ProductInput2;
+  ProductInput2 product() default @ProductInput2;
 
   boolean isDeprecated() default false;
 
@@ -47,11 +47,11 @@ public @interface GoodProductRelationInput1 {
 
   String $goodRef() default "";
 
-  String $goodRefType() default "";
+  String $good() default "";
 
   String $productRef() default "";
 
-  String $productRefType() default "";
+  String $product() default "";
 
   String $isDeprecated() default "";
 

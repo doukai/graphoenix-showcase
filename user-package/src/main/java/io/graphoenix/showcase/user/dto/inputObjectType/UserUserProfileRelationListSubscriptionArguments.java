@@ -22,14 +22,14 @@ public class UserUserProfileRelationListSubscriptionArguments implements MetaExp
 
   private StringExpression userProfileRef;
 
-  private UserProfileExpression userProfileRefType;
+  private UserProfileExpression userProfile;
 
   private StringExpression userRef;
 
-  private UserExpression userRefType;
+  private UserExpression user;
 
   @DefaultValue("false")
-  private Boolean includeDeprecated;
+  private Boolean includeDeprecated = false;
 
   private IntExpression version;
 
@@ -52,10 +52,10 @@ public class UserUserProfileRelationListSubscriptionArguments implements MetaExp
   private Collection<String> groupBy;
 
   @DefaultValue("false")
-  private Boolean not;
+  private Boolean not = false;
 
   @DefaultValue("AND")
-  private Conditional cond;
+  private Conditional cond = Conditional.AND;
 
   private Collection<UserUserProfileRelationExpression> exs;
 
@@ -85,12 +85,12 @@ public class UserUserProfileRelationListSubscriptionArguments implements MetaExp
     this.userProfileRef = userProfileRef;
   }
 
-  public UserProfileExpression getUserProfileRefType() {
-    return this.userProfileRefType;
+  public UserProfileExpression getUserProfile() {
+    return this.userProfile;
   }
 
-  public void setUserProfileRefType(UserProfileExpression userProfileRefType) {
-    this.userProfileRefType = userProfileRefType;
+  public void setUserProfile(UserProfileExpression userProfile) {
+    this.userProfile = userProfile;
   }
 
   public StringExpression getUserRef() {
@@ -101,12 +101,12 @@ public class UserUserProfileRelationListSubscriptionArguments implements MetaExp
     this.userRef = userRef;
   }
 
-  public UserExpression getUserRefType() {
-    return this.userRefType;
+  public UserExpression getUser() {
+    return this.user;
   }
 
-  public void setUserRefType(UserExpression userRefType) {
-    this.userRefType = userRefType;
+  public void setUser(UserExpression user) {
+    this.user = user;
   }
 
   public Boolean getIncludeDeprecated() {
@@ -132,7 +132,7 @@ public class UserUserProfileRelationListSubscriptionArguments implements MetaExp
 
   @Override
   public void setRealmId(IntExpression realmId) {
-    this.realmId = realmId;
+    this.realmId = (IntExpression)realmId;
   }
 
   @Override
@@ -142,7 +142,7 @@ public class UserUserProfileRelationListSubscriptionArguments implements MetaExp
 
   @Override
   public void setCreateUserId(StringExpression createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (StringExpression)createUserId;
   }
 
   @Override
@@ -152,7 +152,7 @@ public class UserUserProfileRelationListSubscriptionArguments implements MetaExp
 
   @Override
   public void setCreateTime(StringExpression createTime) {
-    this.createTime = createTime;
+    this.createTime = (StringExpression)createTime;
   }
 
   @Override
@@ -162,7 +162,7 @@ public class UserUserProfileRelationListSubscriptionArguments implements MetaExp
 
   @Override
   public void setUpdateUserId(StringExpression updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (StringExpression)updateUserId;
   }
 
   @Override
@@ -172,7 +172,7 @@ public class UserUserProfileRelationListSubscriptionArguments implements MetaExp
 
   @Override
   public void setUpdateTime(StringExpression updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (StringExpression)updateTime;
   }
 
   @Override
@@ -182,7 +182,7 @@ public class UserUserProfileRelationListSubscriptionArguments implements MetaExp
 
   @Override
   public void setCreateGroupId(StringExpression createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (StringExpression)createGroupId;
   }
 
   public StringExpression get__typename() {

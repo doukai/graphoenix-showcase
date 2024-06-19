@@ -20,7 +20,7 @@ public @interface UserMobileNumbersRelationExpression {
 
   StringExpression1 userRef() default @StringExpression1;
 
-  UserExpression1 userRefType() default @UserExpression1;
+  UserExpression1 user() default @UserExpression1;
 
   StringExpression1 mobileNumbersRef() default @StringExpression1;
 
@@ -52,7 +52,7 @@ public @interface UserMobileNumbersRelationExpression {
 
   String $userRef() default "";
 
-  String $userRefType() default "";
+  String $user() default "";
 
   String $mobileNumbersRef() default "";
 

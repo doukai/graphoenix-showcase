@@ -19,13 +19,14 @@ public class GoodMerchantRelationMutationArguments implements MetaInput {
 
   private String goodRef;
 
-  private GoodInput goodRefType;
+  private GoodInput good;
 
   private String merchantRef;
 
-  private MerchantInput merchantRefType;
+  private MerchantInput merchant;
 
-  private Boolean isDeprecated;
+  @DefaultValue("false")
+  private Boolean isDeprecated = false;
 
   private Integer version;
 
@@ -42,7 +43,9 @@ public class GoodMerchantRelationMutationArguments implements MetaInput {
   private String createGroupId;
 
   @DefaultValue("\"GoodMerchantRelation\"")
-  private String __typename;
+  private String __typename = "GoodMerchantRelation";
+
+  private GoodMerchantRelationInput input;
 
   private GoodMerchantRelationExpression where;
 
@@ -62,12 +65,12 @@ public class GoodMerchantRelationMutationArguments implements MetaInput {
     this.goodRef = goodRef;
   }
 
-  public GoodInput getGoodRefType() {
-    return this.goodRefType;
+  public GoodInput getGood() {
+    return this.good;
   }
 
-  public void setGoodRefType(GoodInput goodRefType) {
-    this.goodRefType = goodRefType;
+  public void setGood(GoodInput good) {
+    this.good = good;
   }
 
   public String getMerchantRef() {
@@ -78,12 +81,12 @@ public class GoodMerchantRelationMutationArguments implements MetaInput {
     this.merchantRef = merchantRef;
   }
 
-  public MerchantInput getMerchantRefType() {
-    return this.merchantRefType;
+  public MerchantInput getMerchant() {
+    return this.merchant;
   }
 
-  public void setMerchantRefType(MerchantInput merchantRefType) {
-    this.merchantRefType = merchantRefType;
+  public void setMerchant(MerchantInput merchant) {
+    this.merchant = merchant;
   }
 
   public Boolean getIsDeprecated() {
@@ -101,7 +104,7 @@ public class GoodMerchantRelationMutationArguments implements MetaInput {
 
   @Override
   public void setVersion(Integer version) {
-    this.version = version;
+    this.version = (Integer)version;
   }
 
   @Override
@@ -111,7 +114,7 @@ public class GoodMerchantRelationMutationArguments implements MetaInput {
 
   @Override
   public void setRealmId(Integer realmId) {
-    this.realmId = realmId;
+    this.realmId = (Integer)realmId;
   }
 
   @Override
@@ -121,7 +124,7 @@ public class GoodMerchantRelationMutationArguments implements MetaInput {
 
   @Override
   public void setCreateUserId(String createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (String)createUserId;
   }
 
   @Override
@@ -131,7 +134,7 @@ public class GoodMerchantRelationMutationArguments implements MetaInput {
 
   @Override
   public void setCreateTime(LocalDateTime createTime) {
-    this.createTime = createTime;
+    this.createTime = (LocalDateTime)createTime;
   }
 
   @Override
@@ -141,7 +144,7 @@ public class GoodMerchantRelationMutationArguments implements MetaInput {
 
   @Override
   public void setUpdateUserId(String updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (String)updateUserId;
   }
 
   @Override
@@ -151,7 +154,7 @@ public class GoodMerchantRelationMutationArguments implements MetaInput {
 
   @Override
   public void setUpdateTime(LocalDateTime updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (LocalDateTime)updateTime;
   }
 
   @Override
@@ -161,7 +164,7 @@ public class GoodMerchantRelationMutationArguments implements MetaInput {
 
   @Override
   public void setCreateGroupId(String createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (String)createGroupId;
   }
 
   public String get__typename() {
@@ -170,6 +173,14 @@ public class GoodMerchantRelationMutationArguments implements MetaInput {
 
   public void set__typename(String __typename) {
     this.__typename = __typename;
+  }
+
+  public GoodMerchantRelationInput getInput() {
+    return this.input;
+  }
+
+  public void setInput(GoodMerchantRelationInput input) {
+    this.input = input;
   }
 
   public GoodMerchantRelationExpression getWhere() {

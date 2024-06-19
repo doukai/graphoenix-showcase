@@ -38,4 +38,30 @@ public @interface UserProfileInput2 {
   String createGroupId() default "";
 
   String __typename() default "UserProfile";
+
+  String $id() default "";
+
+  String $userId() default "";
+
+  String $email() default "";
+
+  String $address() default "";
+
+  String $isDeprecated() default "";
+
+  String $version() default "";
+
+  String $realmId() default "";
+
+  String $createUserId() default "";
+
+  String $createTime() default "";
+
+  String $updateUserId() default "";
+
+  String $updateTime() default "";
+
+  String $createGroupId() default "";
+
+  String $__typename() default "";
 }

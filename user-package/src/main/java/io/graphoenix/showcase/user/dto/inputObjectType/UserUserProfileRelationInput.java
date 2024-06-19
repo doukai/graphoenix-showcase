@@ -19,13 +19,14 @@ public class UserUserProfileRelationInput implements MetaInput {
 
   private String userProfileRef;
 
-  private UserProfileInput userProfileRefType;
+  private UserProfileInput userProfile;
 
   private String userRef;
 
-  private UserInput userRefType;
+  private UserInput user;
 
-  private Boolean isDeprecated;
+  @DefaultValue("false")
+  private Boolean isDeprecated = false;
 
   private Integer version;
 
@@ -42,7 +43,7 @@ public class UserUserProfileRelationInput implements MetaInput {
   private String createGroupId;
 
   @DefaultValue("\"UserUserProfileRelation\"")
-  private String __typename;
+  private String __typename = "UserUserProfileRelation";
 
   private UserUserProfileRelationExpression where;
 
@@ -62,12 +63,12 @@ public class UserUserProfileRelationInput implements MetaInput {
     this.userProfileRef = userProfileRef;
   }
 
-  public UserProfileInput getUserProfileRefType() {
-    return this.userProfileRefType;
+  public UserProfileInput getUserProfile() {
+    return this.userProfile;
   }
 
-  public void setUserProfileRefType(UserProfileInput userProfileRefType) {
-    this.userProfileRefType = userProfileRefType;
+  public void setUserProfile(UserProfileInput userProfile) {
+    this.userProfile = userProfile;
   }
 
   public String getUserRef() {
@@ -78,12 +79,12 @@ public class UserUserProfileRelationInput implements MetaInput {
     this.userRef = userRef;
   }
 
-  public UserInput getUserRefType() {
-    return this.userRefType;
+  public UserInput getUser() {
+    return this.user;
   }
 
-  public void setUserRefType(UserInput userRefType) {
-    this.userRefType = userRefType;
+  public void setUser(UserInput user) {
+    this.user = user;
   }
 
   public Boolean getIsDeprecated() {
@@ -101,7 +102,7 @@ public class UserUserProfileRelationInput implements MetaInput {
 
   @Override
   public void setVersion(Integer version) {
-    this.version = version;
+    this.version = (Integer)version;
   }
 
   @Override
@@ -111,7 +112,7 @@ public class UserUserProfileRelationInput implements MetaInput {
 
   @Override
   public void setRealmId(Integer realmId) {
-    this.realmId = realmId;
+    this.realmId = (Integer)realmId;
   }
 
   @Override
@@ -121,7 +122,7 @@ public class UserUserProfileRelationInput implements MetaInput {
 
   @Override
   public void setCreateUserId(String createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (String)createUserId;
   }
 
   @Override
@@ -131,7 +132,7 @@ public class UserUserProfileRelationInput implements MetaInput {
 
   @Override
   public void setCreateTime(LocalDateTime createTime) {
-    this.createTime = createTime;
+    this.createTime = (LocalDateTime)createTime;
   }
 
   @Override
@@ -141,7 +142,7 @@ public class UserUserProfileRelationInput implements MetaInput {
 
   @Override
   public void setUpdateUserId(String updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (String)updateUserId;
   }
 
   @Override
@@ -151,7 +152,7 @@ public class UserUserProfileRelationInput implements MetaInput {
 
   @Override
   public void setUpdateTime(LocalDateTime updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (LocalDateTime)updateTime;
   }
 
   @Override
@@ -161,7 +162,7 @@ public class UserUserProfileRelationInput implements MetaInput {
 
   @Override
   public void setCreateGroupId(String createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (String)createGroupId;
   }
 
   public String get__typename() {

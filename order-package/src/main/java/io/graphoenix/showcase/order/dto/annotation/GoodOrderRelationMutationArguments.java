@@ -17,11 +17,11 @@ public @interface GoodOrderRelationMutationArguments {
 
   String orderRef() default "";
 
-  OrderInput1 orderRefType() default @OrderInput1;
+  OrderInput1 order() default @OrderInput1;
 
   String goodRef() default "";
 
-  GoodInput1 goodRefType() default @GoodInput1;
+  GoodInput1 good() default @GoodInput1;
 
   boolean isDeprecated() default false;
 
@@ -41,17 +41,19 @@ public @interface GoodOrderRelationMutationArguments {
 
   String __typename() default "GoodOrderRelation";
 
+  GoodOrderRelationInput1 input() default @GoodOrderRelationInput1;
+
   GoodOrderRelationExpression1 where() default @GoodOrderRelationExpression1;
 
   String $id() default "";
 
   String $orderRef() default "";
 
-  String $orderRefType() default "";
+  String $order() default "";
 
   String $goodRef() default "";
 
-  String $goodRefType() default "";
+  String $good() default "";
 
   String $isDeprecated() default "";
 
@@ -70,6 +72,8 @@ public @interface GoodOrderRelationMutationArguments {
   String $createGroupId() default "";
 
   String $__typename() default "";
+
+  String $input() default "";
 
   String $where() default "";
 }

@@ -44,6 +44,8 @@ public @interface RoleMutationArguments {
 
   RoleUserRelationInput1[] roleUserRelation() default {};
 
+  RoleInput1 input() default @RoleInput1;
+
   RoleExpression1 where() default @RoleExpression1;
 
   String $id() default "";
@@ -75,6 +77,8 @@ public @interface RoleMutationArguments {
   String $roleRoleTypeRelation() default "";
 
   String $roleUserRelation() default "";
+
+  String $input() default "";
 
   String $where() default "";
 }

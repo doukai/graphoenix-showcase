@@ -18,11 +18,11 @@ public @interface MerchantUserRelationInput1 {
 
   String merchantRef() default "";
 
-  MerchantInput2 merchantRefType() default @MerchantInput2;
+  MerchantInput2 merchant() default @MerchantInput2;
 
   int userRef() default 0;
 
-  UserInput2 userRefType() default @UserInput2;
+  UserInput2 user() default @UserInput2;
 
   boolean isDeprecated() default false;
 
@@ -48,11 +48,11 @@ public @interface MerchantUserRelationInput1 {
 
   String $merchantRef() default "";
 
-  String $merchantRefType() default "";
+  String $merchant() default "";
 
   String $userRef() default "";
 
-  String $userRefType() default "";
+  String $user() default "";
 
   String $isDeprecated() default "";
 

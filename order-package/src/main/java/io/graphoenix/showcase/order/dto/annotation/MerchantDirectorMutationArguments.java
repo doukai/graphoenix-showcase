@@ -42,6 +42,8 @@ public @interface MerchantDirectorMutationArguments {
 
   String __typename() default "MerchantDirector";
 
+  MerchantDirectorInput1 input() default @MerchantDirectorInput1;
+
   MerchantDirectorExpression1 where() default @MerchantDirectorExpression1;
 
   String $id() default "";
@@ -71,6 +73,8 @@ public @interface MerchantDirectorMutationArguments {
   String $createGroupId() default "";
 
   String $__typename() default "";
+
+  String $input() default "";
 
   String $where() default "";
 }

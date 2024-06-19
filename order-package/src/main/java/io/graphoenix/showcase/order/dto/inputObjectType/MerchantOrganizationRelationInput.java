@@ -20,13 +20,14 @@ public class MerchantOrganizationRelationInput implements MetaInput {
 
   private String merchantRef;
 
-  private MerchantInput merchantRefType;
+  private MerchantInput merchant;
 
   private Integer organizationRef;
 
-  private OrganizationInput organizationRefType;
+  private OrganizationInput organization;
 
-  private Boolean isDeprecated;
+  @DefaultValue("false")
+  private Boolean isDeprecated = false;
 
   private Integer version;
 
@@ -43,7 +44,7 @@ public class MerchantOrganizationRelationInput implements MetaInput {
   private String createGroupId;
 
   @DefaultValue("\"MerchantOrganizationRelation\"")
-  private String __typename;
+  private String __typename = "MerchantOrganizationRelation";
 
   private MerchantOrganizationRelationExpression where;
 
@@ -63,12 +64,12 @@ public class MerchantOrganizationRelationInput implements MetaInput {
     this.merchantRef = merchantRef;
   }
 
-  public MerchantInput getMerchantRefType() {
-    return this.merchantRefType;
+  public MerchantInput getMerchant() {
+    return this.merchant;
   }
 
-  public void setMerchantRefType(MerchantInput merchantRefType) {
-    this.merchantRefType = merchantRefType;
+  public void setMerchant(MerchantInput merchant) {
+    this.merchant = merchant;
   }
 
   public Integer getOrganizationRef() {
@@ -79,12 +80,12 @@ public class MerchantOrganizationRelationInput implements MetaInput {
     this.organizationRef = organizationRef;
   }
 
-  public OrganizationInput getOrganizationRefType() {
-    return this.organizationRefType;
+  public OrganizationInput getOrganization() {
+    return this.organization;
   }
 
-  public void setOrganizationRefType(OrganizationInput organizationRefType) {
-    this.organizationRefType = organizationRefType;
+  public void setOrganization(OrganizationInput organization) {
+    this.organization = organization;
   }
 
   public Boolean getIsDeprecated() {
@@ -102,7 +103,7 @@ public class MerchantOrganizationRelationInput implements MetaInput {
 
   @Override
   public void setVersion(Integer version) {
-    this.version = version;
+    this.version = (Integer)version;
   }
 
   @Override
@@ -112,7 +113,7 @@ public class MerchantOrganizationRelationInput implements MetaInput {
 
   @Override
   public void setRealmId(Integer realmId) {
-    this.realmId = realmId;
+    this.realmId = (Integer)realmId;
   }
 
   @Override
@@ -122,7 +123,7 @@ public class MerchantOrganizationRelationInput implements MetaInput {
 
   @Override
   public void setCreateUserId(String createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (String)createUserId;
   }
 
   @Override
@@ -132,7 +133,7 @@ public class MerchantOrganizationRelationInput implements MetaInput {
 
   @Override
   public void setCreateTime(LocalDateTime createTime) {
-    this.createTime = createTime;
+    this.createTime = (LocalDateTime)createTime;
   }
 
   @Override
@@ -142,7 +143,7 @@ public class MerchantOrganizationRelationInput implements MetaInput {
 
   @Override
   public void setUpdateUserId(String updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (String)updateUserId;
   }
 
   @Override
@@ -152,7 +153,7 @@ public class MerchantOrganizationRelationInput implements MetaInput {
 
   @Override
   public void setUpdateTime(LocalDateTime updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (LocalDateTime)updateTime;
   }
 
   @Override
@@ -162,7 +163,7 @@ public class MerchantOrganizationRelationInput implements MetaInput {
 
   @Override
   public void setCreateGroupId(String createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (String)createGroupId;
   }
 
   public String get__typename() {

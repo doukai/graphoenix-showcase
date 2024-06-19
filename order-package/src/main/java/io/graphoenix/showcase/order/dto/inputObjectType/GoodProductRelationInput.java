@@ -19,13 +19,14 @@ public class GoodProductRelationInput implements MetaInput {
 
   private String goodRef;
 
-  private GoodInput goodRefType;
+  private GoodInput good;
 
   private String productRef;
 
-  private ProductInput productRefType;
+  private ProductInput product;
 
-  private Boolean isDeprecated;
+  @DefaultValue("false")
+  private Boolean isDeprecated = false;
 
   private Integer version;
 
@@ -42,7 +43,7 @@ public class GoodProductRelationInput implements MetaInput {
   private String createGroupId;
 
   @DefaultValue("\"GoodProductRelation\"")
-  private String __typename;
+  private String __typename = "GoodProductRelation";
 
   private GoodProductRelationExpression where;
 
@@ -62,12 +63,12 @@ public class GoodProductRelationInput implements MetaInput {
     this.goodRef = goodRef;
   }
 
-  public GoodInput getGoodRefType() {
-    return this.goodRefType;
+  public GoodInput getGood() {
+    return this.good;
   }
 
-  public void setGoodRefType(GoodInput goodRefType) {
-    this.goodRefType = goodRefType;
+  public void setGood(GoodInput good) {
+    this.good = good;
   }
 
   public String getProductRef() {
@@ -78,12 +79,12 @@ public class GoodProductRelationInput implements MetaInput {
     this.productRef = productRef;
   }
 
-  public ProductInput getProductRefType() {
-    return this.productRefType;
+  public ProductInput getProduct() {
+    return this.product;
   }
 
-  public void setProductRefType(ProductInput productRefType) {
-    this.productRefType = productRefType;
+  public void setProduct(ProductInput product) {
+    this.product = product;
   }
 
   public Boolean getIsDeprecated() {
@@ -101,7 +102,7 @@ public class GoodProductRelationInput implements MetaInput {
 
   @Override
   public void setVersion(Integer version) {
-    this.version = version;
+    this.version = (Integer)version;
   }
 
   @Override
@@ -111,7 +112,7 @@ public class GoodProductRelationInput implements MetaInput {
 
   @Override
   public void setRealmId(Integer realmId) {
-    this.realmId = realmId;
+    this.realmId = (Integer)realmId;
   }
 
   @Override
@@ -121,7 +122,7 @@ public class GoodProductRelationInput implements MetaInput {
 
   @Override
   public void setCreateUserId(String createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (String)createUserId;
   }
 
   @Override
@@ -131,7 +132,7 @@ public class GoodProductRelationInput implements MetaInput {
 
   @Override
   public void setCreateTime(LocalDateTime createTime) {
-    this.createTime = createTime;
+    this.createTime = (LocalDateTime)createTime;
   }
 
   @Override
@@ -141,7 +142,7 @@ public class GoodProductRelationInput implements MetaInput {
 
   @Override
   public void setUpdateUserId(String updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (String)updateUserId;
   }
 
   @Override
@@ -151,7 +152,7 @@ public class GoodProductRelationInput implements MetaInput {
 
   @Override
   public void setUpdateTime(LocalDateTime updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (LocalDateTime)updateTime;
   }
 
   @Override
@@ -161,7 +162,7 @@ public class GoodProductRelationInput implements MetaInput {
 
   @Override
   public void setCreateGroupId(String createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (String)createGroupId;
   }
 
   public String get__typename() {

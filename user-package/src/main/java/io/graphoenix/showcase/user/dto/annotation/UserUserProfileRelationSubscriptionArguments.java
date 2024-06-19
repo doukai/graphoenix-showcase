@@ -20,11 +20,11 @@ public @interface UserUserProfileRelationSubscriptionArguments {
 
   StringExpression1 userProfileRef() default @StringExpression1;
 
-  UserProfileExpression1 userProfileRefType() default @UserProfileExpression1;
+  UserProfileExpression1 userProfile() default @UserProfileExpression1;
 
   StringExpression1 userRef() default @StringExpression1;
 
-  UserExpression1 userRefType() default @UserExpression1;
+  UserExpression1 user() default @UserExpression1;
 
   boolean includeDeprecated() default false;
 
@@ -56,11 +56,11 @@ public @interface UserUserProfileRelationSubscriptionArguments {
 
   String $userProfileRef() default "";
 
-  String $userProfileRefType() default "";
+  String $userProfile() default "";
 
   String $userRef() default "";
 
-  String $userRefType() default "";
+  String $user() default "";
 
   String $includeDeprecated() default "";
 

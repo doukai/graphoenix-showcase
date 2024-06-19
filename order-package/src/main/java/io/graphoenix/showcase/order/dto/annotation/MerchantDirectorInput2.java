@@ -36,4 +36,28 @@ public @interface MerchantDirectorInput2 {
   String createGroupId() default "";
 
   String __typename() default "MerchantDirector";
+
+  String $id() default "";
+
+  String $merchantId() default "";
+
+  String $userId() default "";
+
+  String $isDeprecated() default "";
+
+  String $version() default "";
+
+  String $realmId() default "";
+
+  String $createUserId() default "";
+
+  String $createTime() default "";
+
+  String $updateUserId() default "";
+
+  String $updateTime() default "";
+
+  String $createGroupId() default "";
+
+  String $__typename() default "";
 }

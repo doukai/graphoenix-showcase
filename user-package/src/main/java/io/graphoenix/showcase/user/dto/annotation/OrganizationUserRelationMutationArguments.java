@@ -17,11 +17,11 @@ public @interface OrganizationUserRelationMutationArguments {
 
   String userRef() default "";
 
-  UserInput1 userRefType() default @UserInput1;
+  UserInput1 user() default @UserInput1;
 
   String organizationRef() default "";
 
-  OrganizationInput1 organizationRefType() default @OrganizationInput1;
+  OrganizationInput1 organization() default @OrganizationInput1;
 
   boolean isDeprecated() default false;
 
@@ -41,17 +41,19 @@ public @interface OrganizationUserRelationMutationArguments {
 
   String __typename() default "OrganizationUserRelation";
 
+  OrganizationUserRelationInput1 input() default @OrganizationUserRelationInput1;
+
   OrganizationUserRelationExpression1 where() default @OrganizationUserRelationExpression1;
 
   String $id() default "";
 
   String $userRef() default "";
 
-  String $userRefType() default "";
+  String $user() default "";
 
   String $organizationRef() default "";
 
-  String $organizationRefType() default "";
+  String $organization() default "";
 
   String $isDeprecated() default "";
 
@@ -70,6 +72,8 @@ public @interface OrganizationUserRelationMutationArguments {
   String $createGroupId() default "";
 
   String $__typename() default "";
+
+  String $input() default "";
 
   String $where() default "";
 }

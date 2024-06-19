@@ -21,13 +21,14 @@ public class MerchantOrganizationRelationListMutationArguments implements MetaIn
 
   private String merchantRef;
 
-  private MerchantInput merchantRefType;
+  private MerchantInput merchant;
 
   private Integer organizationRef;
 
-  private OrganizationInput organizationRefType;
+  private OrganizationInput organization;
 
-  private Boolean isDeprecated;
+  @DefaultValue("false")
+  private Boolean isDeprecated = false;
 
   private Integer version;
 
@@ -44,7 +45,7 @@ public class MerchantOrganizationRelationListMutationArguments implements MetaIn
   private String createGroupId;
 
   @DefaultValue("\"MerchantOrganizationRelation\"")
-  private String __typename;
+  private String __typename = "MerchantOrganizationRelation";
 
   private Collection<MerchantOrganizationRelationInput> list;
 
@@ -66,12 +67,12 @@ public class MerchantOrganizationRelationListMutationArguments implements MetaIn
     this.merchantRef = merchantRef;
   }
 
-  public MerchantInput getMerchantRefType() {
-    return this.merchantRefType;
+  public MerchantInput getMerchant() {
+    return this.merchant;
   }
 
-  public void setMerchantRefType(MerchantInput merchantRefType) {
-    this.merchantRefType = merchantRefType;
+  public void setMerchant(MerchantInput merchant) {
+    this.merchant = merchant;
   }
 
   public Integer getOrganizationRef() {
@@ -82,12 +83,12 @@ public class MerchantOrganizationRelationListMutationArguments implements MetaIn
     this.organizationRef = organizationRef;
   }
 
-  public OrganizationInput getOrganizationRefType() {
-    return this.organizationRefType;
+  public OrganizationInput getOrganization() {
+    return this.organization;
   }
 
-  public void setOrganizationRefType(OrganizationInput organizationRefType) {
-    this.organizationRefType = organizationRefType;
+  public void setOrganization(OrganizationInput organization) {
+    this.organization = organization;
   }
 
   public Boolean getIsDeprecated() {
@@ -105,7 +106,7 @@ public class MerchantOrganizationRelationListMutationArguments implements MetaIn
 
   @Override
   public void setVersion(Integer version) {
-    this.version = version;
+    this.version = (Integer)version;
   }
 
   @Override
@@ -115,7 +116,7 @@ public class MerchantOrganizationRelationListMutationArguments implements MetaIn
 
   @Override
   public void setRealmId(Integer realmId) {
-    this.realmId = realmId;
+    this.realmId = (Integer)realmId;
   }
 
   @Override
@@ -125,7 +126,7 @@ public class MerchantOrganizationRelationListMutationArguments implements MetaIn
 
   @Override
   public void setCreateUserId(String createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (String)createUserId;
   }
 
   @Override
@@ -135,7 +136,7 @@ public class MerchantOrganizationRelationListMutationArguments implements MetaIn
 
   @Override
   public void setCreateTime(LocalDateTime createTime) {
-    this.createTime = createTime;
+    this.createTime = (LocalDateTime)createTime;
   }
 
   @Override
@@ -145,7 +146,7 @@ public class MerchantOrganizationRelationListMutationArguments implements MetaIn
 
   @Override
   public void setUpdateUserId(String updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (String)updateUserId;
   }
 
   @Override
@@ -155,7 +156,7 @@ public class MerchantOrganizationRelationListMutationArguments implements MetaIn
 
   @Override
   public void setUpdateTime(LocalDateTime updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (LocalDateTime)updateTime;
   }
 
   @Override
@@ -165,7 +166,7 @@ public class MerchantOrganizationRelationListMutationArguments implements MetaIn
 
   @Override
   public void setCreateGroupId(String createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (String)createGroupId;
   }
 
   public String get__typename() {

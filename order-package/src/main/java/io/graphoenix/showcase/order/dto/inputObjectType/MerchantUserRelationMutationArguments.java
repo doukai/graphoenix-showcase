@@ -20,13 +20,14 @@ public class MerchantUserRelationMutationArguments implements MetaInput {
 
   private String merchantRef;
 
-  private MerchantInput merchantRefType;
+  private MerchantInput merchant;
 
   private Integer userRef;
 
-  private UserInput userRefType;
+  private UserInput user;
 
-  private Boolean isDeprecated;
+  @DefaultValue("false")
+  private Boolean isDeprecated = false;
 
   private Integer version;
 
@@ -43,7 +44,9 @@ public class MerchantUserRelationMutationArguments implements MetaInput {
   private String createGroupId;
 
   @DefaultValue("\"MerchantUserRelation\"")
-  private String __typename;
+  private String __typename = "MerchantUserRelation";
+
+  private MerchantUserRelationInput input;
 
   private MerchantUserRelationExpression where;
 
@@ -63,12 +66,12 @@ public class MerchantUserRelationMutationArguments implements MetaInput {
     this.merchantRef = merchantRef;
   }
 
-  public MerchantInput getMerchantRefType() {
-    return this.merchantRefType;
+  public MerchantInput getMerchant() {
+    return this.merchant;
   }
 
-  public void setMerchantRefType(MerchantInput merchantRefType) {
-    this.merchantRefType = merchantRefType;
+  public void setMerchant(MerchantInput merchant) {
+    this.merchant = merchant;
   }
 
   public Integer getUserRef() {
@@ -79,12 +82,12 @@ public class MerchantUserRelationMutationArguments implements MetaInput {
     this.userRef = userRef;
   }
 
-  public UserInput getUserRefType() {
-    return this.userRefType;
+  public UserInput getUser() {
+    return this.user;
   }
 
-  public void setUserRefType(UserInput userRefType) {
-    this.userRefType = userRefType;
+  public void setUser(UserInput user) {
+    this.user = user;
   }
 
   public Boolean getIsDeprecated() {
@@ -102,7 +105,7 @@ public class MerchantUserRelationMutationArguments implements MetaInput {
 
   @Override
   public void setVersion(Integer version) {
-    this.version = version;
+    this.version = (Integer)version;
   }
 
   @Override
@@ -112,7 +115,7 @@ public class MerchantUserRelationMutationArguments implements MetaInput {
 
   @Override
   public void setRealmId(Integer realmId) {
-    this.realmId = realmId;
+    this.realmId = (Integer)realmId;
   }
 
   @Override
@@ -122,7 +125,7 @@ public class MerchantUserRelationMutationArguments implements MetaInput {
 
   @Override
   public void setCreateUserId(String createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (String)createUserId;
   }
 
   @Override
@@ -132,7 +135,7 @@ public class MerchantUserRelationMutationArguments implements MetaInput {
 
   @Override
   public void setCreateTime(LocalDateTime createTime) {
-    this.createTime = createTime;
+    this.createTime = (LocalDateTime)createTime;
   }
 
   @Override
@@ -142,7 +145,7 @@ public class MerchantUserRelationMutationArguments implements MetaInput {
 
   @Override
   public void setUpdateUserId(String updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (String)updateUserId;
   }
 
   @Override
@@ -152,7 +155,7 @@ public class MerchantUserRelationMutationArguments implements MetaInput {
 
   @Override
   public void setUpdateTime(LocalDateTime updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (LocalDateTime)updateTime;
   }
 
   @Override
@@ -162,7 +165,7 @@ public class MerchantUserRelationMutationArguments implements MetaInput {
 
   @Override
   public void setCreateGroupId(String createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (String)createGroupId;
   }
 
   public String get__typename() {
@@ -171,6 +174,14 @@ public class MerchantUserRelationMutationArguments implements MetaInput {
 
   public void set__typename(String __typename) {
     this.__typename = __typename;
+  }
+
+  public MerchantUserRelationInput getInput() {
+    return this.input;
+  }
+
+  public void setInput(MerchantUserRelationInput input) {
+    this.input = input;
   }
 
   public MerchantUserRelationExpression getWhere() {

@@ -30,7 +30,8 @@ message MutationOrderRequest {
     string intro_typename = 15;
     int32 buyer_id = 16;
     repeated GoodOrderRelationInput good_order_relation = 17;
-    OrderExpression where = 18;
+    OrderInput input = 18;
+    OrderExpression where = 19;
 }
 message MutationOrderListRequest {
     optional string selection_set = 1;
@@ -73,7 +74,8 @@ message MutationGoodRequest {
     repeated GoodOrderRelationInput good_order_relation = 17;
     repeated GoodProductRelationInput good_product_relation = 18;
     repeated GoodMerchantRelationInput good_merchant_relation = 19;
-    GoodExpression where = 20;
+    GoodInput input = 20;
+    GoodExpression where = 21;
 }
 message MutationGoodListRequest {
     optional string selection_set = 1;
@@ -113,7 +115,8 @@ message MutationProductRequest {
     google.protobuf.Timestamp update_time = 12;
     string create_group_id = 13;
     string intro_typename = 14;
-    ProductExpression where = 15;
+    ProductInput input = 15;
+    ProductExpression where = 16;
 }
 message MutationProductListRequest {
     optional string selection_set = 1;
@@ -155,7 +158,8 @@ message MutationMerchantRequest {
     repeated MerchantUserRelationInput merchant_user_relation = 19;
     repeated MerchantOrganizationRelationInput merchant_organization_relation = 20;
     repeated MerchantDirectorInput merchant_director = 21;
-    MerchantExpression where = 22;
+    MerchantInput input = 22;
+    MerchantExpression where = 23;
 }
 message MutationMerchantListRequest {
     optional string selection_set = 1;
@@ -187,9 +191,9 @@ message MutationGoodOrderRelationRequest {
     optional string arguments = 2;
     string id = 3;
     string order_ref = 4;
-    OrderInput order_ref_type = 5;
+    OrderInput order = 5;
     string good_ref = 6;
-    GoodInput good_ref_type = 7;
+    GoodInput good = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -199,16 +203,17 @@ message MutationGoodOrderRelationRequest {
     google.protobuf.Timestamp update_time = 14;
     string create_group_id = 15;
     string intro_typename = 16;
-    GoodOrderRelationExpression where = 17;
+    GoodOrderRelationInput input = 17;
+    GoodOrderRelationExpression where = 18;
 }
 message MutationGoodOrderRelationListRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     string id = 3;
     string order_ref = 4;
-    OrderInput order_ref_type = 5;
+    OrderInput order = 5;
     string good_ref = 6;
-    GoodInput good_ref_type = 7;
+    GoodInput good = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -226,9 +231,9 @@ message MutationGoodProductRelationRequest {
     optional string arguments = 2;
     string id = 3;
     string good_ref = 4;
-    GoodInput good_ref_type = 5;
+    GoodInput good = 5;
     string product_ref = 6;
-    ProductInput product_ref_type = 7;
+    ProductInput product = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -238,16 +243,17 @@ message MutationGoodProductRelationRequest {
     google.protobuf.Timestamp update_time = 14;
     string create_group_id = 15;
     string intro_typename = 16;
-    GoodProductRelationExpression where = 17;
+    GoodProductRelationInput input = 17;
+    GoodProductRelationExpression where = 18;
 }
 message MutationGoodProductRelationListRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     string id = 3;
     string good_ref = 4;
-    GoodInput good_ref_type = 5;
+    GoodInput good = 5;
     string product_ref = 6;
-    ProductInput product_ref_type = 7;
+    ProductInput product = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -265,9 +271,9 @@ message MutationGoodMerchantRelationRequest {
     optional string arguments = 2;
     string id = 3;
     string good_ref = 4;
-    GoodInput good_ref_type = 5;
+    GoodInput good = 5;
     string merchant_ref = 6;
-    MerchantInput merchant_ref_type = 7;
+    MerchantInput merchant = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -277,16 +283,17 @@ message MutationGoodMerchantRelationRequest {
     google.protobuf.Timestamp update_time = 14;
     string create_group_id = 15;
     string intro_typename = 16;
-    GoodMerchantRelationExpression where = 17;
+    GoodMerchantRelationInput input = 17;
+    GoodMerchantRelationExpression where = 18;
 }
 message MutationGoodMerchantRelationListRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     string id = 3;
     string good_ref = 4;
-    GoodInput good_ref_type = 5;
+    GoodInput good = 5;
     string merchant_ref = 6;
-    MerchantInput merchant_ref_type = 7;
+    MerchantInput merchant = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -304,9 +311,9 @@ message MutationMerchantUserRelationRequest {
     optional string arguments = 2;
     string id = 3;
     string merchant_ref = 4;
-    MerchantInput merchant_ref_type = 5;
+    MerchantInput merchant = 5;
     int32 user_ref = 6;
-    io.graphoenix.showcase.user.UserInput user_ref_type = 7;
+    io.graphoenix.showcase.user.UserInput user = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -316,16 +323,17 @@ message MutationMerchantUserRelationRequest {
     google.protobuf.Timestamp update_time = 14;
     string create_group_id = 15;
     string intro_typename = 16;
-    MerchantUserRelationExpression where = 17;
+    MerchantUserRelationInput input = 17;
+    MerchantUserRelationExpression where = 18;
 }
 message MutationMerchantUserRelationListRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     string id = 3;
     string merchant_ref = 4;
-    MerchantInput merchant_ref_type = 5;
+    MerchantInput merchant = 5;
     int32 user_ref = 6;
-    io.graphoenix.showcase.user.UserInput user_ref_type = 7;
+    io.graphoenix.showcase.user.UserInput user = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -343,9 +351,9 @@ message MutationMerchantOrganizationRelationRequest {
     optional string arguments = 2;
     string id = 3;
     string merchant_ref = 4;
-    MerchantInput merchant_ref_type = 5;
+    MerchantInput merchant = 5;
     int32 organization_ref = 6;
-    io.graphoenix.showcase.user.OrganizationInput organization_ref_type = 7;
+    io.graphoenix.showcase.user.OrganizationInput organization = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -355,16 +363,17 @@ message MutationMerchantOrganizationRelationRequest {
     google.protobuf.Timestamp update_time = 14;
     string create_group_id = 15;
     string intro_typename = 16;
-    MerchantOrganizationRelationExpression where = 17;
+    MerchantOrganizationRelationInput input = 17;
+    MerchantOrganizationRelationExpression where = 18;
 }
 message MutationMerchantOrganizationRelationListRequest {
     optional string selection_set = 1;
     optional string arguments = 2;
     string id = 3;
     string merchant_ref = 4;
-    MerchantInput merchant_ref_type = 5;
+    MerchantInput merchant = 5;
     int32 organization_ref = 6;
-    io.graphoenix.showcase.user.OrganizationInput organization_ref_type = 7;
+    io.graphoenix.showcase.user.OrganizationInput organization = 7;
     bool is_deprecated = 8;
     int32 version = 9;
     int32 realm_id = 10;
@@ -394,7 +403,8 @@ message MutationMerchantDirectorRequest {
     google.protobuf.Timestamp update_time = 14;
     string create_group_id = 15;
     string intro_typename = 16;
-    MerchantDirectorExpression where = 17;
+    MerchantDirectorInput input = 17;
+    MerchantDirectorExpression where = 18;
 }
 message MutationMerchantDirectorListRequest {
     optional string selection_set = 1;

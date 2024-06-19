@@ -44,6 +44,8 @@ public @interface OrderMutationArguments {
 
   GoodOrderRelationInput1[] goodOrderRelation() default {};
 
+  OrderInput1 input() default @OrderInput1;
+
   OrderExpression1 where() default @OrderExpression1;
 
   String $id() default "";
@@ -75,6 +77,8 @@ public @interface OrderMutationArguments {
   String $buyerId() default "";
 
   String $goodOrderRelation() default "";
+
+  String $input() default "";
 
   String $where() default "";
 }

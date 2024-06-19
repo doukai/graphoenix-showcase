@@ -18,7 +18,7 @@ public @interface RoleRoleTypeRelationInput1 {
 
   String roleRef() default "";
 
-  RoleInput2 roleRefType() default @RoleInput2;
+  RoleInput2 role() default @RoleInput2;
 
   RoleType roleTypeRef() default RoleType.ADMIN;
 
@@ -46,7 +46,7 @@ public @interface RoleRoleTypeRelationInput1 {
 
   String $roleRef() default "";
 
-  String $roleRefType() default "";
+  String $role() default "";
 
   String $roleTypeRef() default "";
 

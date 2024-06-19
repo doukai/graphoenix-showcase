@@ -22,14 +22,14 @@ public class GoodProductRelationListQueryArguments implements MetaExpression {
 
   private StringExpression goodRef;
 
-  private GoodExpression goodRefType;
+  private GoodExpression good;
 
   private StringExpression productRef;
 
-  private ProductExpression productRefType;
+  private ProductExpression product;
 
   @DefaultValue("false")
-  private Boolean includeDeprecated;
+  private Boolean includeDeprecated = false;
 
   private IntExpression version;
 
@@ -52,10 +52,10 @@ public class GoodProductRelationListQueryArguments implements MetaExpression {
   private Collection<String> groupBy;
 
   @DefaultValue("false")
-  private Boolean not;
+  private Boolean not = false;
 
   @DefaultValue("AND")
-  private Conditional cond;
+  private Conditional cond = Conditional.AND;
 
   private Collection<GoodProductRelationExpression> exs;
 
@@ -85,12 +85,12 @@ public class GoodProductRelationListQueryArguments implements MetaExpression {
     this.goodRef = goodRef;
   }
 
-  public GoodExpression getGoodRefType() {
-    return this.goodRefType;
+  public GoodExpression getGood() {
+    return this.good;
   }
 
-  public void setGoodRefType(GoodExpression goodRefType) {
-    this.goodRefType = goodRefType;
+  public void setGood(GoodExpression good) {
+    this.good = good;
   }
 
   public StringExpression getProductRef() {
@@ -101,12 +101,12 @@ public class GoodProductRelationListQueryArguments implements MetaExpression {
     this.productRef = productRef;
   }
 
-  public ProductExpression getProductRefType() {
-    return this.productRefType;
+  public ProductExpression getProduct() {
+    return this.product;
   }
 
-  public void setProductRefType(ProductExpression productRefType) {
-    this.productRefType = productRefType;
+  public void setProduct(ProductExpression product) {
+    this.product = product;
   }
 
   public Boolean getIncludeDeprecated() {
@@ -132,7 +132,7 @@ public class GoodProductRelationListQueryArguments implements MetaExpression {
 
   @Override
   public void setRealmId(IntExpression realmId) {
-    this.realmId = realmId;
+    this.realmId = (IntExpression)realmId;
   }
 
   @Override
@@ -142,7 +142,7 @@ public class GoodProductRelationListQueryArguments implements MetaExpression {
 
   @Override
   public void setCreateUserId(StringExpression createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (StringExpression)createUserId;
   }
 
   @Override
@@ -152,7 +152,7 @@ public class GoodProductRelationListQueryArguments implements MetaExpression {
 
   @Override
   public void setCreateTime(StringExpression createTime) {
-    this.createTime = createTime;
+    this.createTime = (StringExpression)createTime;
   }
 
   @Override
@@ -162,7 +162,7 @@ public class GoodProductRelationListQueryArguments implements MetaExpression {
 
   @Override
   public void setUpdateUserId(StringExpression updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (StringExpression)updateUserId;
   }
 
   @Override
@@ -172,7 +172,7 @@ public class GoodProductRelationListQueryArguments implements MetaExpression {
 
   @Override
   public void setUpdateTime(StringExpression updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (StringExpression)updateTime;
   }
 
   @Override
@@ -182,7 +182,7 @@ public class GoodProductRelationListQueryArguments implements MetaExpression {
 
   @Override
   public void setCreateGroupId(StringExpression createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (StringExpression)createGroupId;
   }
 
   public StringExpression get__typename() {

@@ -19,13 +19,14 @@ public class OrganizationUserRelationInput implements MetaInput {
 
   private String userRef;
 
-  private UserInput userRefType;
+  private UserInput user;
 
   private String organizationRef;
 
-  private OrganizationInput organizationRefType;
+  private OrganizationInput organization;
 
-  private Boolean isDeprecated;
+  @DefaultValue("false")
+  private Boolean isDeprecated = false;
 
   private Integer version;
 
@@ -42,7 +43,7 @@ public class OrganizationUserRelationInput implements MetaInput {
   private String createGroupId;
 
   @DefaultValue("\"OrganizationUserRelation\"")
-  private String __typename;
+  private String __typename = "OrganizationUserRelation";
 
   private OrganizationUserRelationExpression where;
 
@@ -62,12 +63,12 @@ public class OrganizationUserRelationInput implements MetaInput {
     this.userRef = userRef;
   }
 
-  public UserInput getUserRefType() {
-    return this.userRefType;
+  public UserInput getUser() {
+    return this.user;
   }
 
-  public void setUserRefType(UserInput userRefType) {
-    this.userRefType = userRefType;
+  public void setUser(UserInput user) {
+    this.user = user;
   }
 
   public String getOrganizationRef() {
@@ -78,12 +79,12 @@ public class OrganizationUserRelationInput implements MetaInput {
     this.organizationRef = organizationRef;
   }
 
-  public OrganizationInput getOrganizationRefType() {
-    return this.organizationRefType;
+  public OrganizationInput getOrganization() {
+    return this.organization;
   }
 
-  public void setOrganizationRefType(OrganizationInput organizationRefType) {
-    this.organizationRefType = organizationRefType;
+  public void setOrganization(OrganizationInput organization) {
+    this.organization = organization;
   }
 
   public Boolean getIsDeprecated() {
@@ -101,7 +102,7 @@ public class OrganizationUserRelationInput implements MetaInput {
 
   @Override
   public void setVersion(Integer version) {
-    this.version = version;
+    this.version = (Integer)version;
   }
 
   @Override
@@ -111,7 +112,7 @@ public class OrganizationUserRelationInput implements MetaInput {
 
   @Override
   public void setRealmId(Integer realmId) {
-    this.realmId = realmId;
+    this.realmId = (Integer)realmId;
   }
 
   @Override
@@ -121,7 +122,7 @@ public class OrganizationUserRelationInput implements MetaInput {
 
   @Override
   public void setCreateUserId(String createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (String)createUserId;
   }
 
   @Override
@@ -131,7 +132,7 @@ public class OrganizationUserRelationInput implements MetaInput {
 
   @Override
   public void setCreateTime(LocalDateTime createTime) {
-    this.createTime = createTime;
+    this.createTime = (LocalDateTime)createTime;
   }
 
   @Override
@@ -141,7 +142,7 @@ public class OrganizationUserRelationInput implements MetaInput {
 
   @Override
   public void setUpdateUserId(String updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (String)updateUserId;
   }
 
   @Override
@@ -151,7 +152,7 @@ public class OrganizationUserRelationInput implements MetaInput {
 
   @Override
   public void setUpdateTime(LocalDateTime updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (LocalDateTime)updateTime;
   }
 
   @Override
@@ -161,7 +162,7 @@ public class OrganizationUserRelationInput implements MetaInput {
 
   @Override
   public void setCreateGroupId(String createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (String)createGroupId;
   }
 
   public String get__typename() {

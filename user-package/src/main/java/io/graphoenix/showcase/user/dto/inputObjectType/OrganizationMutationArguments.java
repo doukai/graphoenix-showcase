@@ -26,7 +26,8 @@ public class OrganizationMutationArguments implements MetaInput {
 
   private Collection<UserInput> users;
 
-  private Boolean isDeprecated;
+  @DefaultValue("false")
+  private Boolean isDeprecated = false;
 
   private Integer version;
 
@@ -43,9 +44,11 @@ public class OrganizationMutationArguments implements MetaInput {
   private String createGroupId;
 
   @DefaultValue("\"Organization\"")
-  private String __typename;
+  private String __typename = "Organization";
 
   private Collection<OrganizationUserRelationInput> organizationUserRelation;
+
+  private OrganizationInput input;
 
   private OrganizationExpression where;
 
@@ -104,7 +107,7 @@ public class OrganizationMutationArguments implements MetaInput {
 
   @Override
   public void setVersion(Integer version) {
-    this.version = version;
+    this.version = (Integer)version;
   }
 
   @Override
@@ -114,7 +117,7 @@ public class OrganizationMutationArguments implements MetaInput {
 
   @Override
   public void setRealmId(Integer realmId) {
-    this.realmId = realmId;
+    this.realmId = (Integer)realmId;
   }
 
   @Override
@@ -124,7 +127,7 @@ public class OrganizationMutationArguments implements MetaInput {
 
   @Override
   public void setCreateUserId(String createUserId) {
-    this.createUserId = createUserId;
+    this.createUserId = (String)createUserId;
   }
 
   @Override
@@ -134,7 +137,7 @@ public class OrganizationMutationArguments implements MetaInput {
 
   @Override
   public void setCreateTime(LocalDateTime createTime) {
-    this.createTime = createTime;
+    this.createTime = (LocalDateTime)createTime;
   }
 
   @Override
@@ -144,7 +147,7 @@ public class OrganizationMutationArguments implements MetaInput {
 
   @Override
   public void setUpdateUserId(String updateUserId) {
-    this.updateUserId = updateUserId;
+    this.updateUserId = (String)updateUserId;
   }
 
   @Override
@@ -154,7 +157,7 @@ public class OrganizationMutationArguments implements MetaInput {
 
   @Override
   public void setUpdateTime(LocalDateTime updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (LocalDateTime)updateTime;
   }
 
   @Override
@@ -164,7 +167,7 @@ public class OrganizationMutationArguments implements MetaInput {
 
   @Override
   public void setCreateGroupId(String createGroupId) {
-    this.createGroupId = createGroupId;
+    this.createGroupId = (String)createGroupId;
   }
 
   public String get__typename() {
@@ -182,6 +185,14 @@ public class OrganizationMutationArguments implements MetaInput {
   public void setOrganizationUserRelation(
       Collection<OrganizationUserRelationInput> organizationUserRelation) {
     this.organizationUserRelation = organizationUserRelation;
+  }
+
+  public OrganizationInput getInput() {
+    return this.input;
+  }
+
+  public void setInput(OrganizationInput input) {
+    this.input = input;
   }
 
   public OrganizationExpression getWhere() {
