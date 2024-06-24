@@ -66,9 +66,3 @@ message MutationMerchantOrganizationRelationResponse {
 message MutationMerchantOrganizationRelationListResponse {
     repeated MerchantOrganizationRelation merchant_organization_relation_list = 1;
 }
-message MutationMerchantDirectorResponse {
-    MerchantDirector merchant_director = 1;
-}
-message MutationMerchantDirectorListResponse {
-    repeated MerchantDirector merchant_director_list = 1;
-}

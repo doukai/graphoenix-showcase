@@ -83,13 +83,4 @@ public @interface Subscription {
 
   MerchantOrganizationRelationConnectionSubscriptionArguments merchantOrganizationRelationConnection(
       ) default @MerchantOrganizationRelationConnectionSubscriptionArguments;
-
-  MerchantDirectorSubscriptionArguments merchantDirector(
-      ) default @MerchantDirectorSubscriptionArguments;
-
-  MerchantDirectorListSubscriptionArguments merchantDirectorList(
-      ) default @MerchantDirectorListSubscriptionArguments;
-
-  MerchantDirectorConnectionSubscriptionArguments merchantDirectorConnection(
-      ) default @MerchantDirectorConnectionSubscriptionArguments;
 }

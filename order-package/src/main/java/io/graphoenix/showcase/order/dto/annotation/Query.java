@@ -79,12 +79,4 @@ public @interface Query {
 
   MerchantOrganizationRelationConnectionQueryArguments merchantOrganizationRelationConnection(
       ) default @MerchantOrganizationRelationConnectionQueryArguments;
-
-  MerchantDirectorQueryArguments merchantDirector() default @MerchantDirectorQueryArguments;
-
-  MerchantDirectorListQueryArguments merchantDirectorList(
-      ) default @MerchantDirectorListQueryArguments;
-
-  MerchantDirectorConnectionQueryArguments merchantDirectorConnection(
-      ) default @MerchantDirectorConnectionQueryArguments;
 }

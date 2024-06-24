@@ -157,9 +157,8 @@ message MutationMerchantRequest {
     int32 organization_id = 18;
     repeated MerchantUserRelationInput merchant_user_relation = 19;
     repeated MerchantOrganizationRelationInput merchant_organization_relation = 20;
-    repeated MerchantDirectorInput merchant_director = 21;
-    MerchantInput input = 22;
-    MerchantExpression where = 23;
+    MerchantInput input = 21;
+    MerchantExpression where = 22;
 }
 message MutationMerchantListRequest {
     optional string selection_set = 1;
@@ -182,9 +181,8 @@ message MutationMerchantListRequest {
     int32 organization_id = 18;
     repeated MerchantUserRelationInput merchant_user_relation = 19;
     repeated MerchantOrganizationRelationInput merchant_organization_relation = 20;
-    repeated MerchantDirectorInput merchant_director = 21;
-    repeated MerchantInput list = 22;
-    MerchantExpression where = 23;
+    repeated MerchantInput list = 21;
+    MerchantExpression where = 22;
 }
 message MutationGoodOrderRelationRequest {
     optional string selection_set = 1;
@@ -385,44 +383,4 @@ message MutationMerchantOrganizationRelationListRequest {
     string intro_typename = 16;
     repeated MerchantOrganizationRelationInput list = 17;
     MerchantOrganizationRelationExpression where = 18;
-}
-message MutationMerchantDirectorRequest {
-    optional string selection_set = 1;
-    optional string arguments = 2;
-    string id = 3;
-    string merchant_id = 4;
-    MerchantInput merchant_id_type = 5;
-    int32 user_id = 6;
-    io.graphoenix.showcase.user.UserInput user_id_type = 7;
-    bool is_deprecated = 8;
-    int32 version = 9;
-    int32 realm_id = 10;
-    string create_user_id = 11;
-    google.protobuf.Timestamp create_time = 12;
-    string update_user_id = 13;
-    google.protobuf.Timestamp update_time = 14;
-    string create_group_id = 15;
-    string intro_typename = 16;
-    MerchantDirectorInput input = 17;
-    MerchantDirectorExpression where = 18;
-}
-message MutationMerchantDirectorListRequest {
-    optional string selection_set = 1;
-    optional string arguments = 2;
-    string id = 3;
-    string merchant_id = 4;
-    MerchantInput merchant_id_type = 5;
-    int32 user_id = 6;
-    io.graphoenix.showcase.user.UserInput user_id_type = 7;
-    bool is_deprecated = 8;
-    int32 version = 9;
-    int32 realm_id = 10;
-    string create_user_id = 11;
-    google.protobuf.Timestamp create_time = 12;
-    string update_user_id = 13;
-    google.protobuf.Timestamp update_time = 14;
-    string create_group_id = 15;
-    string intro_typename = 16;
-    repeated MerchantDirectorInput list = 17;
-    MerchantDirectorExpression where = 18;
 }

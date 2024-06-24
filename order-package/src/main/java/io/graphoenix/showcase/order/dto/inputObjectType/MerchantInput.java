@@ -56,8 +56,6 @@ public class MerchantInput implements MetaInput {
 
   private Collection<MerchantOrganizationRelationInput> merchantOrganizationRelation;
 
-  private Collection<MerchantDirectorInput> merchantDirector;
-
   private MerchantExpression where;
 
   public String getId() {
@@ -217,14 +215,6 @@ public class MerchantInput implements MetaInput {
   public void setMerchantOrganizationRelation(
       Collection<MerchantOrganizationRelationInput> merchantOrganizationRelation) {
     this.merchantOrganizationRelation = merchantOrganizationRelation;
-  }
-
-  public Collection<MerchantDirectorInput> getMerchantDirector() {
-    return this.merchantDirector;
-  }
-
-  public void setMerchantDirector(Collection<MerchantDirectorInput> merchantDirector) {
-    this.merchantDirector = merchantDirector;
   }
 
   public MerchantExpression getWhere() {

@@ -58,8 +58,6 @@ public class Merchant implements Meta {
 
   private Collection<MerchantOrganizationRelation> merchantOrganizationRelation;
 
-  private Collection<MerchantDirector> merchantDirector;
-
   private Integer idCount;
 
   private Integer idMax;
@@ -243,14 +241,6 @@ public class Merchant implements Meta {
   public void setMerchantOrganizationRelation(
       Collection<MerchantOrganizationRelation> merchantOrganizationRelation) {
     this.merchantOrganizationRelation = merchantOrganizationRelation;
-  }
-
-  public Collection<MerchantDirector> getMerchantDirector() {
-    return this.merchantDirector;
-  }
-
-  public void setMerchantDirector(Collection<MerchantDirector> merchantDirector) {
-    this.merchantDirector = merchantDirector;
   }
 
   public Integer getIdCount() {

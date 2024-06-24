@@ -120,19 +120,18 @@ message Merchant {
     int32 organization_id = 16;
     repeated MerchantUserRelation merchant_user_relation = 17;
     repeated MerchantOrganizationRelation merchant_organization_relation = 18;
-    repeated MerchantDirector merchant_director = 19;
-    int32 id_count = 20;
-    int32 id_max = 21;
-    int32 id_min = 22;
-    int32 name_count = 23;
-    string name_max = 24;
-    string name_min = 25;
-    int32 organization_id_count = 26;
-    int32 organization_id_sum = 27;
-    int32 organization_id_avg = 28;
-    int32 organization_id_max = 29;
-    int32 organization_id_min = 30;
-    bool error = 31;
+    int32 id_count = 19;
+    int32 id_max = 20;
+    int32 id_min = 21;
+    int32 name_count = 22;
+    string name_max = 23;
+    string name_min = 24;
+    int32 organization_id_count = 25;
+    int32 organization_id_sum = 26;
+    int32 organization_id_avg = 27;
+    int32 organization_id_max = 28;
+    int32 organization_id_min = 29;
+    bool error = 30;
 }
 message GoodOrderRelation {
     string id = 1;
@@ -263,33 +262,6 @@ message MerchantOrganizationRelation {
     int32 organization_ref_max = 24;
     int32 organization_ref_min = 25;
 }
-message MerchantDirector {
-    string id = 1;
-    string merchant_id = 2;
-    Merchant merchant_id_type = 3;
-    int32 user_id = 4;
-    io.graphoenix.showcase.user.User user_id_type = 5;
-    bool is_deprecated = 6;
-    int32 version = 7;
-    int32 realm_id = 8;
-    string create_user_id = 9;
-    google.protobuf.Timestamp create_time = 10;
-    string update_user_id = 11;
-    google.protobuf.Timestamp update_time = 12;
-    string create_group_id = 13;
-    string intro_typename = 14;
-    int32 id_count = 15;
-    int32 id_max = 16;
-    int32 id_min = 17;
-    int32 merchant_id_count = 18;
-    string merchant_id_max = 19;
-    string merchant_id_min = 20;
-    int32 user_id_count = 21;
-    int32 user_id_sum = 22;
-    int32 user_id_avg = 23;
-    int32 user_id_max = 24;
-    int32 user_id_min = 25;
-}
 message OrderConnection {
     int32 total_count = 1;
     io.graphoenix.core.PageInfo page_info = 2;
@@ -369,14 +341,5 @@ message MerchantOrganizationRelationConnection {
 }
 message MerchantOrganizationRelationEdge {
     MerchantOrganizationRelation node = 1;
-    string cursor = 2;
-}
-message MerchantDirectorConnection {
-    int32 total_count = 1;
-    io.graphoenix.core.PageInfo page_info = 2;
-    repeated MerchantDirectorEdge edges = 3;
-}
-message MerchantDirectorEdge {
-    MerchantDirector node = 1;
     string cursor = 2;
 }

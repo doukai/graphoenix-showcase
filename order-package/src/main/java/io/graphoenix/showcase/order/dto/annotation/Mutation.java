@@ -57,9 +57,4 @@ public @interface Mutation {
 
   MerchantOrganizationRelationListMutationArguments merchantOrganizationRelationList(
       ) default @MerchantOrganizationRelationListMutationArguments;
-
-  MerchantDirectorMutationArguments merchantDirector() default @MerchantDirectorMutationArguments;
-
-  MerchantDirectorListMutationArguments merchantDirectorList(
-      ) default @MerchantDirectorListMutationArguments;
 }

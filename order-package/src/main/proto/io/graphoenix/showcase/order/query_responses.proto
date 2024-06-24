@@ -94,12 +94,3 @@ message QueryMerchantOrganizationRelationListResponse {
 message QueryMerchantOrganizationRelationConnectionResponse {
     MerchantOrganizationRelationConnection merchant_organization_relation_connection = 1;
 }
-message QueryMerchantDirectorResponse {
-    MerchantDirector merchant_director = 1;
-}
-message QueryMerchantDirectorListResponse {
-    repeated MerchantDirector merchant_director_list = 1;
-}
-message QueryMerchantDirectorConnectionResponse {
-    MerchantDirectorConnection merchant_director_connection = 1;
-}

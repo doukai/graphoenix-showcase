@@ -56,8 +56,6 @@ public class MerchantListMutationArguments implements MetaInput {
 
   private Collection<MerchantOrganizationRelationInput> merchantOrganizationRelation;
 
-  private Collection<MerchantDirectorInput> merchantDirector;
-
   private Collection<MerchantInput> list;
 
   private MerchantExpression where;
@@ -219,14 +217,6 @@ public class MerchantListMutationArguments implements MetaInput {
   public void setMerchantOrganizationRelation(
       Collection<MerchantOrganizationRelationInput> merchantOrganizationRelation) {
     this.merchantOrganizationRelation = merchantOrganizationRelation;
-  }
-
-  public Collection<MerchantDirectorInput> getMerchantDirector() {
-    return this.merchantDirector;
-  }
-
-  public void setMerchantDirector(Collection<MerchantDirectorInput> merchantDirector) {
-    this.merchantDirector = merchantDirector;
   }
 
   public Collection<MerchantInput> getList() {

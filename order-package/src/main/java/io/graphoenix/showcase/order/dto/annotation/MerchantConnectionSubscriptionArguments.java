@@ -55,8 +55,6 @@ public @interface MerchantConnectionSubscriptionArguments {
   MerchantOrganizationRelationExpression1 merchantOrganizationRelation(
       ) default @MerchantOrganizationRelationExpression1;
 
-  MerchantDirectorExpression1 merchantDirector() default @MerchantDirectorExpression1;
-
   MerchantOrderBy1 orderBy() default @MerchantOrderBy1;
 
   String[] groupBy() default {};
@@ -112,8 +110,6 @@ public @interface MerchantConnectionSubscriptionArguments {
   String $merchantUserRelation() default "";
 
   String $merchantOrganizationRelation() default "";
-
-  String $merchantDirector() default "";
 
   String $orderBy() default "";
 

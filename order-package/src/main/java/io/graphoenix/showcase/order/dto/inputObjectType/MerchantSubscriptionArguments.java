@@ -56,8 +56,6 @@ public class MerchantSubscriptionArguments implements MetaExpression {
 
   private MerchantOrganizationRelationExpression merchantOrganizationRelation;
 
-  private MerchantDirectorExpression merchantDirector;
-
   private Collection<String> groupBy;
 
   @DefaultValue("false")
@@ -223,14 +221,6 @@ public class MerchantSubscriptionArguments implements MetaExpression {
   public void setMerchantOrganizationRelation(
       MerchantOrganizationRelationExpression merchantOrganizationRelation) {
     this.merchantOrganizationRelation = merchantOrganizationRelation;
-  }
-
-  public MerchantDirectorExpression getMerchantDirector() {
-    return this.merchantDirector;
-  }
-
-  public void setMerchantDirector(MerchantDirectorExpression merchantDirector) {
-    this.merchantDirector = merchantDirector;
   }
 
   public Collection<String> getGroupBy() {

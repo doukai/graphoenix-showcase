@@ -27,7 +27,7 @@ enum Sex {
 
 type Role {
     id: ID
-    name: String! @mutationBefore(field:"appName(role:{name:\\aaa})")
+    name: String!
     roleType: [RoleType]!
     users: [User!]
 }

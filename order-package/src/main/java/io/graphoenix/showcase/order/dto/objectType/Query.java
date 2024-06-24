@@ -63,12 +63,6 @@ public class Query {
 
   private MerchantOrganizationRelationConnection merchantOrganizationRelationConnection;
 
-  private MerchantDirector merchantDirector;
-
-  private Collection<MerchantDirector> merchantDirectorList;
-
-  private MerchantDirectorConnection merchantDirectorConnection;
-
   public Order getOrder() {
     return this.order;
   }
@@ -292,29 +286,5 @@ public class Query {
   public void setMerchantOrganizationRelationConnection(
       MerchantOrganizationRelationConnection merchantOrganizationRelationConnection) {
     this.merchantOrganizationRelationConnection = merchantOrganizationRelationConnection;
-  }
-
-  public MerchantDirector getMerchantDirector() {
-    return this.merchantDirector;
-  }
-
-  public void setMerchantDirector(MerchantDirector merchantDirector) {
-    this.merchantDirector = merchantDirector;
-  }
-
-  public Collection<MerchantDirector> getMerchantDirectorList() {
-    return this.merchantDirectorList;
-  }
-
-  public void setMerchantDirectorList(Collection<MerchantDirector> merchantDirectorList) {
-    this.merchantDirectorList = merchantDirectorList;
-  }
-
-  public MerchantDirectorConnection getMerchantDirectorConnection() {
-    return this.merchantDirectorConnection;
-  }
-
-  public void setMerchantDirectorConnection(MerchantDirectorConnection merchantDirectorConnection) {
-    this.merchantDirectorConnection = merchantDirectorConnection;
   }
 }

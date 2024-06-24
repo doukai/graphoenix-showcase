@@ -31,6 +31,4 @@ service MutationService {
     rpc MerchantUserRelationList (MutationMerchantUserRelationListRequest) returns (MutationMerchantUserRelationListResponse);
     rpc MerchantOrganizationRelation (MutationMerchantOrganizationRelationRequest) returns (MutationMerchantOrganizationRelationResponse);
     rpc MerchantOrganizationRelationList (MutationMerchantOrganizationRelationListRequest) returns (MutationMerchantOrganizationRelationListResponse);
-    rpc MerchantDirector (MutationMerchantDirectorRequest) returns (MutationMerchantDirectorResponse);
-    rpc MerchantDirectorList (MutationMerchantDirectorListRequest) returns (MutationMerchantDirectorListResponse);
 }

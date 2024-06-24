@@ -45,10 +45,6 @@ public class Mutation {
 
   private Collection<MerchantOrganizationRelation> merchantOrganizationRelationList;
 
-  private MerchantDirector merchantDirector;
-
-  private Collection<MerchantDirector> merchantDirectorList;
-
   public Order getOrder() {
     return this.order;
   }
@@ -195,21 +191,5 @@ public class Mutation {
   public void setMerchantOrganizationRelationList(
       Collection<MerchantOrganizationRelation> merchantOrganizationRelationList) {
     this.merchantOrganizationRelationList = merchantOrganizationRelationList;
-  }
-
-  public MerchantDirector getMerchantDirector() {
-    return this.merchantDirector;
-  }
-
-  public void setMerchantDirector(MerchantDirector merchantDirector) {
-    this.merchantDirector = merchantDirector;
-  }
-
-  public Collection<MerchantDirector> getMerchantDirectorList() {
-    return this.merchantDirectorList;
-  }
-
-  public void setMerchantDirectorList(Collection<MerchantDirector> merchantDirectorList) {
-    this.merchantDirectorList = merchantDirectorList;
   }
 }

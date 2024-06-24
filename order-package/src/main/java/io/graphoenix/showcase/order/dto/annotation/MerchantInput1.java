@@ -51,8 +51,6 @@ public @interface MerchantInput1 {
 
   MerchantOrganizationRelationInput2[] merchantOrganizationRelation() default {};
 
-  MerchantDirectorInput2[] merchantDirector() default {};
-
   MerchantExpression2 where() default @MerchantExpression2;
 
   String $id() default "";
@@ -90,8 +88,6 @@ public @interface MerchantInput1 {
   String $merchantUserRelation() default "";
 
   String $merchantOrganizationRelation() default "";
-
-  String $merchantDirector() default "";
 
   String $where() default "";
 }

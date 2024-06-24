@@ -55,8 +55,6 @@ public class MerchantExpression implements MetaExpression {
 
   private MerchantOrganizationRelationExpression merchantOrganizationRelation;
 
-  private MerchantDirectorExpression merchantDirector;
-
   @DefaultValue("false")
   private Boolean not = false;
 
@@ -220,14 +218,6 @@ public class MerchantExpression implements MetaExpression {
   public void setMerchantOrganizationRelation(
       MerchantOrganizationRelationExpression merchantOrganizationRelation) {
     this.merchantOrganizationRelation = merchantOrganizationRelation;
-  }
-
-  public MerchantDirectorExpression getMerchantDirector() {
-    return this.merchantDirector;
-  }
-
-  public void setMerchantDirector(MerchantDirectorExpression merchantDirector) {
-    this.merchantDirector = merchantDirector;
   }
 
   public Boolean getNot() {

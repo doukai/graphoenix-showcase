@@ -55,8 +55,6 @@ public @interface MerchantExpression1 {
   MerchantOrganizationRelationExpression2 merchantOrganizationRelation(
       ) default @MerchantOrganizationRelationExpression2;
 
-  MerchantDirectorExpression2 merchantDirector() default @MerchantDirectorExpression2;
-
   boolean not() default false;
 
   Conditional cond() default Conditional.AND;
@@ -98,8 +96,6 @@ public @interface MerchantExpression1 {
   String $merchantUserRelation() default "";
 
   String $merchantOrganizationRelation() default "";
-
-  String $merchantDirector() default "";
 
   String $not() default "";
 

@@ -40,7 +40,4 @@ service QueryService {
     rpc MerchantOrganizationRelation (QueryMerchantOrganizationRelationRequest) returns (QueryMerchantOrganizationRelationResponse);
     rpc MerchantOrganizationRelationList (QueryMerchantOrganizationRelationListRequest) returns (QueryMerchantOrganizationRelationListResponse);
     rpc MerchantOrganizationRelationConnection (QueryMerchantOrganizationRelationConnectionRequest) returns (QueryMerchantOrganizationRelationConnectionResponse);
-    rpc MerchantDirector (QueryMerchantDirectorRequest) returns (QueryMerchantDirectorResponse);
-    rpc MerchantDirectorList (QueryMerchantDirectorListRequest) returns (QueryMerchantDirectorListResponse);
-    rpc MerchantDirectorConnection (QueryMerchantDirectorConnectionRequest) returns (QueryMerchantDirectorConnectionResponse);
 }

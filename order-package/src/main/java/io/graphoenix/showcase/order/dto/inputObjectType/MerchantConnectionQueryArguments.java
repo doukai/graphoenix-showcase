@@ -57,8 +57,6 @@ public class MerchantConnectionQueryArguments implements MetaExpression {
 
   private MerchantOrganizationRelationExpression merchantOrganizationRelation;
 
-  private MerchantDirectorExpression merchantDirector;
-
   private MerchantOrderBy orderBy;
 
   private Collection<String> groupBy;
@@ -236,14 +234,6 @@ public class MerchantConnectionQueryArguments implements MetaExpression {
   public void setMerchantOrganizationRelation(
       MerchantOrganizationRelationExpression merchantOrganizationRelation) {
     this.merchantOrganizationRelation = merchantOrganizationRelation;
-  }
-
-  public MerchantDirectorExpression getMerchantDirector() {
-    return this.merchantDirector;
-  }
-
-  public void setMerchantDirector(MerchantDirectorExpression merchantDirector) {
-    this.merchantDirector = merchantDirector;
   }
 
   public MerchantOrderBy getOrderBy() {

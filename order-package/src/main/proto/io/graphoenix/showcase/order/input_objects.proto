@@ -183,10 +183,9 @@ message MerchantExpression {
     io.graphoenix.core.IntExpression organization_id = 16;
     MerchantUserRelationExpression merchant_user_relation = 17;
     MerchantOrganizationRelationExpression merchant_organization_relation = 18;
-    MerchantDirectorExpression merchant_director = 19;
-    bool not = 20;
-    io.graphoenix.core.Conditional cond = 21;
-    repeated MerchantExpression exs = 22;
+    bool not = 19;
+    io.graphoenix.core.Conditional cond = 20;
+    repeated MerchantExpression exs = 21;
 }
 message MerchantInput {
     string id = 1;
@@ -207,8 +206,7 @@ message MerchantInput {
     int32 organization_id = 16;
     repeated MerchantUserRelationInput merchant_user_relation = 17;
     repeated MerchantOrganizationRelationInput merchant_organization_relation = 18;
-    repeated MerchantDirectorInput merchant_director = 19;
-    MerchantExpression where = 20;
+    MerchantExpression where = 19;
 }
 message MerchantOrderBy {
     io.graphoenix.core.Sort id = 1;
@@ -474,56 +472,6 @@ message MerchantOrganizationRelationOrderBy {
     io.graphoenix.core.Sort create_group_id = 11;
     io.graphoenix.core.Sort intro_typename = 12;
 }
-message MerchantDirectorExpression {
-    io.graphoenix.core.StringExpression id = 1;
-    io.graphoenix.core.StringExpression merchant_id = 2;
-    MerchantExpression merchant_id_type = 3;
-    io.graphoenix.core.IntExpression user_id = 4;
-    io.graphoenix.showcase.user.UserExpression user_id_type = 5;
-    bool include_deprecated = 6;
-    io.graphoenix.core.IntExpression version = 7;
-    io.graphoenix.core.IntExpression realm_id = 8;
-    io.graphoenix.core.StringExpression create_user_id = 9;
-    io.graphoenix.core.StringExpression create_time = 10;
-    io.graphoenix.core.StringExpression update_user_id = 11;
-    io.graphoenix.core.StringExpression update_time = 12;
-    io.graphoenix.core.StringExpression create_group_id = 13;
-    io.graphoenix.core.StringExpression intro_typename = 14;
-    bool not = 15;
-    io.graphoenix.core.Conditional cond = 16;
-    repeated MerchantDirectorExpression exs = 17;
-}
-message MerchantDirectorInput {
-    string id = 1;
-    string merchant_id = 2;
-    MerchantInput merchant_id_type = 3;
-    int32 user_id = 4;
-    io.graphoenix.showcase.user.UserInput user_id_type = 5;
-    bool is_deprecated = 6;
-    int32 version = 7;
-    int32 realm_id = 8;
-    string create_user_id = 9;
-    google.protobuf.Timestamp create_time = 10;
-    string update_user_id = 11;
-    google.protobuf.Timestamp update_time = 12;
-    string create_group_id = 13;
-    string intro_typename = 14;
-    MerchantDirectorExpression where = 15;
-}
-message MerchantDirectorOrderBy {
-    io.graphoenix.core.Sort id = 1;
-    io.graphoenix.core.Sort merchant_id = 2;
-    io.graphoenix.core.Sort user_id = 3;
-    io.graphoenix.core.Sort is_deprecated = 4;
-    io.graphoenix.core.Sort version = 5;
-    io.graphoenix.core.Sort realm_id = 6;
-    io.graphoenix.core.Sort create_user_id = 7;
-    io.graphoenix.core.Sort create_time = 8;
-    io.graphoenix.core.Sort update_user_id = 9;
-    io.graphoenix.core.Sort update_time = 10;
-    io.graphoenix.core.Sort create_group_id = 11;
-    io.graphoenix.core.Sort intro_typename = 12;
-}
 message OrderQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
     io.graphoenix.core.StringExpression number = 2;
@@ -765,11 +713,10 @@ message MerchantQueryArguments {
     io.graphoenix.core.IntExpression organization_id = 16;
     MerchantUserRelationExpression merchant_user_relation = 17;
     MerchantOrganizationRelationExpression merchant_organization_relation = 18;
-    MerchantDirectorExpression merchant_director = 19;
-    repeated string group_by = 20;
-    bool not = 21;
-    io.graphoenix.core.Conditional cond = 22;
-    repeated MerchantExpression exs = 23;
+    repeated string group_by = 19;
+    bool not = 20;
+    io.graphoenix.core.Conditional cond = 21;
+    repeated MerchantExpression exs = 22;
 }
 message MerchantListQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
@@ -790,17 +737,16 @@ message MerchantListQueryArguments {
     io.graphoenix.core.IntExpression organization_id = 16;
     MerchantUserRelationExpression merchant_user_relation = 17;
     MerchantOrganizationRelationExpression merchant_organization_relation = 18;
-    MerchantDirectorExpression merchant_director = 19;
-    MerchantOrderBy order_by = 20;
-    repeated string group_by = 21;
-    bool not = 22;
-    io.graphoenix.core.Conditional cond = 23;
-    repeated MerchantExpression exs = 24;
-    int32 first = 25;
-    int32 last = 26;
-    int32 offset = 27;
-    string after = 28;
-    string before = 29;
+    MerchantOrderBy order_by = 19;
+    repeated string group_by = 20;
+    bool not = 21;
+    io.graphoenix.core.Conditional cond = 22;
+    repeated MerchantExpression exs = 23;
+    int32 first = 24;
+    int32 last = 25;
+    int32 offset = 26;
+    string after = 27;
+    string before = 28;
 }
 message MerchantConnectionQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
@@ -821,17 +767,16 @@ message MerchantConnectionQueryArguments {
     io.graphoenix.core.IntExpression organization_id = 16;
     MerchantUserRelationExpression merchant_user_relation = 17;
     MerchantOrganizationRelationExpression merchant_organization_relation = 18;
-    MerchantDirectorExpression merchant_director = 19;
-    MerchantOrderBy order_by = 20;
-    repeated string group_by = 21;
-    bool not = 22;
-    io.graphoenix.core.Conditional cond = 23;
-    repeated MerchantExpression exs = 24;
-    int32 first = 25;
-    int32 last = 26;
-    int32 offset = 27;
-    string after = 28;
-    string before = 29;
+    MerchantOrderBy order_by = 19;
+    repeated string group_by = 20;
+    bool not = 21;
+    io.graphoenix.core.Conditional cond = 22;
+    repeated MerchantExpression exs = 23;
+    int32 first = 24;
+    int32 last = 25;
+    int32 offset = 26;
+    string after = 27;
+    string before = 28;
 }
 message GoodOrderRelationQueryArguments {
     io.graphoenix.core.StringExpression id = 1;
@@ -1193,78 +1138,6 @@ message MerchantOrganizationRelationConnectionQueryArguments {
     string after = 23;
     string before = 24;
 }
-message MerchantDirectorQueryArguments {
-    io.graphoenix.core.StringExpression id = 1;
-    io.graphoenix.core.StringExpression merchant_id = 2;
-    MerchantExpression merchant_id_type = 3;
-    io.graphoenix.core.IntExpression user_id = 4;
-    io.graphoenix.showcase.user.UserExpression user_id_type = 5;
-    bool include_deprecated = 6;
-    io.graphoenix.core.IntExpression version = 7;
-    io.graphoenix.core.IntExpression realm_id = 8;
-    io.graphoenix.core.StringExpression create_user_id = 9;
-    io.graphoenix.core.StringExpression create_time = 10;
-    io.graphoenix.core.StringExpression update_user_id = 11;
-    io.graphoenix.core.StringExpression update_time = 12;
-    io.graphoenix.core.StringExpression create_group_id = 13;
-    io.graphoenix.core.StringExpression intro_typename = 14;
-    repeated string group_by = 15;
-    bool not = 16;
-    io.graphoenix.core.Conditional cond = 17;
-    repeated MerchantDirectorExpression exs = 18;
-}
-message MerchantDirectorListQueryArguments {
-    io.graphoenix.core.StringExpression id = 1;
-    io.graphoenix.core.StringExpression merchant_id = 2;
-    MerchantExpression merchant_id_type = 3;
-    io.graphoenix.core.IntExpression user_id = 4;
-    io.graphoenix.showcase.user.UserExpression user_id_type = 5;
-    bool include_deprecated = 6;
-    io.graphoenix.core.IntExpression version = 7;
-    io.graphoenix.core.IntExpression realm_id = 8;
-    io.graphoenix.core.StringExpression create_user_id = 9;
-    io.graphoenix.core.StringExpression create_time = 10;
-    io.graphoenix.core.StringExpression update_user_id = 11;
-    io.graphoenix.core.StringExpression update_time = 12;
-    io.graphoenix.core.StringExpression create_group_id = 13;
-    io.graphoenix.core.StringExpression intro_typename = 14;
-    MerchantDirectorOrderBy order_by = 15;
-    repeated string group_by = 16;
-    bool not = 17;
-    io.graphoenix.core.Conditional cond = 18;
-    repeated MerchantDirectorExpression exs = 19;
-    int32 first = 20;
-    int32 last = 21;
-    int32 offset = 22;
-    string after = 23;
-    string before = 24;
-}
-message MerchantDirectorConnectionQueryArguments {
-    io.graphoenix.core.StringExpression id = 1;
-    io.graphoenix.core.StringExpression merchant_id = 2;
-    MerchantExpression merchant_id_type = 3;
-    io.graphoenix.core.IntExpression user_id = 4;
-    io.graphoenix.showcase.user.UserExpression user_id_type = 5;
-    bool include_deprecated = 6;
-    io.graphoenix.core.IntExpression version = 7;
-    io.graphoenix.core.IntExpression realm_id = 8;
-    io.graphoenix.core.StringExpression create_user_id = 9;
-    io.graphoenix.core.StringExpression create_time = 10;
-    io.graphoenix.core.StringExpression update_user_id = 11;
-    io.graphoenix.core.StringExpression update_time = 12;
-    io.graphoenix.core.StringExpression create_group_id = 13;
-    io.graphoenix.core.StringExpression intro_typename = 14;
-    MerchantDirectorOrderBy order_by = 15;
-    repeated string group_by = 16;
-    bool not = 17;
-    io.graphoenix.core.Conditional cond = 18;
-    repeated MerchantDirectorExpression exs = 19;
-    int32 first = 20;
-    int32 last = 21;
-    int32 offset = 22;
-    string after = 23;
-    string before = 24;
-}
 message OrderMutationArguments {
     string id = 1;
     string number = 2;
@@ -1396,9 +1269,8 @@ message MerchantMutationArguments {
     int32 organization_id = 16;
     repeated MerchantUserRelationInput merchant_user_relation = 17;
     repeated MerchantOrganizationRelationInput merchant_organization_relation = 18;
-    repeated MerchantDirectorInput merchant_director = 19;
-    MerchantInput input = 20;
-    MerchantExpression where = 21;
+    MerchantInput input = 19;
+    MerchantExpression where = 20;
 }
 message MerchantListMutationArguments {
     string id = 1;
@@ -1419,9 +1291,8 @@ message MerchantListMutationArguments {
     int32 organization_id = 16;
     repeated MerchantUserRelationInput merchant_user_relation = 17;
     repeated MerchantOrganizationRelationInput merchant_organization_relation = 18;
-    repeated MerchantDirectorInput merchant_director = 19;
-    repeated MerchantInput list = 20;
-    MerchantExpression where = 21;
+    repeated MerchantInput list = 19;
+    MerchantExpression where = 20;
 }
 message GoodOrderRelationMutationArguments {
     string id = 1;
@@ -1602,42 +1473,6 @@ message MerchantOrganizationRelationListMutationArguments {
     string intro_typename = 14;
     repeated MerchantOrganizationRelationInput list = 15;
     MerchantOrganizationRelationExpression where = 16;
-}
-message MerchantDirectorMutationArguments {
-    string id = 1;
-    string merchant_id = 2;
-    MerchantInput merchant_id_type = 3;
-    int32 user_id = 4;
-    io.graphoenix.showcase.user.UserInput user_id_type = 5;
-    bool is_deprecated = 6;
-    int32 version = 7;
-    int32 realm_id = 8;
-    string create_user_id = 9;
-    google.protobuf.Timestamp create_time = 10;
-    string update_user_id = 11;
-    google.protobuf.Timestamp update_time = 12;
-    string create_group_id = 13;
-    string intro_typename = 14;
-    MerchantDirectorInput input = 15;
-    MerchantDirectorExpression where = 16;
-}
-message MerchantDirectorListMutationArguments {
-    string id = 1;
-    string merchant_id = 2;
-    MerchantInput merchant_id_type = 3;
-    int32 user_id = 4;
-    io.graphoenix.showcase.user.UserInput user_id_type = 5;
-    bool is_deprecated = 6;
-    int32 version = 7;
-    int32 realm_id = 8;
-    string create_user_id = 9;
-    google.protobuf.Timestamp create_time = 10;
-    string update_user_id = 11;
-    google.protobuf.Timestamp update_time = 12;
-    string create_group_id = 13;
-    string intro_typename = 14;
-    repeated MerchantDirectorInput list = 15;
-    MerchantDirectorExpression where = 16;
 }
 message OrderSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
@@ -1880,11 +1715,10 @@ message MerchantSubscriptionArguments {
     io.graphoenix.core.IntExpression organization_id = 16;
     MerchantUserRelationExpression merchant_user_relation = 17;
     MerchantOrganizationRelationExpression merchant_organization_relation = 18;
-    MerchantDirectorExpression merchant_director = 19;
-    repeated string group_by = 20;
-    bool not = 21;
-    io.graphoenix.core.Conditional cond = 22;
-    repeated MerchantExpression exs = 23;
+    repeated string group_by = 19;
+    bool not = 20;
+    io.graphoenix.core.Conditional cond = 21;
+    repeated MerchantExpression exs = 22;
 }
 message MerchantListSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
@@ -1905,17 +1739,16 @@ message MerchantListSubscriptionArguments {
     io.graphoenix.core.IntExpression organization_id = 16;
     MerchantUserRelationExpression merchant_user_relation = 17;
     MerchantOrganizationRelationExpression merchant_organization_relation = 18;
-    MerchantDirectorExpression merchant_director = 19;
-    MerchantOrderBy order_by = 20;
-    repeated string group_by = 21;
-    bool not = 22;
-    io.graphoenix.core.Conditional cond = 23;
-    repeated MerchantExpression exs = 24;
-    int32 first = 25;
-    int32 last = 26;
-    int32 offset = 27;
-    string after = 28;
-    string before = 29;
+    MerchantOrderBy order_by = 19;
+    repeated string group_by = 20;
+    bool not = 21;
+    io.graphoenix.core.Conditional cond = 22;
+    repeated MerchantExpression exs = 23;
+    int32 first = 24;
+    int32 last = 25;
+    int32 offset = 26;
+    string after = 27;
+    string before = 28;
 }
 message MerchantConnectionSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
@@ -1936,17 +1769,16 @@ message MerchantConnectionSubscriptionArguments {
     io.graphoenix.core.IntExpression organization_id = 16;
     MerchantUserRelationExpression merchant_user_relation = 17;
     MerchantOrganizationRelationExpression merchant_organization_relation = 18;
-    MerchantDirectorExpression merchant_director = 19;
-    MerchantOrderBy order_by = 20;
-    repeated string group_by = 21;
-    bool not = 22;
-    io.graphoenix.core.Conditional cond = 23;
-    repeated MerchantExpression exs = 24;
-    int32 first = 25;
-    int32 last = 26;
-    int32 offset = 27;
-    string after = 28;
-    string before = 29;
+    MerchantOrderBy order_by = 19;
+    repeated string group_by = 20;
+    bool not = 21;
+    io.graphoenix.core.Conditional cond = 22;
+    repeated MerchantExpression exs = 23;
+    int32 first = 24;
+    int32 last = 25;
+    int32 offset = 26;
+    string after = 27;
+    string before = 28;
 }
 message GoodOrderRelationSubscriptionArguments {
     io.graphoenix.core.StringExpression id = 1;
@@ -2302,78 +2134,6 @@ message MerchantOrganizationRelationConnectionSubscriptionArguments {
     bool not = 17;
     io.graphoenix.core.Conditional cond = 18;
     repeated MerchantOrganizationRelationExpression exs = 19;
-    int32 first = 20;
-    int32 last = 21;
-    int32 offset = 22;
-    string after = 23;
-    string before = 24;
-}
-message MerchantDirectorSubscriptionArguments {
-    io.graphoenix.core.StringExpression id = 1;
-    io.graphoenix.core.StringExpression merchant_id = 2;
-    MerchantExpression merchant_id_type = 3;
-    io.graphoenix.core.IntExpression user_id = 4;
-    io.graphoenix.showcase.user.UserExpression user_id_type = 5;
-    bool include_deprecated = 6;
-    io.graphoenix.core.IntExpression version = 7;
-    io.graphoenix.core.IntExpression realm_id = 8;
-    io.graphoenix.core.StringExpression create_user_id = 9;
-    io.graphoenix.core.StringExpression create_time = 10;
-    io.graphoenix.core.StringExpression update_user_id = 11;
-    io.graphoenix.core.StringExpression update_time = 12;
-    io.graphoenix.core.StringExpression create_group_id = 13;
-    io.graphoenix.core.StringExpression intro_typename = 14;
-    repeated string group_by = 15;
-    bool not = 16;
-    io.graphoenix.core.Conditional cond = 17;
-    repeated MerchantDirectorExpression exs = 18;
-}
-message MerchantDirectorListSubscriptionArguments {
-    io.graphoenix.core.StringExpression id = 1;
-    io.graphoenix.core.StringExpression merchant_id = 2;
-    MerchantExpression merchant_id_type = 3;
-    io.graphoenix.core.IntExpression user_id = 4;
-    io.graphoenix.showcase.user.UserExpression user_id_type = 5;
-    bool include_deprecated = 6;
-    io.graphoenix.core.IntExpression version = 7;
-    io.graphoenix.core.IntExpression realm_id = 8;
-    io.graphoenix.core.StringExpression create_user_id = 9;
-    io.graphoenix.core.StringExpression create_time = 10;
-    io.graphoenix.core.StringExpression update_user_id = 11;
-    io.graphoenix.core.StringExpression update_time = 12;
-    io.graphoenix.core.StringExpression create_group_id = 13;
-    io.graphoenix.core.StringExpression intro_typename = 14;
-    MerchantDirectorOrderBy order_by = 15;
-    repeated string group_by = 16;
-    bool not = 17;
-    io.graphoenix.core.Conditional cond = 18;
-    repeated MerchantDirectorExpression exs = 19;
-    int32 first = 20;
-    int32 last = 21;
-    int32 offset = 22;
-    string after = 23;
-    string before = 24;
-}
-message MerchantDirectorConnectionSubscriptionArguments {
-    io.graphoenix.core.StringExpression id = 1;
-    io.graphoenix.core.StringExpression merchant_id = 2;
-    MerchantExpression merchant_id_type = 3;
-    io.graphoenix.core.IntExpression user_id = 4;
-    io.graphoenix.showcase.user.UserExpression user_id_type = 5;
-    bool include_deprecated = 6;
-    io.graphoenix.core.IntExpression version = 7;
-    io.graphoenix.core.IntExpression realm_id = 8;
-    io.graphoenix.core.StringExpression create_user_id = 9;
-    io.graphoenix.core.StringExpression create_time = 10;
-    io.graphoenix.core.StringExpression update_user_id = 11;
-    io.graphoenix.core.StringExpression update_time = 12;
-    io.graphoenix.core.StringExpression create_group_id = 13;
-    io.graphoenix.core.StringExpression intro_typename = 14;
-    MerchantDirectorOrderBy order_by = 15;
-    repeated string group_by = 16;
-    bool not = 17;
-    io.graphoenix.core.Conditional cond = 18;
-    repeated MerchantDirectorExpression exs = 19;
     int32 first = 20;
     int32 last = 21;
     int32 offset = 22;

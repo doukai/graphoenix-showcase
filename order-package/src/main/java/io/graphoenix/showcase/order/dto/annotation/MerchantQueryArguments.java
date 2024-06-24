@@ -55,8 +55,6 @@ public @interface MerchantQueryArguments {
   MerchantOrganizationRelationExpression1 merchantOrganizationRelation(
       ) default @MerchantOrganizationRelationExpression1;
 
-  MerchantDirectorExpression1 merchantDirector() default @MerchantDirectorExpression1;
-
   String[] groupBy() default {};
 
   boolean not() default false;
@@ -100,8 +98,6 @@ public @interface MerchantQueryArguments {
   String $merchantUserRelation() default "";
 
   String $merchantOrganizationRelation() default "";
-
-  String $merchantDirector() default "";
 
   String $groupBy() default "";
 
